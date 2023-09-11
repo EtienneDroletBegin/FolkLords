@@ -9,10 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: RifleMan
-  m_EditorClassIdentifier: Assembly-CSharp::PartyMember
-  maxHP: 0
-  maxAP: 0
-  physDMG: 0
-  magDMG: 0
+  m_Script: {fileID: 11500000, guid: 91a0bc4c1ad29934dac433ab110972ff, type: 3}
+  m_Name: Rifleman
+  m_EditorClassIdentifier: 
+  memberName: 4
+  maxHP: 5
+  maxAP: 5
+  physDMG: 5
+  magDMG: 5
+  Portrait: {fileID: 21300000, guid: af368edae79067743a2fe0c2d844bf33, type: 3}
+  prefab: {fileID: 0}

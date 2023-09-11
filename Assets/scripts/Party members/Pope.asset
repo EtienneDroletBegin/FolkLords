@@ -9,6 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 91a0bc4c1ad29934dac433ab110972ff, type: 3}
   m_Name: Pope
-  m_EditorClassIdentifier: Assembly-CSharp::PartyMember
+  m_EditorClassIdentifier: 
+  memberName: 0
+  maxHP: 5
+  maxAP: 5
+  physDMG: 5
+  magDMG: 5
+  Portrait: {fileID: 21300000, guid: 9e8131b562fb98344808bab5ade07ff7, type: 3}
+  prefab: {fileID: 0}
