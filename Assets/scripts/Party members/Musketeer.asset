@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91a0bc4c1ad29934dac433ab110972ff, type: 3}
   m_Name: Musketeer
   m_EditorClassIdentifier: 
-  memberName: 1
+  index: 1
+  memberName: Musketeer
   maxHP: 5
   maxAP: 5
   physDMG: 5

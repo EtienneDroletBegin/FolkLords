@@ -6,7 +6,8 @@ using UnityEngine;
 [CreateAssetMenu]
 public class PartyMembers : ScriptableObject
 {
-    [SerializeField] public EPartyMember memberName;
+    [SerializeField] public int index;
+    [SerializeField] public string memberName;
     [SerializeField] public int maxHP;
     [SerializeField] public int maxAP;
     [SerializeField] public int physDMG;
