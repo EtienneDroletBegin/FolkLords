@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1207153055466684409}
   - component: {fileID: 8476172869133216007}
   - component: {fileID: 8668353261938841481}
-  - component: {fileID: 2216968219429009629}
   m_Layer: 0
   m_Name: Rifleman
   m_TagString: Untagged
@@ -28,8 +27,8 @@ Transform:
   m_GameObject: {fileID: 1229101531681985546}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 183, y: 5.8, z: 261.8859}
-  m_LocalScale: {x: 2.5938766, y: 2.5938766, z: 2.5938766}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.33352965, y: 0.33352965, z: 0.33352965}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -107,15 +106,3 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &2216968219429009629
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1229101531681985546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f89af7758d53e3243ab33c58a282fbbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

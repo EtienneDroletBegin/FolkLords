@@ -16,8 +16,8 @@ public class PlayerMovement : MonoBehaviour
         float V = Input.GetAxis("Vertical");
         m_Animator.SetFloat("V", V);
         m_Animator.SetFloat("H", H);
-        transform.Translate(new Vector3(0, V*50*Time.deltaTime, 0));
-        transform.Translate(new Vector3(H * 50 * Time.deltaTime, 0, 0));
+        transform.Translate(new Vector3(0, V*20*Time.deltaTime, 0));
+        transform.Translate(new Vector3(H * 20 * Time.deltaTime, 0, 0));
 
     }
 }

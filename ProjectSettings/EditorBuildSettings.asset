@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/FightScene.unity
+    guid: 8ac5573cd5d42d346a251c66ec5e273a
+  - enabled: 1
+    path: Assets/Scenes/MenuSelect.unity
+    guid: 917e8df76b0972645af882673484d597
+  - enabled: 1
+    path: Assets/Scenes/OverWorld.unity
+    guid: 27b68557458db3e468c942b46e85615d
+  - enabled: 1
+    path: Assets/Scenes/walk.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}

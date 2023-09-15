@@ -14,7 +14,7 @@ public class PartyMembers : ScriptableObject
     [SerializeField] public int magDMG;
     [SerializeField] public Sprite Portrait;
 
-    [SerializeField] GameObject prefab;
+    [SerializeField] public GameObject prefab;
     Abilities[] abilities;
 
 }

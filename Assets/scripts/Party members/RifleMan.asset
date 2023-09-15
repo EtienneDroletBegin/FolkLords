@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: 4
   memberName: Rifleman
-  maxHP: 5
-  maxAP: 5
+  maxHP: 20
+  maxAP: 4
   physDMG: 5
-  magDMG: 5
+  magDMG: 2
   Portrait: {fileID: 21300000, guid: af368edae79067743a2fe0c2d844bf33, type: 3}
-  prefab: {fileID: 0}
+  prefab: {fileID: 1229101531681985546, guid: c4b279ff108030f43b52772710ef8ad0, type: 3}
