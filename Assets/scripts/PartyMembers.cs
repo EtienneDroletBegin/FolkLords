@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEngine;
 
 
@@ -13,6 +14,7 @@ public class PartyMembers : ScriptableObject
     [SerializeField] public int physDMG;
     [SerializeField] public int magDMG;
     [SerializeField] public Sprite Portrait;
+    [SerializeField]public RuntimeAnimatorController controller;
 
     [SerializeField] public GameObject prefab;
     Abilities[] abilities;

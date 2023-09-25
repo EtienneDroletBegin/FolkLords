@@ -7,6 +7,7 @@ using UnityEngine;
 public class PartySpawner : MonoBehaviour
 {
     private PartyMembers[] party;
+
     void Start()
     {
         party = PartyManager.GetInstance().getParty();
@@ -16,18 +17,21 @@ public class PartySpawner : MonoBehaviour
         {
             GameObject newMember = Instantiate(member.prefab);
             newMember.transform.position = new Vector3((1 * currentMember) * newMember.GetComponent<SpriteRenderer>().bounds.size.x, 0, 0);
+            newMember.GetComponent<Animator>().runtimeAnimatorController = member.controller; 
+
             switch (currentMember)
             {
                 case 0:
                     newMember.AddComponent<PlayerMovement>();
                     break;
                 case 1:
-                    newMember.AddComponent<Follow>();
-                    newMember.GetComponent<Follow>().SetTarget(FindAnyObjectByType<PlayerMovement>().transform);
+                    Follow F = newMember.AddComponent<Follow>();
+                    F.tag = "follow1";
+                    F.SetTarget(FindAnyObjectByType<PlayerMovement>().transform);
                     break;
                 case 2:
-                    newMember.AddComponent<Follow>();
-                    newMember.GetComponent<Follow>().SetTarget(FindAnyObjectByType<Follow>().transform);
+                    Follow F2 =newMember.AddComponent<Follow>();
+                    F2.SetTarget(GameObject.FindGameObjectWithTag("follow1").transform) ;
                     break;
             }
             currentMember++;

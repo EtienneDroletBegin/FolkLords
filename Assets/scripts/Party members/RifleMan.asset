@@ -19,4 +19,5 @@ MonoBehaviour:
   physDMG: 5
   magDMG: 2
   Portrait: {fileID: 21300000, guid: af368edae79067743a2fe0c2d844bf33, type: 3}
+  controller: {fileID: 22100000, guid: 87a9fe711b5b7e849b08caba5b8b4be1, type: 2}
   prefab: {fileID: 1229101531681985546, guid: c4b279ff108030f43b52772710ef8ad0, type: 3}

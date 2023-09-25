@@ -51,7 +51,6 @@ public class PartyManager : MonoBehaviour
     [SerializeField] private Sprite[] images;
     [SerializeField] private Button goButton;
 
-
     public void AddToParty(int memberInt)
     {
         if (ActiveParty.Contains(null)) 
