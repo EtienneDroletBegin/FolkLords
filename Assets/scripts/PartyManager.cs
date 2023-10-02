@@ -121,6 +121,7 @@ public class PartyManager : MonoBehaviour
             {
                 case 0:
                     newMember.AddComponent<PlayerMovement>();
+                    newMember.tag = "mainPlayer";
                     break;
                 case 1:
                     Follow F = newMember.AddComponent<Follow>();
