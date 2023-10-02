@@ -1,17 +1,56 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime;
 using UnityEngine;
+
 
 public class AudioManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField]
+    private AudioSource mainSpeaker;
+    private AudioPool audioPool;
+    private static AudioManager instance;
+
+
+    public AudioManager Instance
     {
-        
+        get
+        {
+            if (instance == null)
+            {
+                instance = FindObjectOfType<AudioManager>();
+                if (instance == null)
+                {
+                    instance = new GameObject("AudioManager").AddComponent<AudioManager>();
+
+                }
+            }
+            return instance;
+        }
+    }
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            if (instance != this)
+            {
+                Destroy(gameObject);
+            }
+        }
+        DontDestroyOnLoad(gameObject);
+        audioPool = GetComponent<AudioPool>();
+    }
+    public static AudioManager GetInstance()
+    {
+        return instance;
     }
 
-    // Update is called once per frame
-    void Update()
+
+    private void Start()
     {
         
     }
