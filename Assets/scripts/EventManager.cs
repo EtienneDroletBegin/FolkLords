@@ -10,6 +10,7 @@ public class EventManager : MonoBehaviour
     private Dictionary<string, Action<Dictionary<string, object>>> eventDictionary;
     private static EventManager instance;
 
+    #region Singleton
     public static EventManager Instance
     {
         get
@@ -41,6 +42,8 @@ public class EventManager : MonoBehaviour
         }
         DontDestroyOnLoad(gameObject);
     }
+
+    #endregion
 
     public static void StartListening(string eventName, Action<Dictionary<string, object>> listener)
     {

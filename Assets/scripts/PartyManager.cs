@@ -98,7 +98,6 @@ public class PartyManager : MonoBehaviour
 
     public void ConfirmPartyChange()
     {
-        Debug.Log("load scende");
         Selected = null;
         SceneManager.LoadScene("OverWorld");
     }
@@ -135,6 +134,12 @@ public class PartyManager : MonoBehaviour
             }
             currentMember++;
         }
+
+    }
+
+
+    public void SpawnForCombat()
+    {
 
     }
 }
