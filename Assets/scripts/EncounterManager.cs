@@ -52,12 +52,12 @@ public class EncounterManager : MonoBehaviour
 
         while (ElapsedTime < TotalTime)
         {
-            Debug.Log(ElapsedTime / TotalTime);
             ElapsedTime += Time.deltaTime;
             Camera.main.transform.GetChild(0).GetComponent<SpriteRenderer>().color = Color.Lerp(startColor, endColor, (ElapsedTime/TotalTime));
             yield return null;
         }
 
         SceneManager.LoadScene("FightScene");
+        
     }
 }
