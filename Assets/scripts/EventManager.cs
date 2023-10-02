@@ -5,82 +5,75 @@ using System.Text;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+public enum EEvents
+{
+    ONPARTYSPAWN,
+    ONBATTLESTART
+}
+
+
 public class EventManager : MonoBehaviour
 {
-    private Dictionary<string, Action<Dictionary<string, object>>> eventDictionary;
-    private static EventManager instance;
-
     #region Singleton
-    public static EventManager Instance
-    {
-        get
-        {
-            if (instance == null)
-            {
-                instance = FindObjectOfType<EventManager>();
 
-                if(instance == null)
-                {
-                    instance = new GameObject("EventManager").AddComponent<EventManager>();
-                }
-            }
-            return instance;
-        }
-    }
-    private void Awake()
+    //1. Instance de la classe
+    private static EventManager m_Instance;
+
+    void Awake()
     {
-        if (instance == null)
+        //2. Initialiser l'instance
+        if (m_Instance == null)
         {
-            instance = this;
+            m_Instance = this;
+            //3. Faire persister l'instance
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
-            if (instance != this)
-            {
-                Destroy(gameObject);
-            }
+            //4. Detruire L'objet existant
+            Destroy(gameObject);
         }
-        DontDestroyOnLoad(gameObject);
+    }
+
+    //5. Porte d'entree globale
+    public static EventManager GetInstance()
+    {
+        return m_Instance;
     }
 
     #endregion
 
-    public static void StartListening(string eventName, Action<Dictionary<string, object>> listener)
+
+    Dictionary<EEvents, Action<Dictionary<string, object>>> m_Events = new Dictionary<EEvents, Action<Dictionary<string, object>>>();
+    public void StartListening(EEvents eventName, Action<Dictionary<string, object>> eventToBind)
     {
-        Action<Dictionary<string, object>> thisEvent;
-        if (Instance.eventDictionary.TryGetValue(eventName, out thisEvent))
+        if (m_Events.ContainsKey(eventName))
         {
-            thisEvent += listener;
-            Instance.eventDictionary[eventName] = thisEvent;
+            m_Events[eventName] += eventToBind;
         }
         else
         {
-            thisEvent += listener;
-            Instance.eventDictionary.Add(eventName, thisEvent);
+            m_Events.Add(eventName, eventToBind);
         }
     }
-    public static void StopListening(string eventName, Action<Dictionary<string, object>> listener)
+
+    public void StopListening(EEvents eventName, Action<Dictionary<string, object>> eventToBind)
     {
-        if (!instance)
+        if (m_Events.ContainsKey(eventName))
         {
-            return;
-        }
-
-        Action<Dictionary<string, object>> thisEvent;
-        if (Instance.eventDictionary.TryGetValue(eventName, out thisEvent))
-        {
-            thisEvent -= listener;
-            Instance.eventDictionary.Remove(eventName);
+            m_Events[eventName] -= eventToBind;
+            if (m_Events[eventName] == null)
+            {
+                m_Events.Remove(eventName);
+            }
         }
     }
 
-    public static void TriggerEvent(string eventName, Dictionary<string, object> eventParams)
+    public void TriggerEvent(EEvents eventName, Dictionary<string, object> eventParams)
     {
-        Action<Dictionary<string, object>> thisEvent;
-        if (Instance.eventDictionary.TryGetValue(eventName, out thisEvent))
+        if (m_Events.TryGetValue(eventName, out Action<Dictionary<string, object>> value))
         {
-            thisEvent?.Invoke(eventParams);
+            value?.Invoke(eventParams);
         }
     }
-
 }
