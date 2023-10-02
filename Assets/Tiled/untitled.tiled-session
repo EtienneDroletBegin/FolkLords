@@ -1,0 +1,46 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "Map/untitled.tmx",
+    "expandedProjectPaths": [
+        ".",
+        "Map"
+    ],
+    "file.lastUsedOpenFilter": "All Files (*)",
+    "fileStates": {
+        "Cainos/Pixel Art Top Down - Basic/Texture/Grass.tsx": {
+            "scaleInDock": 1
+        },
+        "Cainos/Pixel Art Top Down - Basic/Texture/Struct.tsx": {
+            "scaleInDock": 1
+        },
+        "Cainos/Pixel Art Top Down - Basic/Texture/Walls.tsx": {
+            "scaleInDock": 1
+        },
+        "Map/Props.tsx": {
+            "scaleInDock": 1
+        },
+        "Map/untitled.tmx": {
+            "scale": 0.75,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 8,
+                "y": -538.6666666666666
+            }
+        }
+    },
+    "last.imagePath": "D:/unity projects/FolkLords/FolkLords/Assets/Tiled/Cainos/Pixel Art Top Down - Basic/Texture",
+    "map.fixedSize": false,
+    "map.lastUsedFormat": "tmx",
+    "openFiles": [
+        "Map/untitled.tmx"
+    ],
+    "project": "untitled.tiled-project",
+    "property.type": "float",
+    "recentFiles": [
+        "Map/untitled.tmx"
+    ],
+    "tileset.lastUsedFormat": "tsx"
+}
