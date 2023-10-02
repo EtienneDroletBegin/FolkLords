@@ -100,6 +100,41 @@ public class PartyManager : MonoBehaviour
     {
         Debug.Log("load scende");
         Selected = null;
-        SceneManager.LoadScene("walk");
+        SceneManager.LoadScene("OverWorld");
+    }
+
+
+    
+    
+    public void Spawn(Vector2 position)
+    {
+        
+        int currentMember = 0;
+        
+        foreach (PartyMembers member in ActiveParty)
+        {
+            GameObject newMember = Instantiate(member.prefab);
+            position = position + new Vector2((1 * currentMember) * newMember.GetComponent<SpriteRenderer>().bounds.size.x, 0);
+            newMember.transform.position = position;
+            newMember.GetComponent<Animator>().runtimeAnimatorController = member.controller;
+
+            switch (currentMember)
+            {
+                case 0:
+                    newMember.AddComponent<PlayerMovement>();
+                    break;
+                case 1:
+                    Follow F = newMember.AddComponent<Follow>();
+                    F.tag = "follow1";
+                    F.SetTarget(FindAnyObjectByType<PlayerMovement>().transform);
+                    break;
+                case 2:
+                    Follow F2 = newMember.AddComponent<Follow>();
+                    F2.SetTarget(GameObject.FindGameObjectWithTag("follow1").transform);
+                    break;
+            }
+            currentMember++;
+        }
+
     }
 }
