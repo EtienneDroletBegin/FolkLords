@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Animations;
@@ -17,6 +18,13 @@ public class PartyMembers : ScriptableObject
     [SerializeField]public RuntimeAnimatorController controller;
 
     [SerializeField] public GameObject prefab;
+
+    public struct AbilityUnlocks
+    {
+        public int Level;
+        public Abilities ability;
+    }
+
     Abilities[] abilities;
 
 }
@@ -24,5 +32,13 @@ public class PartyMembers : ScriptableObject
 
 public class Abilities : ScriptableObject
 {
+    [Serializable, Flags]
+    public enum ETarget
+    {
+        ENEMY = 1 << 0,
+        ALLY = 1 <<1, 
+        SELF = 1<<2
+    }
 
+    public ETarget Target;
 }
