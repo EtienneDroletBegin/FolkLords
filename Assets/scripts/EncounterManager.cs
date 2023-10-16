@@ -34,8 +34,11 @@ public class EncounterManager : MonoBehaviour
 
     #endregion
 
-
-    public void StartCombat()
+    private void Start()
+    {
+        EventManager.GetInstance().StartListening(EEvents.TOGGLECOMBAT, ToggleCombat);
+    }
+    public void ToggleCombat(Dictionary<string, object> eventParams)
     {
         StartCoroutine("BeginFade");
 
@@ -56,8 +59,16 @@ public class EncounterManager : MonoBehaviour
             Camera.main.transform.GetChild(0).GetComponent<SpriteRenderer>().color = Color.Lerp(startColor, endColor, (ElapsedTime/TotalTime));
             yield return null;
         }
-
-        SceneManager.LoadScene("FightScene");
+        if(SceneManager.GetActiveScene().name != "FightScene")
+        {
+            SceneManager.LoadScene("FightScene");
+        }
+        else
+        {
+            SceneManager.LoadScene("OverWorld");
+        }
         
     }
+
+    
 }

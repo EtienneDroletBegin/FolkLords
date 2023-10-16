@@ -50,7 +50,7 @@ public class PartyManager : MonoBehaviour
     [SerializeField] private UnityEngine.UI.Image[] Selected;
     [SerializeField] private Sprite[] images;
     [SerializeField] private Button goButton;
-
+    private bool initialSpawn = true;
     public void AddToParty(int memberInt)
     {
         if (ActiveParty.Contains(null)) 
@@ -149,5 +149,16 @@ public class PartyManager : MonoBehaviour
             member.transform.position = GameObject.Find("spawnSpots").transform.GetChild(i).transform.position;
             print(GameObject.Find("spawnSpots").transform.GetChild(i).transform.position);
         }
+    }
+    public void LoadParty(Dictionary<string, object> eventParams)
+    {
+        
+        if(eventParams.TryGetValue("SaveData",out object data))
+        {
+            SaveData saveData = data as SaveData;
+            Spawn(saveData.Position);
+
+        }
+
     }
 }

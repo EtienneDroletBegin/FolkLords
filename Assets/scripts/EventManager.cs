@@ -8,7 +8,10 @@ using UnityEngine.SceneManagement;
 public enum EEvents
 {
     ONPARTYSPAWN,
-    ONBATTLESTART
+    ONPARTYLOAD,
+    ONBATTLESTART,
+    TOGGLECOMBAT
+
 }
 
 

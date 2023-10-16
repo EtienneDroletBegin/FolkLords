@@ -230,7 +230,7 @@ GameObject:
   - component: {fileID: 84131807}
   - component: {fileID: 84131806}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: Special
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -660,7 +660,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &203540508
 RectTransform:
   m_ObjectHideFlags: 0
@@ -670,7 +670,7 @@ RectTransform:
   m_GameObject: {fileID: 203540507}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 6.5773, y: 6.5773, z: 6.5773}
+  m_LocalScale: {x: 10.239541, y: 10.239541, z: 10.239541}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1128005756}
@@ -1150,7 +1150,7 @@ GameObject:
   - component: {fileID: 619625444}
   - component: {fileID: 619625443}
   m_Layer: 5
-  m_Name: Button (3)
+  m_Name: Defend
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2251,7 +2251,7 @@ GameObject:
   - component: {fileID: 1101071472}
   - component: {fileID: 1101071471}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2371,6 +2371,7 @@ GameObject:
   - component: {fileID: 1128005755}
   - component: {fileID: 1128005754}
   - component: {fileID: 1128005753}
+  - component: {fileID: 1128005757}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2464,6 +2465,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1128005757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128005752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa1c1093c0216cc4c8cd209911488616, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1182000781
 GameObject:
   m_ObjectHideFlags: 0
@@ -2508,7 +2521,7 @@ GameObject:
   - component: {fileID: 1294308142}
   - component: {fileID: 1294308141}
   m_Layer: 5
-  m_Name: Button (4)
+  m_Name: Flee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2577,7 +2590,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1294308142}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1128005757}
+        m_TargetAssemblyTypeName: CombatUI, Assembly-CSharp
+        m_MethodName: Flee
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1294308142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2670,7 +2695,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1534170656
 Transform:
   m_ObjectHideFlags: 0

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -6,25 +7,23 @@ using UnityEngine;
 public class SaveData
 {
 
-    public int currentLevel;
-    public SaveData(int level)
+    public Vector2 Position;
+    public SaveData(Vector2 position)
     {
-        currentLevel = level;
+        Position = position;
     }
 }
 
-public class SaveSystem
+public static class SaveSystem
 {
 
 
 
+    private static List<string> pathList = new List<string>();
+    private static int fileIndex = 0;
     private static string PATH = Application.persistentDataPath;
 
-
-    public static string getPath() { 
-        return PATH;
-    }
-
+   
     public static void CheckFiles()
     {
         for (int i = 1; i<=3; i++)
@@ -33,25 +32,37 @@ public class SaveSystem
             {
                 File.WriteAllText(PATH + "/save0" + i + ".json", "");
             }
+            pathList.Add(PATH + "/save0" + i + ".json");
         }
     }
-
-    public static void save()
+    public static string GetPath()
     {
-        SaveData dataTosave = new SaveData(2);
-
-        string convertedData = JsonUtility.ToJson(dataTosave);
-        File.WriteAllText(PATH, convertedData);
+        return pathList[fileIndex];
+    }
+    public static void save(SaveData dataToSave)
+    {
+        
+        string convertedData = JsonUtility.ToJson(dataToSave);
+        File.WriteAllText(pathList[fileIndex], convertedData);
     }
 
     public static SaveData load()
     {
-        if (File.Exists(PATH))
+        if (File.Exists(pathList[fileIndex]))
         {
-            string fileContent = File.ReadAllText(PATH);
+            
+            string fileContent = File.ReadAllText(pathList[fileIndex]);
             SaveData convertedData = JsonUtility.FromJson<SaveData>(fileContent);
             return convertedData;
         }
         return null;
+    }
+
+
+    public static void SetFileIndex(int _fileIndex)
+    {
+        fileIndex = _fileIndex;
+        Debug.Log(fileIndex);
+        Debug.Log(pathList[fileIndex]);
     }
 }
