@@ -4,7 +4,7 @@
  <tileset firstgid="257" source="../Cainos/Pixel Art Top Down - Basic/Texture/Struct.tsx"/>
  <tileset firstgid="513" source="../Cainos/Pixel Art Top Down - Basic/Texture/Grass.tsx"/>
  <tileset firstgid="577" source="Props.tsx"/>
- <layer id="2" name="Grass0" width="30" height="20" visible="0">
+ <layer id="2" name="Grass0" width="30" height="20">
   <data encoding="csv">
    <chunk x="-16" y="-32" width="16" height="16">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -116,7 +116,7 @@
 </chunk>
   </data>
  </layer>
- <layer id="4" name="Gate0" class="Portal" width="30" height="20" visible="0" offsetx="-15.6667" offsety="6.66667">
+ <layer id="4" name="Gate0" class="Portal" width="30" height="20" offsetx="-15.6667" offsety="6.66667">
   <properties>
    <property name="Door" value="FightScene"/>
   </properties>
@@ -141,8 +141,11 @@
 </chunk>
   </data>
  </layer>
- <objectgroup id="5" name="Door" class="Door" visible="0"/>
+ <objectgroup id="5" name="Door" class="Door"/>
  <layer id="1" name="Borders0" class="Borders" width="30" height="20">
+  <properties>
+   <property name="collideable" type="bool" value="true"/>
+  </properties>
   <data encoding="csv">
    <chunk x="-16" y="-32" width="16" height="16">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,

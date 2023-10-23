@@ -3695,6 +3695,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SaveSlots: {fileID: 1303033701}
+  emptySlot: {fileID: 21300000, guid: a4abb95d6d3891444966fc3c09354bd0, type: 3}
 --- !u!1 &2123151400
 GameObject:
   m_ObjectHideFlags: 0
