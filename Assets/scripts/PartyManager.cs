@@ -110,7 +110,6 @@ public class PartyManager : MonoBehaviour
     
     public void Spawn(Vector2 position)
     {
-        EventManager.GetInstance().StartListening(EEvents.ONBATTLESTART, SpawnForCombat);
         int currentMember = 0;
         
         foreach (PartyMembers member in ActiveParty)
@@ -142,13 +141,13 @@ public class PartyManager : MonoBehaviour
     }
 
 
-    public void SpawnForCombat(Dictionary<string, object> eventParams)
+    public void SpawnForCombat()
     {
         for (int i = 0; i < ActiveParty.Length; i++)
         {
             GameObject member = Instantiate(ActiveParty[i].prefab);
             member.transform.position = GameObject.Find("spawnSpots").transform.GetChild(i).transform.position;
-            print(GameObject.Find("spawnSpots").transform.GetChild(i).transform.position);
+            member.GetComponent<Animator>().SetBool("incombat", true);
         }
     }
     public void LoadParty(Dictionary<string, object> eventParams)
