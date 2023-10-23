@@ -452,9 +452,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+<<<<<<< HEAD
       - m_Target: {fileID: 410813111}
         m_TargetAssemblyTypeName: Startfight, Assembly-CSharp
         m_MethodName: 
+=======
+      - m_Target: {fileID: 410813113}
+        m_TargetAssemblyTypeName: EncounterManager, Assembly-CSharp
+        m_MethodName: startCombat
+
+>>>>>>> 69a0481715e45ac47182183c4b27b13ee6eb73eb
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

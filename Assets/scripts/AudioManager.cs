@@ -55,33 +55,33 @@ public class AudioManager : MonoBehaviour
         clipDict = new Dictionary<string, Dictionary<string, AudioClip>>();
 
         clipDict.Add("Songs", new Dictionary<string, AudioClip>());
-        for (int i = 0; i < Songs.Length; i++)
-        {
+        //for (int i = 0; i < Songs.Length; i++)
+        //{
 
-            if (Songs[i] != null)
-            {
+        //    if (Songs[i] != null)
+        //    {
 
-                AudioClip clip = Songs[i];
-                clipDict["Songs"].Add(clip.name, clip);
-                Debug.Log(clip.name);
-            }
+        //        AudioClip clip = Songs[i];
+        //        clipDict["Songs"].Add(clip.name, clip);
+        //        Debug.Log(clip.name);
+        //    }
 
-        }
-        clipDict.Add("SFXs", new Dictionary<string, AudioClip>());
-        for (int i = 0; i < SFXs.Length; i++)
-        {
+        //}
+        //clipDict.Add("SFXs", new Dictionary<string, AudioClip>());
+        //for (int i = 0; i < SFXs.Length; i++)
+        //{
 
-            if (SFXs[i] != null)
-            {
+        //    if (SFXs[i] != null)
+        //    {
 
-                AudioClip clip = SFXs[i];
-                clipDict["SFXs"].Add(clip.name, clip);
-                Debug.Log(clip.name);
+        //        AudioClip clip = SFXs[i];
+        //        clipDict["SFXs"].Add(clip.name, clip);
+        //        Debug.Log(clip.name);
 
-            }
+        //    }
 
-        }
-        audioPool = GetComponent<AudioPool>();
+        //}
+        //audioPool = GetComponent<AudioPool>();
     }
    
     public static AudioManager GetInstance()
