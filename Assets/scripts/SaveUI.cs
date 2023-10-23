@@ -9,6 +9,9 @@ public class SaveUI : MonoBehaviour
 {
     [SerializeField]
     private GameObject SaveSlots;
+
+    [SerializeField]
+    private Sprite emptySlot;
     
     
 
@@ -33,6 +36,7 @@ public class SaveUI : MonoBehaviour
     public void DeleteFile(int index)
     {
         SaveSystem.DeleteFile(index);
+        SetSaveImages();
     }
     public void PartySelect()
     {
@@ -59,6 +63,18 @@ public class SaveUI : MonoBehaviour
                     currentPortrait.gameObject.SetActive(true);
                 }
 
+            }
+            else
+            {
+                GameObject currentSlot = SaveSlots.transform.GetChild(i).gameObject;
+                currentSlot.GetComponent<Image>().sprite = emptySlot;
+                for (int j = 0; j < 3; j++)
+                {
+
+                    Image currentPortrait = currentSlot.transform.GetChild(j).GetComponent<Image>();
+                    currentPortrait.sprite = null;
+                    currentPortrait.gameObject.SetActive(false);
+                }
             }
 
         }

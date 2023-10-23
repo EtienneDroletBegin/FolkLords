@@ -67,21 +67,21 @@ public class AudioManager : MonoBehaviour
         //    }
 
         //}
-        clipDict.Add("SFXs", new Dictionary<string, AudioClip>());
-        for (int i = 0; i < SFXs.Length; i++)
-        {
+        //clipDict.Add("SFXs", new Dictionary<string, AudioClip>());
+        //for (int i = 0; i < SFXs.Length; i++)
+        //{
 
-            if (SFXs[i] != null)
-            {
+        //    if (SFXs[i] != null)
+        //    {
 
-                AudioClip clip = SFXs[i];
-                clipDict["SFXs"].Add(clip.name, clip);
-                Debug.Log(clip.name);
+        //        AudioClip clip = SFXs[i];
+        //        clipDict["SFXs"].Add(clip.name, clip);
+        //        Debug.Log(clip.name);
 
-            }
+        //    }
 
-        }
-        audioPool = GetComponent<AudioPool>();
+        //}
+        //audioPool = GetComponent<AudioPool>();
     }
    
     public static AudioManager GetInstance()
