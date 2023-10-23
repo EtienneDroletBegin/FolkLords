@@ -6,8 +6,9 @@ public class Startfight : MonoBehaviour
 {
     void Start()
     {
-        EventManager.GetInstance().TriggerEvent(EEvents.TOGGLECOMBAT, null);
     }
+
+
 
 
 }
