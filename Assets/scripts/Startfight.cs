@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Startfight : MonoBehaviour
 {
-    void Start()
+    public void StartBattle()
     {
-        EventManager.GetInstance().TriggerEvent(EEvents.TOGGLECOMBAT, null);
+        EventManager.GetInstance().TriggerEvent(EEvents.ONBATTLESTART, null);
     }
 
 
