@@ -33,6 +33,7 @@ public class SaveUI : MonoBehaviour
     public void DeleteFile(int index)
     {
         SaveSystem.DeleteFile(index);
+        
     }
     public void PartySelect()
     {
