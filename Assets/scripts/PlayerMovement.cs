@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.B))
         {
-            SaveData dataToSave = new SaveData(transform.position);
+            SaveData dataToSave = new SaveData(transform.position, PartyManager.GetInstance().getParty());
             SaveSystem.save(dataToSave);
             Debug.Log(dataToSave.Position.ToString());
         }
