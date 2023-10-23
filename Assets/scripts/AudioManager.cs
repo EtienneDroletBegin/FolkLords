@@ -55,18 +55,18 @@ public class AudioManager : MonoBehaviour
         clipDict = new Dictionary<string, Dictionary<string, AudioClip>>();
 
         clipDict.Add("Songs", new Dictionary<string, AudioClip>());
-        for (int i = 0; i < Songs.Length; i++)
-        {
+        //for (int i = 0; i < Songs.Length; i++)
+        //{
 
-            if (Songs[i] != null)
-            {
+        //    if (Songs[i] != null)
+        //    {
 
-                AudioClip clip = Songs[i];
-                clipDict["Songs"].Add(clip.name, clip);
-                Debug.Log(clip.name);
-            }
+        //        AudioClip clip = Songs[i];
+        //        clipDict["Songs"].Add(clip.name, clip);
+        //        Debug.Log(clip.name);
+        //    }
 
-        }
+        //}
         clipDict.Add("SFXs", new Dictionary<string, AudioClip>());
         for (int i = 0; i < SFXs.Length; i++)
         {
