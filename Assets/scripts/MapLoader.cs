@@ -9,10 +9,11 @@ public class MapLoader : MonoBehaviour
     [SerializeField] private SuperMap testMap;
     [SerializeField] private GameObject playerPrefab;
     private GameObject currentMap;
-
+    private SaveData saveData;
     private void Start()
     {
         LoadMap(testMap);
+        saveData = SaveSystem.load();
     }
 
     public void LoadMap(SuperMap map)
@@ -37,11 +38,18 @@ public class MapLoader : MonoBehaviour
                collider.enabled = true;
                 
             }
-            else if (superObj.m_Type.Contains("Spawn"))
+            if (superObj.m_Type.Contains("Spawn"))
             {
                 Vector2 spawnPoint = superObj.gameObject.transform.position;
                 PartyManager.GetInstance().Spawn(spawnPoint);
             }
+            else
+            {
+                Vector2 spawnPoint = saveData.Position;
+                PartyManager.GetInstance().Spawn(spawnPoint);
+
+            }
+            
         }
     }
 }

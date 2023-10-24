@@ -44,6 +44,11 @@ public class EncounterManager : MonoBehaviour
 
     }
 
+    public void startCombat()
+    {
+        EventManager.GetInstance().TriggerEvent(EEvents.TOGGLECOMBAT, null);
+    }
+
 
     IEnumerator BeginFade()
     {

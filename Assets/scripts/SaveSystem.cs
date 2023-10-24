@@ -2,15 +2,18 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using TMPro;
 using UnityEngine;
 
 public class SaveData
 {
 
     public Vector2 Position;
-    public SaveData(Vector2 position)
+    public PartyMembers[] ActiveParty;
+    public SaveData(Vector2 position,PartyMembers[] Party)
     {
         Position = position;
+        ActiveParty = Party;
     }
 }
 
@@ -26,13 +29,17 @@ public static class SaveSystem
 
     public static void CheckFiles()
     {
+<<<<<<< HEAD
         for (int i = 1; i <= 3; i++)
+=======
+        for (int i = 0; i<=3; i++)
+>>>>>>> 524c5f5144352b00c0502e0791a804fc62ffc93a
         {
             if (!File.Exists(PATH + "/save0" + i + ".json"))
             {
-                File.WriteAllText(PATH + "/save0" + i + ".json", "");
+                File.WriteAllText(PATH + "/save0" + i + ".json", null);
             }
-            pathList.Add(PATH + "/save0" + i + ".json");
+            pathList.Insert(i, PATH + "/save0" + i + ".json");
         }
     }
     public static string GetPath()
@@ -58,7 +65,12 @@ public static class SaveSystem
         return null;
     }
 
-
+    public static void DeleteFile(int _fileIndex)
+    {
+        File.Delete(pathList[fileIndex]);
+        pathList.RemoveAt(fileIndex);
+        CheckFiles();
+    }
     public static void SetFileIndex(int _fileIndex)
     {
         fileIndex = _fileIndex;
