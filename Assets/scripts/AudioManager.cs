@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime;
+using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -55,33 +56,33 @@ public class AudioManager : MonoBehaviour
         clipDict = new Dictionary<string, Dictionary<string, AudioClip>>();
 
         clipDict.Add("Songs", new Dictionary<string, AudioClip>());
-        //for (int i = 0; i < Songs.Length; i++)
-        //{
+        for (int i = 0; i < Songs.Length; i++)
+        {
 
-        //    if (Songs[i] != null)
-        //    {
+            if (Songs[i] != null)
+            {
 
-        //        AudioClip clip = Songs[i];
-        //        clipDict["Songs"].Add(clip.name, clip);
-        //        Debug.Log(clip.name);
-        //    }
+                AudioClip clip = Songs[i];
+                clipDict["Songs"].Add(clip.name, clip);
+                Debug.Log(clip.name);
+            }
 
-        //}
-        //clipDict.Add("SFXs", new Dictionary<string, AudioClip>());
-        //for (int i = 0; i < SFXs.Length; i++)
-        //{
+        }
+        clipDict.Add("SFXs", new Dictionary<string, AudioClip>());
+        for (int i = 0; i < SFXs.Length; i++)
+        {
 
-        //    if (SFXs[i] != null)
-        //    {
+            if (SFXs[i] != null)
+            {
 
-        //        AudioClip clip = SFXs[i];
-        //        clipDict["SFXs"].Add(clip.name, clip);
-        //        Debug.Log(clip.name);
+                AudioClip clip = SFXs[i];
+                clipDict["SFXs"].Add(clip.name, clip);
+                Debug.Log(clip.name);
 
-        //    }
+            }
 
-        //}
-        //audioPool = GetComponent<AudioPool>();
+        }
+        audioPool = GetComponent<AudioPool>();
     }
    
     public static AudioManager GetInstance()
@@ -89,6 +90,11 @@ public class AudioManager : MonoBehaviour
         return instance;
     }
     #endregion
+
+    private void Start()
+    {
+        PlaySongOnMain("MenuSong");
+    }
     public void PlaySongOnMain(string sound)
     {
         StartCoroutine(PlayWithDelay(sound));
@@ -101,12 +107,51 @@ public class AudioManager : MonoBehaviour
     {
         mainSpeaker.Stop();
     }
-
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.LeftControl))
+        {
+            Debug.Log("Hyon");
+            fadeToNext("OverWorldSong");
+        }
+    }
     public AudioSource PlaySFX(Vector3 pos, string sound)
     {
         AudioSource audioSource = audioPool.GetAvailableAudio(pos);
         audioSource.PlayOneShot(GetClip("SFXs", sound));
         return audioSource;
+    }
+
+    public void fadeToNext(string song)
+    {
+        StartCoroutine(Fade(song));
+        
+    }
+    private IEnumerator Fade(string song)
+    {
+        float time = 0f;
+        float volume = mainSpeaker.volume;
+        
+        while(mainSpeaker.volume > 0f)
+        {
+            Debug.Log(time);
+            time += Time.deltaTime;
+            mainSpeaker.volume = Mathf.Lerp(volume, 0, time / 2);
+
+            
+        }
+        time = 0f;
+        mainSpeaker.Stop();
+        mainSpeaker.PlayOneShot(GetClip("Songs", song), volume);
+
+        while (mainSpeaker.volume < volume) 
+        {
+            Debug.Log(time);
+            time += Time.deltaTime;
+            mainSpeaker.volume = Mathf.Lerp(0, volume, time);
+            
+        }
+        yield break;
     }
 
     private AudioClip GetClip(string type, string name)

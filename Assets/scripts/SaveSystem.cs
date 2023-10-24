@@ -7,11 +7,12 @@ using UnityEngine;
 
 public class SaveData
 {
-
+    public bool hasSaved;
     public Vector2 Position;
     public PartyMembers[] ActiveParty;
-    public SaveData(Vector2 position,PartyMembers[] Party)
+    public SaveData(bool hasSaved,Vector2 position, PartyMembers[] Party)
     {
+
         Position = position;
         ActiveParty = Party;
     }
@@ -29,11 +30,7 @@ public static class SaveSystem
 
     public static void CheckFiles()
     {
-<<<<<<< HEAD
-        for (int i = 1; i <= 3; i++)
-=======
-        for (int i = 0; i<=3; i++)
->>>>>>> 524c5f5144352b00c0502e0791a804fc62ffc93a
+        for (int i = 0; i <= 3; i++)
         {
             if (!File.Exists(PATH + "/save0" + i + ".json"))
             {
@@ -55,6 +52,7 @@ public static class SaveSystem
 
     public static SaveData load()
     {
+        CheckFiles();
         if (File.Exists(pathList[fileIndex]))
         {
 

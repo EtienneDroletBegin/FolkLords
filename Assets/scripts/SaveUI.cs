@@ -27,9 +27,19 @@ public class SaveUI : MonoBehaviour
     {
 
         SaveSystem.SetFileIndex(index);
-        PartyManager.GetInstance().ConfirmPartyChange();
+        
         
 
+    }
+    public void LoadGame()
+    {
+        StartCoroutine(LoadScene());
+    }
+    private IEnumerator LoadScene()
+    {
+        SceneManager.LoadScene("OverWorld");
+        yield return new WaitForEndOfFrame();
+        PartyManager.GetInstance().ConfirmPartyChange();
     }
     public void SetFiles()
     {
@@ -38,12 +48,10 @@ public class SaveUI : MonoBehaviour
     public void DeleteFile(int index)
     {
         SaveSystem.DeleteFile(index);
-
-        
-
         SetSaveImages();
 
     }
+    
     public void PartySelect()
     {
         SceneManager.LoadScene("PartySelect");
