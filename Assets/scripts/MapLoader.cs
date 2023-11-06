@@ -9,14 +9,16 @@ public class MapLoader : MonoBehaviour
     [SerializeField] private SuperMap testMap;
     [SerializeField] private GameObject playerPrefab;
     private GameObject currentMap;
-
+    private SaveData saveData;
     private void Start()
     {
+        saveData = SaveSystem.load();
         LoadMap(testMap);
     }
 
     public void LoadMap(SuperMap map)
     {
+        Vector2 spawnPoint;
         //Détruire l'ancienne Map
         if (currentMap != null)
         { 
@@ -31,17 +33,28 @@ public class MapLoader : MonoBehaviour
         foreach (SuperObject superObj in objects)
         {
             //Regarder le m_Type pour savoir quoi faire
-            if (superObj.m_Type.Contains("Borders"))
+            if (superObj.m_TiledName.Contains("Borders"))
             {
-               Collider collider = superObj.GetComponent<Collider>();
+
+               Collider2D collider = superObj.GetComponent<Collider2D>();
                collider.enabled = true;
                 
             }
-            else if (superObj.m_Type.Contains("Spawn"))
+            if (superObj.m_Type.Contains("Spawn"))
             {
-                Vector2 spawnPoint = superObj.gameObject.transform.position;
-                PartyManager.GetInstance().Spawn(spawnPoint);
+                if(saveData == null)
+                {
+                    spawnPoint = superObj.gameObject.transform.position;
+
+                }
+                else
+                {
+                    spawnPoint = saveData.Position;
+                }
+                    PartyManager.GetInstance().Spawn(spawnPoint);
             }
+            
+            
         }
     }
 }

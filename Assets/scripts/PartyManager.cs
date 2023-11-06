@@ -99,8 +99,15 @@ public class PartyManager : MonoBehaviour
 
     public void ConfirmPartyChange()
     {
-        Selected = null;
-
+        if(Selected != null)
+        {
+            Selected = null;
+        }
+        if(SaveSystem.load() != null)
+        {
+            ActiveParty = SaveSystem.load().ActiveParty;
+        }
+        AudioManager.GetInstance().fadeToNext("OverWorldSong");
         SceneManager.LoadScene("OverWorld");
 
     }
@@ -150,15 +157,5 @@ public class PartyManager : MonoBehaviour
             member.GetComponent<Animator>().SetBool("incombat", true);
         }
     }
-    public void LoadParty(Dictionary<string, object> eventParams)
-    {
-        
-        if(eventParams.TryGetValue("SaveData",out object data))
-        {
-            SaveData saveData = data as SaveData;
-            Spawn(saveData.Position);
-
-        }
-
-    }
+    
 }
