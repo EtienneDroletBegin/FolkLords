@@ -30,7 +30,7 @@ public static class SaveSystem
 
     public static void CheckFiles()
     {
-        for (int i = 0; i <= 3; i++)
+        for (int i = 0; i < 3; i++)
         {
             if (!File.Exists(PATH + "/save0" + i + ".json"))
             {
