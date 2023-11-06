@@ -36,11 +36,8 @@ public class SaveUI : MonoBehaviour
     public void DeleteFile(int index)
     {
         SaveSystem.DeleteFile(index);
-<<<<<<< HEAD
-        
-=======
         SetSaveImages();
->>>>>>> 69a0481715e45ac47182183c4b27b13ee6eb73eb
+
     }
     public void PartySelect()
     {
