@@ -2,11 +2,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour,IDamageable
 {
     private Animator m_Animator;
     private float m_Speed = 2f;
     private Vector2 m_Position;
+
+    public float health { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
+
+    public void FullHeal()
+    {
+        health = 100.0f;
+    }
+
+    public void Heal(float _amount)
+    {
+        health += _amount;
+    }
+
+    public void Kill()
+    {
+        health = 0;
+    }
+
+    public void TakeDamage(float _amount)
+    {
+        health -= _amount;
+    }
+
     private void Start()
     {
         m_Animator = GetComponent<Animator>();

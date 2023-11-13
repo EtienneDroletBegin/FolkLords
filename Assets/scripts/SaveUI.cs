@@ -9,7 +9,8 @@ public class SaveUI : MonoBehaviour
 {
     [SerializeField]
     private GameObject SaveSlots;
-
+    [SerializeField]
+    private GameObject PartyScreen;
     [SerializeField]
     private Sprite emptySlot;
     
