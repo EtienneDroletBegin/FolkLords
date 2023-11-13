@@ -33,6 +33,9 @@ public class PartyManager : MonoBehaviour
             //4. Detruire L'objet existant
             Destroy(gameObject);
         }
+       
+
+        
     }
 
     //5. Porte d'entree globale
@@ -46,12 +49,24 @@ public class PartyManager : MonoBehaviour
     //[SerializeField]private List<PartyMembers> activeParty;
     [SerializeField] private PartyMembers[] ActiveParty = { null, null, null }; 
     [SerializeField] private List<PartyMembers> AvailableChars;
-
     [SerializeField] private UnityEngine.UI.Image[] Selected;
     [SerializeField] private Sprite[] images;
     [SerializeField] private Button goButton;
+    private SaveData Data = null;
     private bool initialSpawn = true;
     private Vector2 lastPos;
+
+    public void ChangeActiveParty()
+    {
+        Data = SaveSystem.load();
+        if (Data.ActiveParty[0] != null)
+        {
+            for(int i = 0; i < Data.ActiveParty.Length; i++)
+            {
+                AddToParty(Data.ActiveParty[i].index);
+            }
+        }
+    }
     public void AddToParty(int memberInt)
     {
         if (ActiveParty.Contains(null)) 
@@ -65,6 +80,7 @@ public class PartyManager : MonoBehaviour
                     ActiveParty[i] = AvailableChars[memberInt];
 
                     Selected[i].sprite = ActiveParty[i].Portrait;
+          
                     GameObject.Find("ActiveTexts").transform.GetChild(i).GetComponent<TextMeshProUGUI>().text = ActiveParty[i].memberName;
                     GameObject.Find("buttons").transform.GetChild(memberInt).GetComponent<Button>().interactable = false;
                     break;
@@ -85,6 +101,7 @@ public class PartyManager : MonoBehaviour
     public PartyMembers[] getParty()
     {
         return ActiveParty;
+        
     }
 
     public void RemoveFromParty(int index)
