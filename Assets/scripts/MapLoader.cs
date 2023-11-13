@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class MapLoader : MonoBehaviour
 {
@@ -27,13 +28,16 @@ public class MapLoader : MonoBehaviour
         map.gameObject.transform.localScale = new Vector2(2, 2);
         //Spawner la nouvelle map
         currentMap = Instantiate(map).gameObject;
+        currentMap.GetComponentInChildren<Grid>().AddComponent<TilemapCollider2D>();
         
+
         //Obtenir la liste de tous les objects de la map
         SuperObject[] objects = currentMap.GetComponentsInChildren<SuperObject>();
+       
         foreach (SuperObject superObj in objects)
         {
             //Regarder le m_Type pour savoir quoi faire
-            if (superObj.m_TiledName.Contains("Borders"))
+            if (superObj.m_Type.Contains("Borders0"))
             {
 
                Collider2D collider = superObj.GetComponent<Collider2D>();
