@@ -14,6 +14,7 @@ public class PartyMembers : ScriptableObject
     [SerializeField] public int maxAP;
     [SerializeField] public int physDMG;
     [SerializeField] public int magDMG;
+    [SerializeField] public int spd;
     [SerializeField] public Sprite Portrait;
     [SerializeField]public RuntimeAnimatorController controller;
 

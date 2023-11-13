@@ -34,6 +34,9 @@ public class EncounterManager : MonoBehaviour
 
     #endregion
 
+
+    private list<IDamageable> m_encounter
+
     private void Start()
     {
         EventManager.GetInstance().StartListening(EEvents.TOGGLECOMBAT, ToggleCombat);
@@ -41,13 +44,13 @@ public class EncounterManager : MonoBehaviour
     public void ToggleCombat(Dictionary<string, object> eventParams)
     {
         StartCoroutine(BeginFade());
-        
 
     }
 
     public void startCombat()
     {
         EventManager.GetInstance().TriggerEvent(EEvents.TOGGLECOMBAT, null);
+
     }
 
 
