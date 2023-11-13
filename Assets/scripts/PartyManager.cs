@@ -65,7 +65,6 @@ public class PartyManager : MonoBehaviour
                     ActiveParty[i] = AvailableChars[memberInt];
 
                     Selected[i].sprite = ActiveParty[i].Portrait;
-                    Debug.Log(ActiveParty[i].memberName);
                     GameObject.Find("ActiveTexts").transform.GetChild(i).GetComponent<TextMeshProUGUI>().text = ActiveParty[i].memberName;
                     GameObject.Find("buttons").transform.GetChild(memberInt).GetComponent<Button>().interactable = false;
                     break;

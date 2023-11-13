@@ -6,7 +6,7 @@ using UnityEngine;
 
 
 [CreateAssetMenu]
-public class PartyMembers : ScriptableObject
+public class PartyMembers : ScriptableObject, ICombatUnit
 {
     [SerializeField] public int index;
     [SerializeField] public string memberName;

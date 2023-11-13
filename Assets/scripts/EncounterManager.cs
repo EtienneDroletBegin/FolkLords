@@ -1,7 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
+public struct initiative
+{
+    public ICombatUnit unit;
+    public int init;
+}
 
 public class EncounterManager : MonoBehaviour
 {
@@ -35,7 +44,8 @@ public class EncounterManager : MonoBehaviour
     #endregion
 
 
-    private list<IDamageable> m_encounter
+    private List<initiative> m_encounter;
+    private GameObject initIMG;
 
     private void Start()
     {
@@ -49,8 +59,32 @@ public class EncounterManager : MonoBehaviour
 
     public void startCombat()
     {
+        m_encounter = new List<initiative>();
         EventManager.GetInstance().TriggerEvent(EEvents.TOGGLECOMBAT, null);
 
+
+
+    }
+
+    public void RollInitiative()
+    {
+        foreach (PartyMembers unit in PartyManager.GetInstance().getParty())
+        {
+            print(unit.memberName);
+            initiative ini = new initiative();
+            ini.unit = unit;
+            ini.init = Random.Range(1, unit.spd);
+            m_encounter.Add(ini);
+        }
+        m_encounter = m_encounter.OrderByDescending(x => x.init).ToList();
+        //print(m_encounter.Count);
+
+        initIMG = Resources.Load<GameObject>("initIMG");
+        foreach (initiative image in m_encounter)
+        {
+            Image go = Instantiate(initIMG, GameObject.Find("initiative").transform).GetComponent<Image>();
+            go.sprite = image.unit.ConvertTo<PartyMembers>().Portrait;
+        }
     }
 
 

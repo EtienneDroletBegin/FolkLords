@@ -72,7 +72,5 @@ public static class SaveSystem
     public static void SetFileIndex(int _fileIndex)
     {
         fileIndex = _fileIndex;
-        Debug.Log(fileIndex);
-        Debug.Log(pathList[fileIndex]);
     }
 }

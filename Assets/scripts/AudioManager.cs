@@ -111,7 +111,6 @@ public class AudioManager : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.LeftControl))
         {
-            Debug.Log("Hyon");
             fadeToNext("OverWorldSong");
         }
     }
@@ -134,7 +133,6 @@ public class AudioManager : MonoBehaviour
         
         while(mainSpeaker.volume > 0f)
         {
-            Debug.Log(time);
             time += Time.deltaTime;
             mainSpeaker.volume = Mathf.Lerp(volume, 0, time / 2);
 
@@ -146,7 +144,6 @@ public class AudioManager : MonoBehaviour
 
         while (mainSpeaker.volume < volume) 
         {
-            Debug.Log(time);
             time += Time.deltaTime;
             mainSpeaker.volume = Mathf.Lerp(0, volume, time);
             

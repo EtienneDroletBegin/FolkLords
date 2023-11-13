@@ -7,5 +7,7 @@ public class StartFight : MonoBehaviour
     private void Awake()
     {
         PartyManager.GetInstance().SpawnForCombat();
+        EncounterManager.GetInstance().RollInitiative();
+
     }
 }
