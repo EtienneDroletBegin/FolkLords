@@ -12,6 +12,8 @@ public class SaveUI : MonoBehaviour
     [SerializeField]
     private GameObject PartyScreen;
     [SerializeField]
+    private GameObject MainMenu;
+    [SerializeField]
     private Sprite emptySlot;
     
     
@@ -26,11 +28,9 @@ public class SaveUI : MonoBehaviour
 
     public void FileIndex(int index)
     {
-
         SaveSystem.SetFileIndex(index);
-        
-        
-
+        PartyManager.GetInstance().ChangeActiveParty();
+       
     }
     public void LoadGame()
     {
@@ -55,7 +55,8 @@ public class SaveUI : MonoBehaviour
     
     public void PartySelect()
     {
-        SceneManager.LoadScene("PartySelect");
+        MainMenu.SetActive(false);
+        PartyScreen.SetActive(true);
     }
 
     private void SetSaveImages()
@@ -93,5 +94,6 @@ public class SaveUI : MonoBehaviour
             }
 
         }
+        SaveSystem.SetFileIndex(0);
     }
 }
