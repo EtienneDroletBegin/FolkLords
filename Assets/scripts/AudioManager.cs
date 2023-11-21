@@ -107,14 +107,7 @@ public class AudioManager : MonoBehaviour
     {
         mainSpeaker.Stop();
     }
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.LeftControl))
-        {
-            Debug.Log("Hyon");
-            fadeToNext("OverWorldSong");
-        }
-    }
+    
     public AudioSource PlaySFX(Vector3 pos, string sound)
     {
         AudioSource audioSource = audioPool.GetAvailableAudio(pos);
