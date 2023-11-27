@@ -66,7 +66,6 @@ public class SaveUI : MonoBehaviour
         {
             SaveSystem.SetFileIndex(i);
             SaveData saveData = SaveSystem.load();
-            Debug.Log(saveData);
             if(saveData != null)
             {
                 GameObject currentSlot = SaveSlots.transform.GetChild(i).gameObject;

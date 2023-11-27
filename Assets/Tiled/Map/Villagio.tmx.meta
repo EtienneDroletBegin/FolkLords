@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 762b65b125f60a647aad70bfb8ba38d9
+guid: 4817e546dbd0f8740b6dacdeb2a8b76b
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -8,20 +8,21 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 1fa25d03934ea624a82bf2fcee6f0873, type: 3}
-  missingFiles:
-  - Props.tsx
+  missingFiles: []
   errors:
-  - 'Missing tileset asset: Props.tsx'
-  warnings: []
+  - Invalid rectangle (Tile ID ='2') in tileset 'walls' has zero width
+  warnings:
+  - Tileset 'walls' is an embedded tileset. Exported tilesets are preferred.
   missingSortingLayers: []
   missingLayers: []
   missingTags: []
   importerVersion: 26
   pixelsPerUnit: 100
   edgesPerEllipse: 32
-  numberOfObjectsImported: 2
-  tilesAsObjects: 1
-  sortingMode: 1
+  numberOfObjectsImported: 516
+  tilesAsObjects: 0
+  sortingMode: 0
   isIsometric: 0
   customImporterClassName: 
-  internalTilesets: []
+  internalTilesets:
+  - {instanceID: 0}

@@ -1,4 +1,5 @@
 using Microsoft.Unity.VisualStudio.Editor;
+using Cinemachine;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -52,6 +53,7 @@ public class PartyManager : MonoBehaviour
     [SerializeField] private UnityEngine.UI.Image[] Selected;
     [SerializeField] private Sprite[] images;
     [SerializeField] private Button goButton;
+    [SerializeField] private CinemachineVirtualCamera cam;
     private SaveData Data = null;
     private bool initialSpawn = true;
     private Vector2 lastPos;
@@ -133,6 +135,8 @@ public class PartyManager : MonoBehaviour
     
     public void Spawn(Vector2 position)
     {
+        cam = Instantiate(Resources.Load("cam").GetComponent<CinemachineVirtualCamera>());
+        cam.m_Lens.OrthographicSize = 4;
         int currentMember = 0;
         
         foreach (PartyMembers member in ActiveParty)
@@ -147,6 +151,7 @@ public class PartyManager : MonoBehaviour
                 case 0:
                     newMember.AddComponent<PlayerMovement>();
                     newMember.tag = "mainPlayer";
+                    cam.Follow = newMember.transform;
                     break;
                 case 1:
                     Follow F = newMember.AddComponent<Follow>();
@@ -160,6 +165,8 @@ public class PartyManager : MonoBehaviour
             }
             currentMember++;
         }
+
+
 
     }
 

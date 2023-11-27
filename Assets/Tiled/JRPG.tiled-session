@@ -1,0 +1,67 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "walls.tsx",
+    "expandedProjectPaths": [
+        "Map",
+        "."
+    ],
+    "fileStates": {
+        "": {
+            "scaleInDock": 1
+        },
+        "BUILDINGS.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 2
+        },
+        "Map/Villagio.tmx": {
+            "scale": 1,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 245.5,
+                "y": 837
+            }
+        },
+        "Map/Villagio.tmx#walls": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Props.tsx": {
+            "scaleInDock": 1
+        },
+        "TX Struct.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "TX Tileset Grass.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "walls.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 2
+        }
+    },
+    "last.externalTilesetPath": "E:/EtienneDB/EndGame/JRPG/JRPG/Assets/Tiled",
+    "last.imagePath": "E:/EtienneDB/EndGame/JRPG/JRPG/Assets/Tiled/Cainos/Pixel Art Top Down - Basic/Texture",
+    "map.fixedSize": false,
+    "map.lastUsedFormat": "tmx",
+    "openFiles": [
+        "Map/Villagio.tmx",
+        "BUILDINGS.tsx",
+        "TX Struct.tsx",
+        "walls.tsx"
+    ],
+    "project": "JRPG.tiled-project",
+    "recentFiles": [
+        "Map/Villagio.tmx",
+        "BUILDINGS.tsx",
+        "TX Struct.tsx",
+        "walls.tsx",
+        "TX Tileset Grass.tsx"
+    ],
+    "tileset.lastUsedFilter": "Fichiers de jeu de tuiles Tiled (*.tsx *.xml)",
+    "tileset.lastUsedFormat": "tsx"
+}
