@@ -61,7 +61,7 @@ public class PartyManager : MonoBehaviour
     public void ChangeActiveParty()
     {
         Data = SaveSystem.load();
-        if (Data.ActiveParty[0] != null)
+        if (Data != null)
         {
             for(int i = 0; i < Data.ActiveParty.Length; i++)
             {

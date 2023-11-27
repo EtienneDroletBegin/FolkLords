@@ -37,11 +37,9 @@ public class MapLoader : MonoBehaviour
         foreach (SuperObject superObj in objects)
         {
             //Regarder le m_Type pour savoir quoi faire
-            if (superObj.m_Type.Contains("Borders0"))
+            if (superObj.m_Type.Contains("Doors"))
             {
-
-               Collider2D collider = superObj.GetComponent<Collider2D>();
-               collider.enabled = true;
+                superObj.AddComponent<Portal>();
                 
             }
             if (superObj.m_Type.Contains("Spawn"))

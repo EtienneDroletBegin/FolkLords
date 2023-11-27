@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="32" tileheight="32" infinite="1" nextlayerid="5" nextobjectid="2">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="32" tileheight="32" infinite="1" nextlayerid="7" nextobjectid="2">
  <tileset firstgid="1" source="../TX Tileset Grass.tsx"/>
  <tileset firstgid="65" name="walls" tilewidth="32" tileheight="32" tilecount="256" columns="16">
   <image source="../Cainos/Pixel Art Top Down - Basic/Texture/TX Tileset Wall.png" width="512" height="512"/>
-  <tile id="2">
-   <objectgroup draworder="index" id="2">
-    <object id="1" x="0" y="0"/>
-   </objectgroup>
-  </tile>
   <tile id="17">
    <objectgroup draworder="index" id="2">
-    <object id="1" x="0.181818" y="0.545455" width="7.27273" height="31.4545"/>
-    <object id="2" x="0.363636" y="0.181818" width="31.6364" height="7.45455"/>
+    <object id="3" x="32" y="0">
+     <polygon points="0,0 0,8 -22.125,7.875 -22.25,31.875 -32,32 -32,0"/>
+    </object>
    </objectgroup>
   </tile>
   <tile id="18">
@@ -21,8 +17,9 @@
   </tile>
   <tile id="19">
    <objectgroup draworder="index" id="2">
-    <object id="1" x="0" y="0" width="32" height="8"/>
-    <object id="2" x="24.3636" y="0.545455" width="7.63636" height="31.2727"/>
+    <object id="3" x="0" y="0">
+     <polygon points="0,0 0,7.9375 23.9375,8.0625 23.9375,31.875 32,32 32,0"/>
+    </object>
    </objectgroup>
   </tile>
   <tile id="20">
@@ -57,7 +54,7 @@
   </tile>
   <tile id="26">
    <objectgroup draworder="index" id="2">
-    <object id="1" x="24" y="0" width="8" height="32"/>
+    <object id="1" x="22.5" y="0" width="9.5" height="32"/>
    </objectgroup>
   </tile>
   <tile id="28">
@@ -78,6 +75,16 @@
   <tile id="33">
    <objectgroup draworder="index" id="2">
     <object id="1" x="0" y="0" width="10" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="35">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="22.5" y="0" width="9.5" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="36">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="24" y="0" width="8" height="32"/>
    </objectgroup>
   </tile>
   <tile id="37">
@@ -107,19 +114,21 @@
   </tile>
   <tile id="42">
    <objectgroup draworder="index" id="2">
-    <object id="1" x="24" y="0" width="8" height="32"/>
+    <object id="1" x="22.125" y="0" width="9.875" height="32"/>
    </objectgroup>
   </tile>
   <tile id="44">
    <objectgroup draworder="index" id="2">
-    <object id="1" x="0.181818" y="0" width="9.81818" height="31.8182"/>
-    <object id="3" x="0.545455" y="0.363636" width="31.2727" height="7.45455"/>
+    <object id="1" x="32" y="0">
+     <polygon points="0,0 0,7.875 -22.125,8 -22.25,31.75 -32,32 -32,0"/>
+    </object>
    </objectgroup>
   </tile>
   <tile id="45">
    <objectgroup draworder="index" id="2">
-    <object id="1" x="0" y="0.181818" width="32" height="7.27273"/>
-    <object id="2" x="24.3636" y="0.181818" width="7.63636" height="31.8182"/>
+    <object id="3" x="0" y="0">
+     <polygon points="0,0 32,0 32,32 24.125,31.875 24,8.25 0,8.25"/>
+    </object>
    </objectgroup>
   </tile>
   <tile id="49">
@@ -137,6 +146,11 @@
     <object id="1" x="0" y="0" width="32" height="32"/>
    </objectgroup>
   </tile>
+  <tile id="52">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="24" y="0" width="8" height="32"/>
+   </objectgroup>
+  </tile>
   <tile id="56">
    <objectgroup draworder="index" id="2">
     <object id="1" x="0" y="0" width="10" height="32"/>
@@ -149,7 +163,7 @@
   </tile>
   <tile id="58">
    <objectgroup draworder="index" id="2">
-    <object id="1" x="24" y="0" width="8" height="32"/>
+    <object id="1" x="22" y="0" width="10" height="32"/>
    </objectgroup>
   </tile>
   <tile id="60">
@@ -187,6 +201,11 @@
     <object id="1" x="0" y="0" width="32" height="8"/>
    </objectgroup>
   </tile>
+  <tile id="70">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="32" height="8"/>
+   </objectgroup>
+  </tile>
   <tile id="71">
    <objectgroup draworder="index" id="2">
     <object id="1" x="0" y="0" width="32" height="8"/>
@@ -209,7 +228,47 @@
     <object id="1" x="0" y="0" width="30" height="32"/>
    </objectgroup>
   </tile>
+  <tile id="97">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="32" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="98">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="32" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="99">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="32" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="100">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="32" height="32"/>
+   </objectgroup>
+  </tile>
   <tile id="102">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="32" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="113">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="32" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="114">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="32" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="115">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="0" width="32" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="116">
    <objectgroup draworder="index" id="2">
     <object id="1" x="0" y="0" width="32" height="32"/>
    </objectgroup>
@@ -716,6 +775,9 @@
 </chunk>
   </data>
  </layer>
+ <layer id="5" name="Doors" class="Doors" width="30" height="20" visible="0" offsetx="16" offsety="8">
+  <data encoding="csv"/>
+ </layer>
  <layer id="2" name="WALLS" width="30" height="20">
   <data encoding="csv">
    <chunk x="-16" y="-16" width="16" height="16">
@@ -733,8 +795,8 @@
 0,0,0,0,0,0,0,633,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,633,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,633,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,633,0,0,85,86,87,87,87,87,
-0,0,0,0,0,0,0,633,0,0,101,102,103,103,103,103
+0,0,0,0,0,0,0,633,0,0,85,86,398,399,87,87,
+0,0,0,0,0,0,0,633,0,0,101,102,414,415,103,103
 </chunk>
    <chunk x="0" y="-16" width="16" height="16">
 0,0,594,595,595,595,596,0,0,0,0,0,0,0,0,0,
@@ -751,8 +813,8 @@
 0,0,0,59,42,60,0,0,0,0,0,0,0,0,0,0,
 49,42,50,42,34,49,33,33,34,0,0,0,0,0,0,0,
 42,50,0,0,0,0,0,34,42,0,0,0,0,0,0,0,
-341,342,87,87,87,87,87,341,342,627,87,87,87,87,87,87,
-357,358,103,103,103,103,103,357,358,643,103,103,103,103,103,103
+341,342,87,87,87,87,87,341,342,627,87,398,399,87,87,87,
+357,358,103,103,103,103,103,357,358,643,103,414,415,103,103,103
 </chunk>
    <chunk x="16" y="-16" width="16" height="16">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -769,8 +831,8 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-87,87,87,599,599,599,341,342,599,599,599,599,599,341,342,599,
-103,103,103,615,615,615,357,358,615,615,615,615,615,357,358,615
+87,398,399,599,599,599,341,342,398,399,599,599,599,341,342,398,
+103,414,415,615,615,615,357,358,414,415,615,615,615,357,358,414
 </chunk>
    <chunk x="32" y="-16" width="16" height="16">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -787,8 +849,8 @@
 0,0,0,0,0,0,612,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,612,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,612,0,0,0,0,0,0,0,0,0,
-599,600,601,0,0,0,612,0,0,0,0,0,0,0,0,0,
-615,616,617,0,0,0,612,0,0,0,0,0,0,0,0,0
+399,600,601,0,0,0,612,0,0,0,0,0,0,0,0,0,
+415,616,617,0,0,0,612,0,0,0,0,0,0,0,0,0
 </chunk>
    <chunk x="-16" y="0" width="16" height="16">
 0,0,0,0,0,0,0,633,0,0,101,0,41,41,0,0,
@@ -806,7 +868,7 @@
 0,0,0,0,0,0,0,98,0,0,0,0,0,0,0,100,
 0,0,0,0,0,0,0,98,0,0,0,0,0,0,0,100,
 0,0,0,0,0,0,0,98,0,0,0,0,0,0,0,100,
-0,0,0,0,0,0,0,98,0,0,85,679,87,87,87,116
+0,0,0,0,0,0,0,98,0,0,85,679,87,398,399,116
 </chunk>
    <chunk x="0" y="0" width="16" height="16">
 373,374,0,0,0,0,0,373,374,0,0,50,50,0,0,0,
@@ -824,14 +886,14 @@
 0,0,0,0,34,41,0,0,0,0,98,0,0,0,0,0,
 0,0,0,0,34,50,0,0,0,0,98,0,0,0,0,0,
 0,0,0,0,33,41,0,0,0,0,98,0,0,0,0,0,
-0,0,0,0,41,34,0,0,0,0,114,88,88,88,679,89
+0,0,0,0,41,34,0,0,0,0,114,398,399,88,679,89
 </chunk>
    <chunk x="16" y="0" width="16" height="16">
 0,34,58,0,0,0,373,374,33,58,0,0,0,373,374,41,
 41,34,34,49,41,50,34,41,41,42,33,50,33,50,34,49,
 594,595,596,0,0,0,0,0,34,34,0,0,0,0,594,647,
 121,0,612,0,0,0,0,0,58,57,0,0,0,0,610,0,
-121,0,597,0,0,0,0,0,50,50,0,0,0,0,610,0,
+121,0,619,0,0,0,0,0,50,50,0,0,0,0,610,0,
 121,0,100,0,0,0,0,0,41,33,0,0,0,0,617,0,
 137,0,100,0,0,0,0,0,41,50,0,0,0,0,617,0,
 0,0,100,0,0,0,0,0,50,58,0,0,0,0,617,0,
@@ -863,7 +925,7 @@
 595,595,595,595,595,595,596,0,0,0,0,0,0,0,0,0
 </chunk>
    <chunk x="-16" y="16" width="16" height="16">
-0,0,0,0,0,0,0,98,0,0,100,695,103,103,103,132,
+0,0,0,0,0,0,0,98,0,0,100,695,103,414,415,132,
 0,0,0,0,0,0,0,98,0,0,100,0,0,49,34,34,
 0,0,0,0,0,0,0,98,0,0,100,0,0,42,49,42,
 0,0,0,0,0,0,0,98,0,0,100,0,0,0,0,0,
@@ -881,7 +943,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </chunk>
    <chunk x="0" y="16" width="16" height="16">
-0,0,0,0,42,34,0,0,0,0,130,103,103,103,695,89,
+0,0,0,0,42,34,0,0,0,0,130,414,415,103,695,602,
 34,33,34,34,42,49,33,41,41,49,33,49,42,0,0,121,
 41,41,50,34,49,49,49,34,34,41,41,50,33,0,0,121,
 0,0,0,0,34,50,0,0,0,0,0,0,0,0,0,121,
@@ -954,8 +1016,11 @@
 </chunk>
   </data>
  </layer>
+ <layer id="6" name="Props" width="30" height="20" offsetx="16" offsety="8">
+  <data encoding="csv"/>
+ </layer>
  <objectgroup id="4" name="Spawn" class="Spawn">
-  <object id="1" type="Spawn" x="160" y="917.333">
+  <object id="1" type="Spawn" x="161" y="1182.33">
    <point/>
   </object>
  </objectgroup>
