@@ -63,6 +63,10 @@ public class PlayerMovement : MonoBehaviour,IDamageable
             SaveData dataToLoad = SaveSystem.load();
             transform.position = dataToLoad.Position;
         }
+        if (Input.GetKeyDown(KeyCode.Backspace))
+        {
+            gameObject.ResetPosition();
+        }
     }
 
     
