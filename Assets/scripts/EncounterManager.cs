@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using static UnityEngine.UI.CanvasScaler;
 
 public struct initiative
 {
@@ -45,6 +47,9 @@ public class EncounterManager : MonoBehaviour
 
 
     private List<initiative> m_encounter;
+    private List<Monsters> m_monsters;
+    [SerializeField]
+    private Monsters wendigo;
     private GameObject initIMG;
 
     private void Start()
@@ -62,28 +67,50 @@ public class EncounterManager : MonoBehaviour
         m_encounter = new List<initiative>();
         EventManager.GetInstance().TriggerEvent(EEvents.TOGGLECOMBAT, null);
 
-
-
     }
 
     public void RollInitiative()
     {
+        //REMOVE LATER-----------------------------
+        m_encounter = new List<initiative>();
+        m_monsters = new List<Monsters>();
+        //------------------------------------------
         foreach (PartyMembers unit in PartyManager.GetInstance().getParty())
         {
-            print(unit.memberName);
             initiative ini = new initiative();
             ini.unit = unit;
             ini.init = Random.Range(1, unit.spd);
             m_encounter.Add(ini);
         }
-        m_encounter = m_encounter.OrderByDescending(x => x.init).ToList();
-        //print(m_encounter.Count);
 
+        int monsterNB = Random.Range(1,3);
+        //for (int i = 0; i<= monsterNB; i++)
+        //{
+        m_monsters.Add(wendigo);
+        //}
+        foreach(Monsters mnstr in m_monsters)
+        {
+            initiative ini = new initiative();
+            ini.unit = mnstr;
+            ini.init = Random.Range(1, 6);
+            m_encounter.Add(ini);
+        }
+
+
+        m_encounter = m_encounter.OrderByDescending(x => x.init).ToList();
         initIMG = Resources.Load<GameObject>("initIMG");
         foreach (initiative image in m_encounter)
         {
             Image go = Instantiate(initIMG, GameObject.Find("initiative").transform).GetComponent<Image>();
-            go.sprite = image.unit.ConvertTo<PartyMembers>().Portrait;
+            if (image.unit is PartyMembers)
+            {
+                go.sprite = image.unit.ConvertTo<PartyMembers>().Portrait;
+            }
+            else
+            {
+                go.sprite = image.unit.ConvertTo<Monsters>().img;
+
+            }
         }
     }
 
