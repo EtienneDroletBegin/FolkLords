@@ -741,7 +741,7 @@ Transform:
   - {fileID: 1113969747}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
+
 --- !u!114 &1453158960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -853,8 +853,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
-=======
->>>>>>> fb3ec38abac99e7a8901c550be453b8d0a8617a3
+
 --- !u!1 &1566191375
 GameObject:
   m_ObjectHideFlags: 0

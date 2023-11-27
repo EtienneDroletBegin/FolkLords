@@ -5,15 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Portal : MonoBehaviour
 {
-    [SerializeField] private string destination;
-
-    public void SetDestination(string _destination)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        destination = _destination;
-    }
-
-    public void Teleport()
-    {
-        SceneManager.LoadScene(destination);
+        print("Hyon");
     }
 }

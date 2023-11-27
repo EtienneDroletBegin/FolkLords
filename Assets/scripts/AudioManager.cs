@@ -107,7 +107,7 @@ public class AudioManager : MonoBehaviour
     {
         mainSpeaker.Stop();
     }
-<<<<<<< HEAD
+
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.LeftControl))
@@ -115,9 +115,7 @@ public class AudioManager : MonoBehaviour
             fadeToNext("OverWorldSong");
         }
     }
-=======
-    
->>>>>>> fb3ec38abac99e7a8901c550be453b8d0a8617a3
+
     public AudioSource PlaySFX(Vector3 pos, string sound)
     {
         AudioSource audioSource = audioPool.GetAvailableAudio(pos);
