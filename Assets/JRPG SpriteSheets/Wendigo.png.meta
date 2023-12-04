@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/JRPG SpriteSheets/Wendigo.png.meta
 guid: d369b98b9fda7e4479c1d00e9a72bacc
+=======
+guid: a0957393c4a9c4049b4dd9f88f7190b1
+>>>>>>> 8e7a1b394962c5e4ab9712fb8bd9ae702687066e:Assets/SpriteSheets/Enemies/Wendigo.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +47,11 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
+<<<<<<< HEAD:Assets/JRPG SpriteSheets/Wendigo.png.meta
   spriteMode: 2
+=======
+  spriteMode: 1
+>>>>>>> 8e7a1b394962c5e4ab9712fb8bd9ae702687066e:Assets/SpriteSheets/Enemies/Wendigo.png.meta
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,6 +116,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
+<<<<<<< HEAD:Assets/JRPG SpriteSheets/Wendigo.png.meta
     sprites:
     - serializedVersion: 2
       name: Wendigo_0
@@ -3154,6 +3163,9 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+=======
+    sprites: []
+>>>>>>> 8e7a1b394962c5e4ab9712fb8bd9ae702687066e:Assets/SpriteSheets/Enemies/Wendigo.png.meta
     outline: []
     physicsShape: []
     bones: []
@@ -3164,6 +3176,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+<<<<<<< HEAD:Assets/JRPG SpriteSheets/Wendigo.png.meta
     nameFileIdTable:
       Wendigo_0: -517009393
       Wendigo_1: 1825861425
@@ -3311,6 +3324,9 @@ TextureImporter:
       Wendigo_97: -895892343
       Wendigo_98: -989086216
       Wendigo_99: 1207083843
+=======
+    nameFileIdTable: {}
+>>>>>>> 8e7a1b394962c5e4ab9712fb8bd9ae702687066e:Assets/SpriteSheets/Enemies/Wendigo.png.meta
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

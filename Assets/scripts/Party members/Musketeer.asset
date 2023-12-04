@@ -22,3 +22,7 @@ MonoBehaviour:
   Portrait: {fileID: 21300000, guid: 0ab42ed6760dc2b4795064a4bf7c068f, type: 3}
   controller: {fileID: 22100000, guid: e2774afbebd180942b01613117454c99, type: 2}
   prefab: {fileID: 7042422211864769153, guid: 6256a2927be0d074fa650b9855460efa, type: 3}
+  abilities:
+  - {fileID: 11400000, guid: c470def7315d5b342a82fcb5e630b498, type: 2}
+  - {fileID: 11400000, guid: c2cfce4b4f362d3478cdc29b0c3f0318, type: 2}
+  - {fileID: 11400000, guid: dc8f365ff3ae0214fae9fd0b61fed865, type: 2}
