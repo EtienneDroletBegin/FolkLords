@@ -26,7 +26,7 @@ public class PartyMembers : ScriptableObject, ICombatUnit
         public Abilities ability;
     }
 
-    Abilities[] abilities;
+    public Abilities[] abilities;
 
 }
 
@@ -34,15 +34,15 @@ public class PartyMembers : ScriptableObject, ICombatUnit
 [CreateAssetMenu]
 public class Abilities : ScriptableObject
 {
-    [Serializable, Flags]
-    public enum ETarget
-    {
-        ENEMY = 1 << 0,
-        ALLY = 1 <<1, 
-        SELF = 1<<2
-    }
+    //[Serializable, Flags]
+    //public enum ETarget
+    //{
+    //    ENEMY = 1 << 0,
+    //    ALLY = 1 <<1, 
+    //    SELF = 1<<2
+    //}
 
-    public ETarget Target;
+   // public ETarget Target;
     public string name;
 
 }

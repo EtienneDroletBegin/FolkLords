@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -49,8 +50,11 @@ public class EncounterManager : MonoBehaviour
     private List<initiative> m_encounter;
     private List<Monsters> m_monsters;
     [SerializeField]
+    private GameObject BtPrefab;
+    [SerializeField]
     private Monsters wendigo;
     private GameObject initIMG;
+    private int CurrentTurn = 0;
 
     private void Start()
     {
@@ -111,6 +115,13 @@ public class EncounterManager : MonoBehaviour
                 go.sprite = image.unit.ConvertTo<Monsters>().img;
 
             }
+        }
+
+        foreach (Abilities abilities in m_encounter[CurrentTurn].unit.ConvertTo<PartyMembers>().abilities)
+        {
+            GameObject newBT = Instantiate(BtPrefab, GameObject.Find("AbilityButtons").transform);
+            newBT.name = abilities.name;
+            newBT.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = abilities.name;
         }
     }
 
