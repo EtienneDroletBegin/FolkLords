@@ -107,10 +107,6 @@ public class AudioManager : MonoBehaviour
     {
         mainSpeaker.Stop();
     }
-<<<<<<< HEAD
-=======
-
->>>>>>> f83f2227b339891af84efb45a61cb47cb452a2ed
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.LeftControl))

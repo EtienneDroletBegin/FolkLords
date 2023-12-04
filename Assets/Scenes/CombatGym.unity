@@ -2421,6 +2421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ad1c449be76826479255a71292f2c6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wendigo: {fileID: 11400000, guid: 5e032587616b3fb499c5ddadd557e0a6, type: 2}
 --- !u!4 &1307768963
 Transform:
   m_ObjectHideFlags: 0

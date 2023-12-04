@@ -31,6 +31,7 @@ public class PartyMembers : ScriptableObject, ICombatUnit
 }
 
 
+[CreateAssetMenu]
 public class Abilities : ScriptableObject
 {
     [Serializable, Flags]
@@ -42,4 +43,6 @@ public class Abilities : ScriptableObject
     }
 
     public ETarget Target;
+    public string name;
+
 }
