@@ -15,5 +15,5 @@ MonoBehaviour:
   monsterName: Wendigo
   BaseHP: 25
   BaseAtk: 3
-  img: {fileID: 21300000, guid: cf26e23f7c0000845875348c5943fecb, type: 3}
+  img: {fileID: 287968059, guid: d369b98b9fda7e4479c1d00e9a72bacc, type: 3}
   moves: []
