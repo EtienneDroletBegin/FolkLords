@@ -92,6 +92,7 @@ public class EncounterManager : MonoBehaviour
         //for (int i = 0; i<= monsterNB; i++)
         //{
         m_monsters.Add(wendigo);
+        m_monsters.Add(wendigo);
         //}
         foreach(Monsters mnstr in m_monsters)
         {
@@ -131,12 +132,12 @@ public class EncounterManager : MonoBehaviour
             endTurn();
         }
 
-        foreach (Abilities abilities in m_encounter[CurrentTurn].unit.ConvertTo<PartyMembers>().abilities)
+        foreach (Transform t in GameObject.Find("AbilityButtons").transform)
         {
-            GameObject newBT = Instantiate(BtPrefab, GameObject.Find("AbilityButtons").transform);
-            newBT.name = abilities.name;
-            newBT.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = abilities.name;
+            Destroy(t.gameObject);
         }
+
+
     }
 
     public void endTurn()
@@ -154,7 +155,14 @@ public class EncounterManager : MonoBehaviour
         {
             endTurn();
         }
+    }
 
+    public void ChooseAbility()
+    {
+        foreach (Transform t in GameObject.Find("AbilityButtons").transform)
+        {
+            Destroy(t.gameObject);
+        }
         foreach (Abilities abilities in m_encounter[CurrentTurn].unit.ConvertTo<PartyMembers>().abilities)
         {
             GameObject newBT = Instantiate(BtPrefab, GameObject.Find("AbilityButtons").transform);
@@ -175,13 +183,16 @@ public class EncounterManager : MonoBehaviour
             {
                 GameObject newBT = Instantiate(BtPrefab, GameObject.Find("AbilityButtons").transform);
                 newBT.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = mnstrs.GetChild(0).GetComponent<MnstrStats>()._name();
+                newBT.GetComponent<Button>().onClick.AddListener(delegate { attack(mnstrs); });
             }
         }
     }
 
     private void attack(Transform mnstrs)
     {
-        print("attack" + mnstrs.GetChild(0).name);
+        print(m_encounter[CurrentTurn].unit.ConvertTo<PartyMembers>().physDMG);
+        mnstrs.GetChild(0).GetComponent<MnstrStats>().TakeDamage(m_encounter[CurrentTurn].unit.ConvertTo<PartyMembers>().physDMG);
+        endTurn();
     }
 
     IEnumerator BeginFade()

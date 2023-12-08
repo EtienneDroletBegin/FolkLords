@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: Burst Shot
   m_EditorClassIdentifier: Assembly-CSharp::Abilities
-  name: 
+  name: Burst Shot

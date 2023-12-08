@@ -29,7 +29,7 @@ public class CombatUI : MonoBehaviour
 
     public void Special()
     {
-        EncounterManager.GetInstance().endTurn();
-
+        EncounterManager.GetInstance().ChooseAbility();
     }
+
 }
