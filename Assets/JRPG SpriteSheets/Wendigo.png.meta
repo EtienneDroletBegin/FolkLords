@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Assets/JRPG SpriteSheets/Wendigo.png.meta
 guid: d369b98b9fda7e4479c1d00e9a72bacc
-=======
-guid: a0957393c4a9c4049b4dd9f88f7190b1
->>>>>>> 8e7a1b394962c5e4ab9712fb8bd9ae702687066e:Assets/SpriteSheets/Enemies/Wendigo.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -38,27 +34,23 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: 1
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-<<<<<<< HEAD:Assets/JRPG SpriteSheets/Wendigo.png.meta
   spriteMode: 2
-=======
-  spriteMode: 1
->>>>>>> 8e7a1b394962c5e4ab9712fb8bd9ae702687066e:Assets/SpriteSheets/Enemies/Wendigo.png.meta
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 0
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -71,9 +63,9 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 0
+  applyGammaDecoding: 1
   swizzle: 50462976
-  cookieLightType: 0
+  cookieLightType: 2
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -93,7 +85,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -106,7 +98,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -116,7 +108,6 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-<<<<<<< HEAD:Assets/JRPG SpriteSheets/Wendigo.png.meta
     sprites:
     - serializedVersion: 2
       name: Wendigo_0
@@ -127,14 +118,14 @@ TextureImporter:
         width: 66
         height: 56
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ed46d37eeed0064597acdee4f023634
-      internalID: -517009393
+      spriteID: d31b059071dcad348b73b485e3c8a52e
+      internalID: 899762440
       vertices: []
       indices: 
       edges: []
@@ -148,14 +139,14 @@ TextureImporter:
         width: 64
         height: 57
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7541af7a9c72e4b4ebb1f36e50b5a620
-      internalID: 1825861425
+      spriteID: 7c44674a48ba2934ab332ffee219cff4
+      internalID: 287968059
       vertices: []
       indices: 
       edges: []
@@ -169,14 +160,14 @@ TextureImporter:
         width: 63
         height: 58
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b88be85c495e6924d8619d099cd5e3ac
-      internalID: 1983514083
+      spriteID: 6912f7beb967c7e4e911a7462956f32f
+      internalID: 1055802305
       vertices: []
       indices: 
       edges: []
@@ -190,14 +181,14 @@ TextureImporter:
         width: 64
         height: 58
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e2ed79b8053c4842acaf3ac1c5361ab
-      internalID: 1365704606
+      spriteID: d592e64bfea0093458fb692bfe267fad
+      internalID: -1373632272
       vertices: []
       indices: 
       edges: []
@@ -211,14 +202,14 @@ TextureImporter:
         width: 60
         height: 56
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 639b880c8d595d043bc71dba304049b6
-      internalID: 641226362
+      spriteID: 4f06cca79b36e8146a13cbc84c266fab
+      internalID: -1335013161
       vertices: []
       indices: 
       edges: []
@@ -232,14 +223,14 @@ TextureImporter:
         width: 60
         height: 56
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dee7665224c181649ab7e9790c2f3216
-      internalID: -1162227474
+      spriteID: 3a867e5a7e0106840948c1f8af6edc90
+      internalID: 69001610
       vertices: []
       indices: 
       edges: []
@@ -253,14 +244,14 @@ TextureImporter:
         width: 66
         height: 56
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e4e79b281c84004e93dfdf05164240c
-      internalID: -248056266
+      spriteID: e278d7484b0c5554694ee0464538870b
+      internalID: 793148072
       vertices: []
       indices: 
       edges: []
@@ -274,14 +265,14 @@ TextureImporter:
         width: 67
         height: 55
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff070b57ddc4d834b8c7a051a4ff61c7
-      internalID: 794942323
+      spriteID: 068a2e4a6ca8b454fb30cbc2eaca8d01
+      internalID: 1109176371
       vertices: []
       indices: 
       edges: []
@@ -295,14 +286,14 @@ TextureImporter:
         width: 65
         height: 57
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 244319bf595f2dd458040b4c48b53c7f
-      internalID: -847222710
+      spriteID: 1818c25473ebd94489bacb455d2b414e
+      internalID: -614524489
       vertices: []
       indices: 
       edges: []
@@ -316,14 +307,14 @@ TextureImporter:
         width: 64
         height: 61
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 042ca379cc3a48b4e9f67c5a2a3f8fd6
-      internalID: -1242543560
+      spriteID: b4e2fcd7097a7a44c9e63ac7eba8f884
+      internalID: -370369475
       vertices: []
       indices: 
       edges: []
@@ -337,14 +328,14 @@ TextureImporter:
         width: 62
         height: 62
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14bed3df8cac73049b5c4aa1f0a724ee
-      internalID: -1991191273
+      spriteID: cc4ef9992335dbb4ea6781f2f35c0fc8
+      internalID: -436038425
       vertices: []
       indices: 
       edges: []
@@ -358,14 +349,14 @@ TextureImporter:
         width: 55
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 233637fdaa22bf64e808e94a5f825ea6
-      internalID: -1076493661
+      spriteID: 11fc64f60f844524d95f79019e9835bf
+      internalID: 1299241261
       vertices: []
       indices: 
       edges: []
@@ -379,14 +370,14 @@ TextureImporter:
         width: 54
         height: 65
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 87c4bc68d8772b344a5165fa6dfe05f6
-      internalID: -2063431065
+      spriteID: c81b51eff394b0e4f8b7ac8cb316d6a1
+      internalID: -1136746221
       vertices: []
       indices: 
       edges: []
@@ -400,14 +391,14 @@ TextureImporter:
         width: 62
         height: 62
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d1a189a7f1a0fa4ba30d9fa18a60817
-      internalID: -1278111846
+      spriteID: 5fb87d42d47c10d44b8542df3e31a2c0
+      internalID: 1773963579
       vertices: []
       indices: 
       edges: []
@@ -421,14 +412,14 @@ TextureImporter:
         width: 64
         height: 61
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9474ba89eae01aa4b8077dfcc88a658b
-      internalID: -230206904
+      spriteID: 6fc0c469f6ada3c41b81bfa0c7d0f063
+      internalID: 91406208
       vertices: []
       indices: 
       edges: []
@@ -442,14 +433,14 @@ TextureImporter:
         width: 65
         height: 57
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 36642219b774a93459bab7d07f639bd1
-      internalID: 1354450418
+      spriteID: 4eeaab9dde318d247a6c69ac489ed042
+      internalID: -374484578
       vertices: []
       indices: 
       edges: []
@@ -463,14 +454,14 @@ TextureImporter:
         width: 66
         height: 56
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68d720be966f3fd45a6cf5677f67ccf0
-      internalID: 1291071793
+      spriteID: afdff6ef4d56bca498999b76bbfe8372
+      internalID: -729236672
       vertices: []
       indices: 
       edges: []
@@ -484,14 +475,14 @@ TextureImporter:
         width: 53
         height: 67
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a09002df8d30a5c478304f64395d5e0d
-      internalID: -1239542782
+      spriteID: aee1670370516384382fcc44a420f1d0
+      internalID: 1835400048
       vertices: []
       indices: 
       edges: []
@@ -505,14 +496,14 @@ TextureImporter:
         width: 53
         height: 83
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a1edce4bd3ad0849927a62aaa869243
-      internalID: -2045882290
+      spriteID: f5474c777b2d5f64dbf1307b7983250a
+      internalID: 833044482
       vertices: []
       indices: 
       edges: []
@@ -526,14 +517,14 @@ TextureImporter:
         width: 59
         height: 84
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a6becbc0582dff64285a2ff025ba6209
-      internalID: -1372743753
+      spriteID: 4505fcd57baa0304e92426cfbf17d513
+      internalID: 1583098574
       vertices: []
       indices: 
       edges: []
@@ -547,14 +538,14 @@ TextureImporter:
         width: 88
         height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ed35ce4c750c05468a60d054f48055b
-      internalID: 1380072593
+      spriteID: af47a78cbdffd10449d39cf9d7eba5eb
+      internalID: -2016304720
       vertices: []
       indices: 
       edges: []
@@ -568,14 +559,14 @@ TextureImporter:
         width: 92
         height: 69
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 29d6be3b144eccc4ba852b9b24dad3a4
-      internalID: -1827270026
+      spriteID: e6629e6a36213c647afd83c249fe6d5b
+      internalID: 1357861066
       vertices: []
       indices: 
       edges: []
@@ -589,14 +580,14 @@ TextureImporter:
         width: 89
         height: 69
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0cf9a67a538d4c544875ad05c7c2b999
-      internalID: -624328435
+      spriteID: 5334e6c87168b3f4f9445d81f4d34242
+      internalID: -676824718
       vertices: []
       indices: 
       edges: []
@@ -610,14 +601,14 @@ TextureImporter:
         width: 70
         height: 69
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b840575729027c24388edc185849ee99
-      internalID: -1354153801
+      spriteID: 6b10e37d46a4340409033f0778b2b313
+      internalID: -1446445923
       vertices: []
       indices: 
       edges: []
@@ -631,14 +622,14 @@ TextureImporter:
         width: 67
         height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dac465c502d15894495250e4a9ba6516
-      internalID: -791672489
+      spriteID: 65c2cd7fd67148f4a8315cbdaf4c2284
+      internalID: -1091510909
       vertices: []
       indices: 
       edges: []
@@ -652,14 +643,14 @@ TextureImporter:
         width: 72
         height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e3af02c8341ef045a61c4ddc74c9ba2
-      internalID: -556154877
+      spriteID: 1073fb962943af84aae9e42e1ea6e656
+      internalID: -538929660
       vertices: []
       indices: 
       edges: []
@@ -673,14 +664,14 @@ TextureImporter:
         width: 71
         height: 52
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4d56e99054c5634ba88175ef21d1651
-      internalID: -509189148
+      spriteID: 98f65cae660ef6e4381cb0ad880acef4
+      internalID: 1054986220
       vertices: []
       indices: 
       edges: []
@@ -694,14 +685,14 @@ TextureImporter:
         width: 74
         height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a2eff7ced2df112479a9ccfa12b579df
-      internalID: -1566079771
+      spriteID: 793afe7f41c4dc14695fea89ab888f0a
+      internalID: 1138046171
       vertices: []
       indices: 
       edges: []
@@ -715,14 +706,14 @@ TextureImporter:
         width: 75
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee658c62fedd9a645a2530370f089f3d
-      internalID: -1016697744
+      spriteID: 1aee7cf1cf86ec44792a5e3e31456ed1
+      internalID: 1133426065
       vertices: []
       indices: 
       edges: []
@@ -736,14 +727,14 @@ TextureImporter:
         width: 73
         height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c5e2df340d771848bdc875cf1bdd30a
-      internalID: 1587452867
+      spriteID: e4b0fa113c3bc84428b7e6b620c8e1cd
+      internalID: 196555413
       vertices: []
       indices: 
       edges: []
@@ -757,14 +748,14 @@ TextureImporter:
         width: 72
         height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: edfcfddfcb60cf848a30e93df1b07e4b
-      internalID: -576237491
+      spriteID: c957d5b37fa65ee4b84a758b94e3c99c
+      internalID: -1387557619
       vertices: []
       indices: 
       edges: []
@@ -778,14 +769,14 @@ TextureImporter:
         width: 72
         height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3bb0203d4fd00ba4986505e00198dc9a
-      internalID: -724851546
+      spriteID: 6edb824daf94a9a478890902924a2b07
+      internalID: -1862635442
       vertices: []
       indices: 
       edges: []
@@ -799,14 +790,14 @@ TextureImporter:
         width: 70
         height: 52
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01ebd7506af0cdd4c9fa9af01d707191
-      internalID: -1428257749
+      spriteID: 58d1738ba6335134e8229ef03cf91072
+      internalID: -1892714258
       vertices: []
       indices: 
       edges: []
@@ -820,14 +811,14 @@ TextureImporter:
         width: 67
         height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b243a3dc027c9f4a8e68c4f10d24467
-      internalID: -1503732735
+      spriteID: 750d569af52d40d4aa72f9d366c4e15a
+      internalID: -85633968
       vertices: []
       indices: 
       edges: []
@@ -841,14 +832,14 @@ TextureImporter:
         width: 68
         height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a67a5f001bc1ff4488eaa3e4d2e0e7dc
-      internalID: -1804999138
+      spriteID: b51b761049f57ac448a70a32ef26437c
+      internalID: 1566497265
       vertices: []
       indices: 
       edges: []
@@ -862,14 +853,14 @@ TextureImporter:
         width: 69
         height: 52
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0fe071a06b295184785cee03cb77485f
-      internalID: 698195081
+      spriteID: c3d81bd539eba6f4e8c57229b9a22da7
+      internalID: -502449054
       vertices: []
       indices: 
       edges: []
@@ -883,14 +874,14 @@ TextureImporter:
         width: 73
         height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e54093e67c3c734ca367dfa327040d6
-      internalID: 692790690
+      spriteID: 3b953254af2e5bc46b743157ad0a7be0
+      internalID: -681912599
       vertices: []
       indices: 
       edges: []
@@ -904,14 +895,14 @@ TextureImporter:
         width: 73
         height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0cdeafc2b7795f74fbb9c3f7c9181db7
-      internalID: 2059250140
+      spriteID: b110317d0480be346923a763df847afb
+      internalID: -1987668676
       vertices: []
       indices: 
       edges: []
@@ -925,14 +916,14 @@ TextureImporter:
         width: 73
         height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a8048362598c85409221b481696b389
-      internalID: 437022707
+      spriteID: b75b847debbe40449937fab2b4d405b1
+      internalID: 1862099023
       vertices: []
       indices: 
       edges: []
@@ -946,14 +937,14 @@ TextureImporter:
         width: 73
         height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 261092278fd71824fb2f84ebc61b1f0b
-      internalID: -283836275
+      spriteID: 3a271dcdf32a7d64fb9fbca1288237ba
+      internalID: -801608199
       vertices: []
       indices: 
       edges: []
@@ -967,14 +958,14 @@ TextureImporter:
         width: 73
         height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c9591e0d895f0ba47b02721221641e5b
-      internalID: -701382491
+      spriteID: ae5ae04337dc20e498fdfa70323e7d79
+      internalID: -304980889
       vertices: []
       indices: 
       edges: []
@@ -988,14 +979,14 @@ TextureImporter:
         width: 73
         height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7087ff384c67d984ebcf0d3e2f25ed42
-      internalID: -1210865989
+      spriteID: 83fb4189e385c98438d971da8256d111
+      internalID: 653841633
       vertices: []
       indices: 
       edges: []
@@ -1009,14 +1000,14 @@ TextureImporter:
         width: 73
         height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7642418b7aafb334f87c8a3b6ce24cfa
-      internalID: -659016255
+      spriteID: e9ec822d13b506347b074b1a1b465ea4
+      internalID: 2016236413
       vertices: []
       indices: 
       edges: []
@@ -1030,14 +1021,14 @@ TextureImporter:
         width: 83
         height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ab95eb54c0fd244398bd0eb886c3ad7
-      internalID: -1596249995
+      spriteID: ab91b760b3cadb649937e9647daa5b96
+      internalID: 1706357099
       vertices: []
       indices: 
       edges: []
@@ -1051,14 +1042,14 @@ TextureImporter:
         width: 80
         height: 54
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d617db7d4b9fe7346bddd436f5067b17
-      internalID: -1314303940
+      spriteID: 0c26568f17a263745b0e63e0420bdee9
+      internalID: 901388
       vertices: []
       indices: 
       edges: []
@@ -1072,14 +1063,14 @@ TextureImporter:
         width: 80
         height: 54
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ddac3100b12a4904981c58586a4dff3d
-      internalID: 1100252465
+      spriteID: 620af80cf8b8d85448f6548017b0513c
+      internalID: -127623644
       vertices: []
       indices: 
       edges: []
@@ -1093,14 +1084,14 @@ TextureImporter:
         width: 79
         height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a008ba3ed2e05d846892164c1feaa41e
-      internalID: 1139882704
+      spriteID: 3ba6e8cfa9b48c04985229bf028e2a18
+      internalID: 1932808448
       vertices: []
       indices: 
       edges: []
@@ -1114,14 +1105,14 @@ TextureImporter:
         width: 81
         height: 54
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 153237bd9d583494aa19ed95d0fbe096
-      internalID: 936111179
+      spriteID: bebe1d3813514e44ebf06d1261796314
+      internalID: 725333262
       vertices: []
       indices: 
       edges: []
@@ -1135,14 +1126,14 @@ TextureImporter:
         width: 81
         height: 54
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b955fee227e4e8345a4d68c731e1a1f0
-      internalID: -1780691601
+      spriteID: 474f969926fdfa343a41a47fc9202679
+      internalID: 1896198805
       vertices: []
       indices: 
       edges: []
@@ -1156,14 +1147,14 @@ TextureImporter:
         width: 66
         height: 56
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 627b4628ec247e94c9229b6c4f268c57
-      internalID: 373461496
+      spriteID: bdeccc8571f6b5741890ae4da9b76c0e
+      internalID: 121285711
       vertices: []
       indices: 
       edges: []
@@ -1177,14 +1168,14 @@ TextureImporter:
         width: 60
         height: 59
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2eccd8a5764db1242aad853f93a2337b
-      internalID: -1753747674
+      spriteID: 91c09fa2928ddf04485054f2c428ba06
+      internalID: -1562595756
       vertices: []
       indices: 
       edges: []
@@ -1198,14 +1189,14 @@ TextureImporter:
         width: 63
         height: 61
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf01587345f21354990ccd12b5b560c8
-      internalID: 1364203638
+      spriteID: f268c1a6f1beced4697c6ad610a4d27f
+      internalID: -1049261677
       vertices: []
       indices: 
       edges: []
@@ -1219,14 +1210,14 @@ TextureImporter:
         width: 63
         height: 61
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc3cb13c5a61d824fb415db69561957c
-      internalID: -80949948
+      spriteID: 876448365dd720247b8740b0e0b5c641
+      internalID: 1548022984
       vertices: []
       indices: 
       edges: []
@@ -1240,14 +1231,14 @@ TextureImporter:
         width: 63
         height: 61
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fda41de03f3159648a5a64549123928c
-      internalID: -1132320143
+      spriteID: 4ce07a6e29c20c64aadfec302e1e9851
+      internalID: -1109114026
       vertices: []
       indices: 
       edges: []
@@ -1261,14 +1252,14 @@ TextureImporter:
         width: 63
         height: 61
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 657bbf696cfbef9418c3d1b09487e5b3
-      internalID: -1005118932
+      spriteID: b3faddc2a93bbb449b516e3c95802c8e
+      internalID: -198035231
       vertices: []
       indices: 
       edges: []
@@ -1282,14 +1273,14 @@ TextureImporter:
         width: 63
         height: 61
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 90d36307dff1e1e45801e5a9a9deddf0
-      internalID: 1146204435
+      spriteID: a94954ec4cc67c04cbe2c420d4c625e3
+      internalID: -935811721
       vertices: []
       indices: 
       edges: []
@@ -1303,14 +1294,14 @@ TextureImporter:
         width: 66
         height: 56
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c452c25140ccd24190658c9fd65202d
-      internalID: -186968530
+      spriteID: 28db7e9fb6995aa45914894270f54127
+      internalID: 388952079
       vertices: []
       indices: 
       edges: []
@@ -1324,14 +1315,14 @@ TextureImporter:
         width: 68
         height: 59
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f30160e63471d2441a1230d20e166fdf
-      internalID: 1765254717
+      spriteID: 69f7c3dcd92d6f1438c61f5742c33f34
+      internalID: -176196368
       vertices: []
       indices: 
       edges: []
@@ -1345,14 +1336,14 @@ TextureImporter:
         width: 56
         height: 56
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f3ab79f691ab8d545b95f2d770203bfb
-      internalID: -1328781652
+      spriteID: d51ec60f650469f489e64b41ea266e5a
+      internalID: -1488473519
       vertices: []
       indices: 
       edges: []
@@ -1366,14 +1357,14 @@ TextureImporter:
         width: 58
         height: 56
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 23e2fb48e8d64744abcf8cf6a71235e1
-      internalID: 305364300
+      spriteID: 2578616c2f0ceab42a877f11717adb73
+      internalID: -1151261563
       vertices: []
       indices: 
       edges: []
@@ -1387,14 +1378,14 @@ TextureImporter:
         width: 58
         height: 56
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0dc91872618dd644db5f5f505be11dd7
-      internalID: 1765348578
+      spriteID: e94bb770e6f4c954b9d25eacb86f867c
+      internalID: 824903612
       vertices: []
       indices: 
       edges: []
@@ -1408,14 +1399,14 @@ TextureImporter:
         width: 57
         height: 56
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce2b0e9f2f88b9544b3ad6c7c7e3f31b
-      internalID: 1067551846
+      spriteID: c142c152934a8ef44b0652cc68869c1b
+      internalID: -1617224153
       vertices: []
       indices: 
       edges: []
@@ -1429,14 +1420,14 @@ TextureImporter:
         width: 56
         height: 56
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff7935b8765a3394586256ca3c71596b
-      internalID: -1708019762
+      spriteID: 24f8e57abd8a751458157300e4745cd4
+      internalID: 462471590
       vertices: []
       indices: 
       edges: []
@@ -1450,14 +1441,14 @@ TextureImporter:
         width: 58
         height: 56
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f3a97d9801fe0e40b05887ae75f794c
-      internalID: 920926876
+      spriteID: bdfe0e775d574844a9259e2a3e2911ac
+      internalID: 1520420251
       vertices: []
       indices: 
       edges: []
@@ -1471,14 +1462,14 @@ TextureImporter:
         width: 66
         height: 56
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e59656b92611aca4ea73d403459a2af5
-      internalID: 1103134950
+      spriteID: 36f7d1a41644a2449b57178cede60e77
+      internalID: -2078005643
       vertices: []
       indices: 
       edges: []
@@ -1492,14 +1483,14 @@ TextureImporter:
         width: 75
         height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee12a3bcfeb81e743b8603e69cea51b3
-      internalID: 343738711
+      spriteID: 79e78a98d2cb9414da1dc89b053acc1e
+      internalID: 450725719
       vertices: []
       indices: 
       edges: []
@@ -1513,14 +1504,14 @@ TextureImporter:
         width: 73
         height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4c9dc09c61b14b40a120d140914d9f5
-      internalID: 141546094
+      spriteID: 756df3ce2e316c9409731fe81e7d85f8
+      internalID: -28104640
       vertices: []
       indices: 
       edges: []
@@ -1534,14 +1525,14 @@ TextureImporter:
         width: 72
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1c7a12d2d2b4c946beed7c6ef6469cb
-      internalID: 1301630657
+      spriteID: 2aa3ce734bea093479930052c502344a
+      internalID: -591295503
       vertices: []
       indices: 
       edges: []
@@ -1555,14 +1546,14 @@ TextureImporter:
         width: 52
         height: 78
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26ee0082ab81de84baa7ed9a6f5f7b0d
-      internalID: -100862055
+      spriteID: fe056b15ba4f26448bc42d8df316e391
+      internalID: -1195527761
       vertices: []
       indices: 
       edges: []
@@ -1576,14 +1567,14 @@ TextureImporter:
         width: 52
         height: 78
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 503f7dc8d14c61e4bbf0fea8bd7f5fd5
-      internalID: -754743824
+      spriteID: a7f967e2ec2847948b247594f93f67de
+      internalID: 70159995
       vertices: []
       indices: 
       edges: []
@@ -1597,14 +1588,14 @@ TextureImporter:
         width: 52
         height: 78
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2c1fa2a1726033448b48c9a409474f6
-      internalID: 1536179319
+      spriteID: eae9abf28ecb9a14a86e119c95b0f0bd
+      internalID: -794009371
       vertices: []
       indices: 
       edges: []
@@ -1618,14 +1609,14 @@ TextureImporter:
         width: 52
         height: 78
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ac5932d6dfbd6346abb03c9d4641e31
-      internalID: 1733954625
+      spriteID: 92e1597d04012984690428aba2b45d1a
+      internalID: -442001231
       vertices: []
       indices: 
       edges: []
@@ -1639,14 +1630,14 @@ TextureImporter:
         width: 80
         height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c84bbb64cfb2114d909707dc139255f
-      internalID: -2039447089
+      spriteID: 716a40cae9d56894a98fcc70568b4902
+      internalID: 1661853514
       vertices: []
       indices: 
       edges: []
@@ -1660,14 +1651,14 @@ TextureImporter:
         width: 77
         height: 49
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e023dfae0e4e67442ae3feb73cb6aba1
-      internalID: 1751438095
+      spriteID: 3cf9783c143e4794ab6cb2d1a4c288b1
+      internalID: -1748295666
       vertices: []
       indices: 
       edges: []
@@ -1681,14 +1672,14 @@ TextureImporter:
         width: 74
         height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ffa241f99255a9948b4065e8d2b5a1c6
-      internalID: 140633871
+      spriteID: e702b32600ea47d4fb93249cfd9c4270
+      internalID: 1470385922
       vertices: []
       indices: 
       edges: []
@@ -1702,14 +1693,14 @@ TextureImporter:
         width: 66
         height: 56
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 16f8c2a256686434e9510796397b6f53
-      internalID: -363001619
+      spriteID: 1506bac1547fc974386d839c8692b41d
+      internalID: -19364393
       vertices: []
       indices: 
       edges: []
@@ -1723,14 +1714,14 @@ TextureImporter:
         width: 83
         height: 49
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6ab7a47c11cfc541b3a86731f1b8cca
-      internalID: 1573363691
+      spriteID: 15df5077aaf111d4684d4ee04c480971
+      internalID: -1811085523
       vertices: []
       indices: 
       edges: []
@@ -1744,14 +1735,14 @@ TextureImporter:
         width: 33
         height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7887cc5cb763615458d88a4246f3dba1
-      internalID: -1767665403
+      spriteID: a6b1653b5bd635b44bbc9bf3f638c37c
+      internalID: 1068589756
       vertices: []
       indices: 
       edges: []
@@ -1765,14 +1756,14 @@ TextureImporter:
         width: 66
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e3e8fffdf38df34f9b3f34abb1c1a64
-      internalID: -1109896013
+      spriteID: 805ac31cb61add843ba9de1d667454ce
+      internalID: 757470818
       vertices: []
       indices: 
       edges: []
@@ -1786,14 +1777,14 @@ TextureImporter:
         width: 66
         height: 65
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6e803634c9e93f459a80a812604e67f
-      internalID: -1581399884
+      spriteID: 95790fddb4ee7414cb561bd21f9ba912
+      internalID: -510130893
       vertices: []
       indices: 
       edges: []
@@ -1807,14 +1798,14 @@ TextureImporter:
         width: 43
         height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: addd76c61da517342a67d68b695835f1
-      internalID: -790311145
+      spriteID: 37fce364fa9f95447a6777a8bb037a80
+      internalID: 612676360
       vertices: []
       indices: 
       edges: []
@@ -1828,14 +1819,14 @@ TextureImporter:
         width: 36
         height: 38
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db3fcf7dfbce9f74cb0965d80a6f2ddd
-      internalID: 1726997514
+      spriteID: afc492acbd7fdcb419b673a72e9efa4c
+      internalID: 950656918
       vertices: []
       indices: 
       edges: []
@@ -1849,14 +1840,14 @@ TextureImporter:
         width: 29
         height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 25a8b154e85e11743a1e5892c868d8d3
-      internalID: 1348915335
+      spriteID: 51ee805e2ab5a7048918afb54fc92ab4
+      internalID: -1259209161
       vertices: []
       indices: 
       edges: []
@@ -1870,14 +1861,14 @@ TextureImporter:
         width: 40
         height: 36
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d1561c21d1cc53488bc9c46a2a723f5
-      internalID: -1784880597
+      spriteID: 67f1676cbe09515479e6b590b91a2622
+      internalID: -218301995
       vertices: []
       indices: 
       edges: []
@@ -1889,58 +1880,16 @@ TextureImporter:
         x: 334
         y: 100
         width: 47
-        height: 27
+        height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1225c65575f315343a8b80a740a5ed49
-      internalID: 847018457
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wendigo_85
-      rect:
-        serializedVersion: 2
-        x: 343
-        y: 123
-        width: 7
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cf77817bcc5fc69478efd7a92914de95
-      internalID: -1407552823
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wendigo_86
-      rect:
-        serializedVersion: 2
-        x: 401
-        y: 120
-        width: 8
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 457dfa1d23ad16f42ba08a4499ea6eff
-      internalID: 2052467269
+      spriteID: c06d76ddbde750741a856c62cdf2f0df
+      internalID: -1719155794
       vertices: []
       indices: 
       edges: []
@@ -1949,40 +1898,19 @@ TextureImporter:
       name: Wendigo_87
       rect:
         serializedVersion: 2
-        x: 408
+        x: 400
         y: 88
-        width: 31
+        width: 39
         height: 38
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 62dcd2a2cc8cd0e4497626d689603f7d
-      internalID: 1606368718
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wendigo_88
-      rect:
-        serializedVersion: 2
-        x: 465
-        y: 118
-        width: 7
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fcf17d7334a0ccc429844bb8ef690f75
-      internalID: -1505418156
+      spriteID: 65b32e5b5fbfeb041953db3f31f8a8de
+      internalID: 1825428661
       vertices: []
       indices: 
       edges: []
@@ -1991,19 +1919,19 @@ TextureImporter:
       name: Wendigo_89
       rect:
         serializedVersion: 2
-        x: 474
+        x: 464
         y: 86
-        width: 23
+        width: 33
         height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 385bce970dc9cad45a4078c2017d0051
-      internalID: 1013087174
+      spriteID: 922bbbb83da8a2348923fd160105a81c
+      internalID: -1011654898
       vertices: []
       indices: 
       edges: []
@@ -2017,161 +1945,14 @@ TextureImporter:
         width: 46
         height: 26
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 62b18322f0cefe44e82985f9ec136d60
-      internalID: 1257659721
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wendigo_91
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 117
-        width: 4
-        height: 4
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fe404e6c8e94ebe468842fa913a10f73
-      internalID: -1552772988
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wendigo_92
-      rect:
-        serializedVersion: 2
-        x: 477
-        y: 109
-        width: 5
-        height: 4
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 392a5a0544b5c744c966508b6b992ce9
-      internalID: 1636174777
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wendigo_93
-      rect:
-        serializedVersion: 2
-        x: 178
-        y: 93
-        width: 5
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b28cf78c55eb09c4280b9690e7999868
-      internalID: -1551578098
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wendigo_94
-      rect:
-        serializedVersion: 2
-        x: 470
-        y: 101
-        width: 10
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 437aaaaaed5a1f645804df0913093b1a
-      internalID: -1304526086
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wendigo_95
-      rect:
-        serializedVersion: 2
-        x: 351
-        y: 42
-        width: 15
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 94aca3159346652448882efd909ccf3d
-      internalID: -1064509647
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wendigo_96
-      rect:
-        serializedVersion: 2
-        x: 420
-        y: 49
-        width: 9
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6ab75510cdcc922448ea86a25922998b
-      internalID: -354008925
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wendigo_97
-      rect:
-        serializedVersion: 2
-        x: 486
-        y: 55
-        width: 5
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ef23e3c930c4ce24383b17293b8790bc
-      internalID: -895892343
+      spriteID: 478d2594df65042408b7d3c8f2fc5f60
+      internalID: 207835182
       vertices: []
       indices: 
       edges: []
@@ -2185,14 +1966,14 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca4040cdc81e30c46b2b24c16fb2bcd2
-      internalID: -989086216
+      spriteID: c65a74de8ea0db54bbc909bc2563fe8d
+      internalID: 1292328673
       vertices: []
       indices: 
       edges: []
@@ -2206,14 +1987,14 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a50bbe577abf2344a62fc9b58c44bb8
-      internalID: 1207083843
+      spriteID: 3f6efd7654f702340986b71dafebbd33
+      internalID: -715589560
       vertices: []
       indices: 
       edges: []
@@ -2227,14 +2008,14 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e00eeca3acabe9459060fe12aee631a
-      internalID: -157639475
+      spriteID: a3daa174acb147a468179dd7b0be0c78
+      internalID: -1427392307
       vertices: []
       indices: 
       edges: []
@@ -2248,308 +2029,14 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e9d3843b9acf8294da2fbc2c7edd43fd
-      internalID: 866268049
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wendigo_102
-      rect:
-        serializedVersion: 2
-        x: 274
-        y: 23
-        width: 28
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 24eeb6f6716e3664589d1fc7fd27c8fe
-      internalID: 907530019
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wendigo_103
-      rect:
-        serializedVersion: 2
-        x: 854
-        y: 35
-        width: 15
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 46d290c6a64d2084c993de41b6e34256
-      internalID: 152222681
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wendigo_104
-      rect:
-        serializedVersion: 2
-        x: 874
-        y: 39
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d15ca2f5f53550c459e6266a9adb9677
-      internalID: 1757300630
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wendigo_105
-      rect:
-        serializedVersion: 2
-        x: 918
-        y: 38
-        width: 9
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bffaecd68fd333f44b7bbf20d037ac7e
-      internalID: 1273143790
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wendigo_106
-      rect:
-        serializedVersion: 2
-        x: 937
-        y: 41
-        width: 5
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 09ec7c2d95ec8a94fb99a2d6fec14afe
-      internalID: 1495367469
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wendigo_107
-      rect:
-        serializedVersion: 2
-        x: 983
-        y: 41
-        width: 5
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: efc448282a6dec841b9b0d2d3c391377
-      internalID: 258639170
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wendigo_108
-      rect:
-        serializedVersion: 2
-        x: 1001
-        y: 42
-        width: 4
-        height: 4
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a4ec37831f5658e43933ef00679147dc
-      internalID: 1860862658
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wendigo_109
-      rect:
-        serializedVersion: 2
-        x: 300
-        y: 27
-        width: 12
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 05a9e86548b54f94696b521257f909ca
-      internalID: -1567079265
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wendigo_110
-      rect:
-        serializedVersion: 2
-        x: 350
-        y: 25
-        width: 14
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f1831139f34468842a68db5423243f10
-      internalID: 1172840756
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wendigo_111
-      rect:
-        serializedVersion: 2
-        x: 368
-        y: 30
-        width: 11
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5bd0fbe8832054c40980e86e18102242
-      internalID: 1292630944
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wendigo_112
-      rect:
-        serializedVersion: 2
-        x: 426
-        y: 33
-        width: 5
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d49931dc7e629d94497c6ccf2ac5a609
-      internalID: 812879000
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wendigo_113
-      rect:
-        serializedVersion: 2
-        x: 438
-        y: 32
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 266c2811386d5f34982e20936724213e
-      internalID: 486225482
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wendigo_114
-      rect:
-        serializedVersion: 2
-        x: 493
-        y: 35
-        width: 4
-        height: 4
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a8f602816b5c13949a3d48288ed43e51
-      internalID: -1276164287
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wendigo_115
-      rect:
-        serializedVersion: 2
-        x: 506
-        y: 34
-        width: 4
-        height: 4
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1fed297992767da4c9170d61bdbb7a22
-      internalID: 1378926307
+      spriteID: c6020fd61ce50304fbd7a5f35349092a
+      internalID: 778745947
       vertices: []
       indices: 
       edges: []
@@ -2563,14 +2050,14 @@ TextureImporter:
         width: 48
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cdee78035db89ed46ae45d6bf831bb99
-      internalID: 1066898600
+      spriteID: bfff40ebcb680334496125e1bd597f1a
+      internalID: 610010444
       vertices: []
       indices: 
       edges: []
@@ -2584,14 +2071,14 @@ TextureImporter:
         width: 48
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca526f5665c59d94485b1516e0d005aa
-      internalID: -398814432
+      spriteID: 7b4815d30e050c8488bda29b740670bf
+      internalID: 1964544572
       vertices: []
       indices: 
       edges: []
@@ -2605,14 +2092,14 @@ TextureImporter:
         width: 48
         height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d62a63822a7e6e34ba7bc8370c63dfd3
-      internalID: -1605765004
+      spriteID: 911abd6f393caf348bfade8402357bb0
+      internalID: 802964878
       vertices: []
       indices: 
       edges: []
@@ -2626,14 +2113,14 @@ TextureImporter:
         width: 48
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c845a963fd16479478640de342f1ba93
-      internalID: -1137739708
+      spriteID: b485b16f31d005b4d855838272e41d39
+      internalID: -1018771702
       vertices: []
       indices: 
       edges: []
@@ -2644,689 +2131,324 @@ TextureImporter:
         serializedVersion: 2
         x: 788
         y: 22
-        width: 38
+        width: 49
         height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da73f24385ffecc4c8f37d3f087d55f5
-      internalID: -893818211
+      spriteID: bae334f702896cb4f9bbe5bc19727fde
+      internalID: -1472627267
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wendigo_121
+      name: Wendigo_95
       rect:
         serializedVersion: 2
-        x: 825
-        y: 27
-        width: 11
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 48033588f8dd25f4bbefb34a211bbe21
-      internalID: -1684874010
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wendigo_122
-      rect:
-        serializedVersion: 2
-        x: 895
-        y: 34
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3bb4d2912ca13664bafb984e965c5802
-      internalID: -1905074597
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wendigo_123
-      rect:
-        serializedVersion: 2
-        x: 962
-        y: 37
-        width: 4
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0bf875248359c8f43aed9e77e92bd355
-      internalID: -625370351
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wendigo_124
-      rect:
-        serializedVersion: 2
-        x: 1012
-        y: 22
-        width: 19
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: deeb4f28fbd50084aa945be978dc1735
-      internalID: 776725635
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wendigo_125
-      rect:
-        serializedVersion: 2
-        x: 290
-        y: 13
-        width: 13
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 46d8ffb48f2044843b622d7e7d0eee39
-      internalID: -551627948
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wendigo_126
-      rect:
-        serializedVersion: 2
-        x: 337
-        y: 23
-        width: 9
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9036b5dba9283fd4db8fc03c1bb6aec9
-      internalID: -20114249
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wendigo_127
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 21
-        width: 7
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3409ef790e629ea46b43ce824a6df7ef
-      internalID: 990394029
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wendigo_128
-      rect:
-        serializedVersion: 2
-        x: 414
-        y: 25
-        width: 5
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 71895e09b553c1d499a12022a95bb33e
-      internalID: -1105468529
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wendigo_129
-      rect:
-        serializedVersion: 2
-        x: 464
-        y: 21
-        width: 5
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 50bd1558bd1665d4d8c31d75ea3cb7ea
-      internalID: 1016598397
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wendigo_130
-      rect:
-        serializedVersion: 2
-        x: 478
-        y: 25
-        width: 4
-        height: 4
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d9b676cfb6d8dce4ab7be34812d8375e
-      internalID: -1237222351
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wendigo_131
-      rect:
-        serializedVersion: 2
-        x: 816
-        y: 32
-        width: 11
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 29c065a31393bcb44badd860803c0d86
-      internalID: -1553330137
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wendigo_132
-      rect:
-        serializedVersion: 2
-        x: 854
-        y: 20
-        width: 14
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0c78c6f369286b040a31d7008d2eebd7
-      internalID: -722883778
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wendigo_133
-      rect:
-        serializedVersion: 2
-        x: 872
-        y: 22
-        width: 9
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5b22888e967d0864eba035513190845c
-      internalID: -328391523
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wendigo_134
-      rect:
-        serializedVersion: 2
-        x: 882
-        y: 24
-        width: 6
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5e419768e252c354c8fea4e035d17480
-      internalID: -1274783152
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wendigo_135
-      rect:
-        serializedVersion: 2
-        x: 882
-        y: 33
-        width: 12
-        height: 4
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9c94cb8f763ccf341953b2255946afba
-      internalID: -746934038
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wendigo_136
-      rect:
-        serializedVersion: 2
-        x: 894
-        y: 25
-        width: 5
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 87149ad1ea0bb64478ecf29e6bf992b3
-      internalID: 434098771
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wendigo_137
-      rect:
-        serializedVersion: 2
-        x: 920
-        y: 18
-        width: 15
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a69cdbaea6afb584c9178353803f0b37
-      internalID: 2100971372
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wendigo_138
-      rect:
-        serializedVersion: 2
-        x: 939
-        y: 19
-        width: 12
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c40852d01c831a444864af881479017f
-      internalID: -2031095912
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wendigo_139
-      rect:
-        serializedVersion: 2
-        x: 956
-        y: 25
-        width: 8
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a826f7eb0dd28834bba666166a3040be
-      internalID: 1121746427
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wendigo_140
-      rect:
-        serializedVersion: 2
-        x: 997
-        y: 18
-        width: 14
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d3ed0725863b03d42aa536cd47bb728b
-      internalID: -68888217
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wendigo_141
-      rect:
-        serializedVersion: 2
-        x: 357
-        y: 10
-        width: 11
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 379e921f47ebe1d49ac6b496b57e6172
-      internalID: -826139827
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wendigo_142
-      rect:
-        serializedVersion: 2
-        x: 984
-        y: 16
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ff9810792d83f764da1cc076ec9bf488
-      internalID: -1839961650
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wendigo_143
-      rect:
-        serializedVersion: 2
-        x: 425
-        y: 8
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 474243fe632c7f143be898cae0e8a00d
-      internalID: 11190475
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wendigo_144
-      rect:
-        serializedVersion: 2
-        x: 492
+        x: 268
         y: 6
-        width: 5
-        height: 6
+        width: 51
+        height: 57
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63a07dd940baf4f47b39782bf7c46803
-      internalID: 292392702
+      spriteID: da4efcd0747765840a3ac5ef0c9e0311
+      internalID: 1027506398
       vertices: []
       indices: 
       edges: []
       weights: []
-=======
-    sprites: []
->>>>>>> 8e7a1b394962c5e4ab9712fb8bd9ae702687066e:Assets/SpriteSheets/Enemies/Wendigo.png.meta
+    - serializedVersion: 2
+      name: Wendigo_96
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 7
+        width: 51
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21cce2349e693984b90060913c9e616f
+      internalID: 1041232847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wendigo_97
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 6
+        width: 52
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a3a2ca1bd1b612428cdf1f0dbefb5d9
+      internalID: -1307877903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wendigo_102
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 5
+        width: 53
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2b6d03343700164ebc910caadd02779
+      internalID: -1454445769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wendigo_103
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 18
+        width: 59
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c95c4820daf749444a85d491d2e46d4e
+      internalID: -1617445384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wendigo_104
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 14
+        width: 55
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bc781cc6a00770439d34c579f177043
+      internalID: -194537627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wendigo_105
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 15
+        width: 58
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4171ca35e48da24f8ee743986d610e5
+      internalID: 1556180874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: dbb7513968192344a86452a948c0c845
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-<<<<<<< HEAD:Assets/JRPG SpriteSheets/Wendigo.png.meta
     nameFileIdTable:
-      Wendigo_0: -517009393
-      Wendigo_1: 1825861425
-      Wendigo_10: -1991191273
-      Wendigo_100: -157639475
-      Wendigo_101: 866268049
-      Wendigo_102: 907530019
-      Wendigo_103: 152222681
-      Wendigo_104: 1757300630
-      Wendigo_105: 1273143790
-      Wendigo_106: 1495367469
-      Wendigo_107: 258639170
-      Wendigo_108: 1860862658
-      Wendigo_109: -1567079265
-      Wendigo_11: -1076493661
-      Wendigo_110: 1172840756
-      Wendigo_111: 1292630944
-      Wendigo_112: 812879000
-      Wendigo_113: 486225482
-      Wendigo_114: -1276164287
-      Wendigo_115: 1378926307
-      Wendigo_116: 1066898600
-      Wendigo_117: -398814432
-      Wendigo_118: -1605765004
-      Wendigo_119: -1137739708
-      Wendigo_12: -2063431065
-      Wendigo_120: -893818211
-      Wendigo_121: -1684874010
-      Wendigo_122: -1905074597
-      Wendigo_123: -625370351
-      Wendigo_124: 776725635
-      Wendigo_125: -551627948
-      Wendigo_126: -20114249
-      Wendigo_127: 990394029
-      Wendigo_128: -1105468529
-      Wendigo_129: 1016598397
-      Wendigo_13: -1278111846
-      Wendigo_130: -1237222351
-      Wendigo_131: -1553330137
-      Wendigo_132: -722883778
-      Wendigo_133: -328391523
-      Wendigo_134: -1274783152
-      Wendigo_135: -746934038
-      Wendigo_136: 434098771
-      Wendigo_137: 2100971372
-      Wendigo_138: -2031095912
-      Wendigo_139: 1121746427
-      Wendigo_14: -230206904
-      Wendigo_140: -68888217
-      Wendigo_141: -826139827
-      Wendigo_142: -1839961650
-      Wendigo_143: 11190475
-      Wendigo_144: 292392702
-      Wendigo_145: -140400827
-      Wendigo_15: 1354450418
-      Wendigo_16: 1291071793
-      Wendigo_17: -1239542782
-      Wendigo_18: -2045882290
-      Wendigo_19: -1372743753
-      Wendigo_2: 1983514083
-      Wendigo_20: 1380072593
-      Wendigo_21: -1827270026
-      Wendigo_22: -624328435
-      Wendigo_23: -1354153801
-      Wendigo_24: -791672489
-      Wendigo_25: -556154877
-      Wendigo_26: -509189148
-      Wendigo_27: -1566079771
-      Wendigo_28: -1016697744
-      Wendigo_29: 1587452867
-      Wendigo_3: 1365704606
-      Wendigo_30: -576237491
-      Wendigo_31: -724851546
-      Wendigo_32: -1428257749
-      Wendigo_33: -1503732735
-      Wendigo_34: -1804999138
-      Wendigo_35: 698195081
-      Wendigo_36: 692790690
-      Wendigo_37: 2059250140
-      Wendigo_38: 437022707
-      Wendigo_39: -283836275
-      Wendigo_4: 641226362
-      Wendigo_40: -701382491
-      Wendigo_41: -1210865989
-      Wendigo_42: -659016255
-      Wendigo_43: -1596249995
-      Wendigo_44: -1314303940
-      Wendigo_45: 1100252465
-      Wendigo_46: 1139882704
-      Wendigo_47: 936111179
-      Wendigo_48: -1780691601
-      Wendigo_49: 373461496
-      Wendigo_5: -1162227474
-      Wendigo_50: -1753747674
-      Wendigo_51: 1364203638
-      Wendigo_52: -80949948
-      Wendigo_53: -1132320143
-      Wendigo_54: -1005118932
-      Wendigo_55: 1146204435
-      Wendigo_56: -186968530
-      Wendigo_57: 1765254717
-      Wendigo_58: -1328781652
-      Wendigo_59: 305364300
-      Wendigo_6: -248056266
-      Wendigo_60: 1765348578
-      Wendigo_61: 1067551846
-      Wendigo_62: -1708019762
-      Wendigo_63: 920926876
-      Wendigo_64: 1103134950
-      Wendigo_65: 343738711
-      Wendigo_66: 141546094
-      Wendigo_67: 1301630657
-      Wendigo_68: -100862055
-      Wendigo_69: -754743824
-      Wendigo_7: 794942323
-      Wendigo_70: 1536179319
-      Wendigo_71: 1733954625
-      Wendigo_72: -2039447089
-      Wendigo_73: 1751438095
-      Wendigo_74: 140633871
-      Wendigo_75: -363001619
-      Wendigo_76: 1573363691
-      Wendigo_77: -1767665403
-      Wendigo_78: -1109896013
-      Wendigo_79: -1581399884
-      Wendigo_8: -847222710
-      Wendigo_80: -790311145
-      Wendigo_81: 1726997514
-      Wendigo_82: 1348915335
-      Wendigo_83: -1784880597
-      Wendigo_84: 847018457
-      Wendigo_85: -1407552823
-      Wendigo_86: 2052467269
-      Wendigo_87: 1606368718
-      Wendigo_88: -1505418156
-      Wendigo_89: 1013087174
-      Wendigo_9: -1242543560
-      Wendigo_90: 1257659721
-      Wendigo_91: -1552772988
-      Wendigo_92: 1636174777
-      Wendigo_93: -1551578098
-      Wendigo_94: -1304526086
-      Wendigo_95: -1064509647
-      Wendigo_96: -354008925
-      Wendigo_97: -895892343
-      Wendigo_98: -989086216
-      Wendigo_99: 1207083843
-=======
-    nameFileIdTable: {}
->>>>>>> 8e7a1b394962c5e4ab9712fb8bd9ae702687066e:Assets/SpriteSheets/Enemies/Wendigo.png.meta
+      Wendigo_0: 899762440
+      Wendigo_1: 287968059
+      Wendigo_10: -436038425
+      Wendigo_100: -1427392307
+      Wendigo_101: 778745947
+      Wendigo_102: -1454445769
+      Wendigo_103: -1617445384
+      Wendigo_104: -194537627
+      Wendigo_105: 1556180874
+      Wendigo_106: 1113202955
+      Wendigo_107: 272422229
+      Wendigo_108: 353066765
+      Wendigo_109: 1849266350
+      Wendigo_11: 1299241261
+      Wendigo_110: -1727760449
+      Wendigo_111: 1148468397
+      Wendigo_112: 925668703
+      Wendigo_113: -1042442945
+      Wendigo_114: 2119081794
+      Wendigo_115: 1708990270
+      Wendigo_116: 610010444
+      Wendigo_117: 1964544572
+      Wendigo_118: 802964878
+      Wendigo_119: -1018771702
+      Wendigo_12: -1136746221
+      Wendigo_120: -1472627267
+      Wendigo_121: 1760348661
+      Wendigo_122: 1346615953
+      Wendigo_123: 2016849867
+      Wendigo_124: -1464441364
+      Wendigo_125: 1292183207
+      Wendigo_126: 1602676765
+      Wendigo_127: 842791376
+      Wendigo_128: 2086325799
+      Wendigo_129: -2109646952
+      Wendigo_13: 1773963579
+      Wendigo_130: 1063897661
+      Wendigo_131: 1756590273
+      Wendigo_132: 361013755
+      Wendigo_133: -2045945983
+      Wendigo_134: -109416149
+      Wendigo_135: -910629037
+      Wendigo_136: -1588598364
+      Wendigo_137: 1126022283
+      Wendigo_138: 942605300
+      Wendigo_139: 78554215
+      Wendigo_14: 91406208
+      Wendigo_140: 124961862
+      Wendigo_141: 1609952755
+      Wendigo_142: -345182919
+      Wendigo_143: -1479651869
+      Wendigo_144: -2057877946
+      Wendigo_15: -374484578
+      Wendigo_16: -729236672
+      Wendigo_17: 1835400048
+      Wendigo_18: 833044482
+      Wendigo_19: 1583098574
+      Wendigo_2: 1055802305
+      Wendigo_20: -2016304720
+      Wendigo_21: 1357861066
+      Wendigo_22: -676824718
+      Wendigo_23: -1446445923
+      Wendigo_24: -1091510909
+      Wendigo_25: -538929660
+      Wendigo_26: 1054986220
+      Wendigo_27: 1138046171
+      Wendigo_28: 1133426065
+      Wendigo_29: 196555413
+      Wendigo_3: -1373632272
+      Wendigo_30: -1387557619
+      Wendigo_31: -1862635442
+      Wendigo_32: -1892714258
+      Wendigo_33: -85633968
+      Wendigo_34: 1566497265
+      Wendigo_35: -502449054
+      Wendigo_36: -681912599
+      Wendigo_37: -1987668676
+      Wendigo_38: 1862099023
+      Wendigo_39: -801608199
+      Wendigo_4: -1335013161
+      Wendigo_40: -304980889
+      Wendigo_41: 653841633
+      Wendigo_42: 2016236413
+      Wendigo_43: 1706357099
+      Wendigo_44: 901388
+      Wendigo_45: -127623644
+      Wendigo_46: 1932808448
+      Wendigo_47: 725333262
+      Wendigo_48: 1896198805
+      Wendigo_49: 121285711
+      Wendigo_5: 69001610
+      Wendigo_50: -1562595756
+      Wendigo_51: -1049261677
+      Wendigo_52: 1548022984
+      Wendigo_53: -1109114026
+      Wendigo_54: -198035231
+      Wendigo_55: -935811721
+      Wendigo_56: 388952079
+      Wendigo_57: -176196368
+      Wendigo_58: -1488473519
+      Wendigo_59: -1151261563
+      Wendigo_6: 793148072
+      Wendigo_60: 824903612
+      Wendigo_61: -1617224153
+      Wendigo_62: 462471590
+      Wendigo_63: 1520420251
+      Wendigo_64: -2078005643
+      Wendigo_65: 450725719
+      Wendigo_66: -28104640
+      Wendigo_67: -591295503
+      Wendigo_68: -1195527761
+      Wendigo_69: 70159995
+      Wendigo_7: 1109176371
+      Wendigo_70: -794009371
+      Wendigo_71: -442001231
+      Wendigo_72: 1661853514
+      Wendigo_73: -1748295666
+      Wendigo_74: 1470385922
+      Wendigo_75: -19364393
+      Wendigo_76: -1811085523
+      Wendigo_77: 1068589756
+      Wendigo_78: 757470818
+      Wendigo_79: -510130893
+      Wendigo_8: -614524489
+      Wendigo_80: 612676360
+      Wendigo_81: 950656918
+      Wendigo_82: -1259209161
+      Wendigo_83: -218301995
+      Wendigo_84: -1719155794
+      Wendigo_85: 598295678
+      Wendigo_86: 1836679689
+      Wendigo_87: 1825428661
+      Wendigo_88: 1029004736
+      Wendigo_89: -1011654898
+      Wendigo_9: -370369475
+      Wendigo_90: 207835182
+      Wendigo_91: -876248548
+      Wendigo_92: -492718655
+      Wendigo_93: 939754618
+      Wendigo_94: 1580138320
+      Wendigo_95: 1027506398
+      Wendigo_96: 1041232847
+      Wendigo_97: -1307877903
+      Wendigo_98: 1292328673
+      Wendigo_99: -715589560
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
