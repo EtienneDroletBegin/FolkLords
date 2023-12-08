@@ -12,5 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: Enlighten
   m_EditorClassIdentifier: Assembly-CSharp::Abilities
-  Target: 0
-  name: 
+  name: Enlighten

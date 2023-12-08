@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -83,20 +84,28 @@ public class EncounterManager : MonoBehaviour
         {
             initiative ini = new initiative();
             ini.unit = unit;
-            ini.init = Random.Range(1, unit.spd);
+            ini.init = UnityEngine.Random.Range(1, unit.spd);
             m_encounter.Add(ini);
         }
 
-        int monsterNB = Random.Range(1,3);
+        int monsterNB = UnityEngine.Random.Range(1,3);
         //for (int i = 0; i<= monsterNB; i++)
         //{
         m_monsters.Add(wendigo);
         //}
         foreach(Monsters mnstr in m_monsters)
         {
+            foreach(Transform spots in GameObject.Find("monsterSpots").transform)
+            {
+                if (spots.childCount == 0)
+                {
+                    Instantiate(Resources.Load<GameObject>("wendigo"), spots);
+                    break;
+                }
+            }
             initiative ini = new initiative();
             ini.unit = mnstr;
-            ini.init = Random.Range(1, 6);
+            ini.init = UnityEngine.Random.Range(1, 6);
             m_encounter.Add(ini);
         }
 
@@ -117,6 +126,11 @@ public class EncounterManager : MonoBehaviour
             }
         }
 
+        if (m_encounter[CurrentTurn].unit is Monsters)
+        {
+            endTurn();
+        }
+
         foreach (Abilities abilities in m_encounter[CurrentTurn].unit.ConvertTo<PartyMembers>().abilities)
         {
             GameObject newBT = Instantiate(BtPrefab, GameObject.Find("AbilityButtons").transform);
@@ -125,6 +139,50 @@ public class EncounterManager : MonoBehaviour
         }
     }
 
+    public void endTurn()
+    {
+        foreach(Transform t in GameObject.Find("AbilityButtons").transform)
+        {
+            Destroy(t.gameObject);
+        }
+        CurrentTurn++;
+        if(CurrentTurn >= m_encounter.Count)
+        {
+            CurrentTurn = 0;
+        }
+        if (m_encounter[CurrentTurn].unit is Monsters)
+        {
+            endTurn();
+        }
+
+        foreach (Abilities abilities in m_encounter[CurrentTurn].unit.ConvertTo<PartyMembers>().abilities)
+        {
+            GameObject newBT = Instantiate(BtPrefab, GameObject.Find("AbilityButtons").transform);
+            newBT.name = abilities.name;
+            newBT.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = abilities.name;
+        }
+    }
+
+    public void ChooseTarget(string type)
+    {
+        foreach (Transform t in GameObject.Find("AbilityButtons").transform)
+        {
+            Destroy(t.gameObject);
+        }
+        foreach (Transform mnstrs in GameObject.Find("monsterSpots").transform)
+        {
+            if (mnstrs.transform.childCount != 0) 
+            {
+                GameObject newBT = Instantiate(BtPrefab, GameObject.Find("AbilityButtons").transform);
+                newBT.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = mnstrs.GetChild(0).GetComponent<MnstrStats>()._name();
+            }
+        }
+    }
+
+    private void attack(Transform mnstrs)
+    {
+        print("attack" + mnstrs.GetChild(0).name);
+    }
 
     IEnumerator BeginFade()
     {

@@ -346,6 +346,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ad1c449be76826479255a71292f2c6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BtPrefab: {fileID: 5981007583855149481, guid: 89e6a7c05223fcd4686e2bdf8598fb0f,
+    type: 3}
+  wendigo: {fileID: 11400000, guid: 5e032587616b3fb499c5ddadd557e0a6, type: 2}
 --- !u!1 &583255030
 GameObject:
   m_ObjectHideFlags: 0
@@ -741,7 +744,6 @@ Transform:
   - {fileID: 1113969747}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-
 --- !u!114 &1453158960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -853,7 +855,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
-
 --- !u!1 &1566191375
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,4 +14,22 @@ public class CombatUI : MonoBehaviour
         AudioManager.GetInstance().fadeToNext("OverWorldSong");
         
     }
+
+    public void Defend()
+    {
+        EncounterManager.GetInstance().endTurn();
+
+    }
+
+    public void Attack()
+    {
+        EncounterManager.GetInstance().ChooseTarget("attack");
+
+    }
+
+    public void Special()
+    {
+        EncounterManager.GetInstance().endTurn();
+
+    }
 }
