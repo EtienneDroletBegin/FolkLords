@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: Assault
   m_EditorClassIdentifier: Assembly-CSharp::Abilities
-  name: Assault
+  Target: 1
+  abilityName: Assault
+  prefab: {fileID: 0}

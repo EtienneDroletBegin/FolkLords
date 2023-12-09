@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: It was YOU
   m_EditorClassIdentifier: Assembly-CSharp::Abilities
-  name: It was YOU
+  Target: 0
+  abilityName: is was YOU
+  prefab: {fileID: 0}

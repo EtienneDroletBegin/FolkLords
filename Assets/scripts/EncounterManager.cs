@@ -166,26 +166,66 @@ public class EncounterManager : MonoBehaviour
         foreach (Abilities abilities in m_encounter[CurrentTurn].unit.ConvertTo<PartyMembers>().abilities)
         {
             GameObject newBT = Instantiate(BtPrefab, GameObject.Find("AbilityButtons").transform);
-            newBT.name = abilities.name;
-            newBT.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = abilities.name;
+            newBT.name = abilities.abilityName;
+            newBT.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = abilities.abilityName;
+            newBT.GetComponent<BTStat>().SetAbilities(abilities);
+            newBT.GetComponent<Button>().onClick.AddListener(delegate { abilities.ChooseTarget(); });
         }
     }
 
-    public void ChooseTarget(string type)
+    public void ChooseTarget(Abilities ability)
     {
         foreach (Transform t in GameObject.Find("AbilityButtons").transform)
         {
             Destroy(t.gameObject);
         }
-        foreach (Transform mnstrs in GameObject.Find("monsterSpots").transform)
+        //No ability received so basic attack
+        if(ability == null)
         {
-            if (mnstrs.transform.childCount != 0) 
+            foreach (Transform mnstrs in GameObject.Find("monsterSpots").transform)
             {
-                GameObject newBT = Instantiate(BtPrefab, GameObject.Find("AbilityButtons").transform);
-                newBT.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = mnstrs.GetChild(0).GetComponent<MnstrStats>()._name();
-                newBT.GetComponent<Button>().onClick.AddListener(delegate { attack(mnstrs); });
+                if (mnstrs.transform.childCount != 0)
+                {
+                    GameObject newBT = Instantiate(BtPrefab, GameObject.Find("AbilityButtons").transform);
+                    newBT.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = mnstrs.GetChild(0).GetComponent<MnstrStats>()._name();
+                    newBT.GetComponent<Button>().onClick.AddListener(delegate { attack(mnstrs); });
+                }
             }
         }
+        //Received an ability
+        else
+        {
+            if(ability.Target.HasFlag(Abilities.ETarget.ENEMY))
+            {
+                foreach (Transform mnstrs in GameObject.Find("monsterSpots").transform)
+                {
+                    if (mnstrs.transform.childCount != 0)
+                    {
+                        GameObject newBT = Instantiate(BtPrefab, GameObject.Find("AbilityButtons").transform);
+                        newBT.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = mnstrs.GetChild(0).GetComponent<MnstrStats>()._name();
+                        newBT.GetComponent<Button>().onClick.AddListener(delegate { ability.Execute(mnstrs.GetChild(0).gameObject); });
+                    }
+                }
+            }
+            if (ability.Target.HasFlag(Abilities.ETarget.ALLY))
+            {
+
+            }
+            if (ability.Target.HasFlag(Abilities.ETarget.SELF))
+            {
+
+            }
+            if (ability.Target.HasFlag(Abilities.ETarget.AllyAll))
+            {
+
+            }
+            if (ability.Target.HasFlag(Abilities.ETarget.EnemyAll))
+            {
+
+            }
+
+        }
+
     }
 
     private void attack(Transform mnstrs)

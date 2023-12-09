@@ -23,7 +23,7 @@ public class CombatUI : MonoBehaviour
 
     public void Attack()
     {
-        EncounterManager.GetInstance().ChooseTarget("attack");
+        EncounterManager.GetInstance().ChooseTarget(null);
 
     }
 

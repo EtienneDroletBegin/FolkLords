@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: Vantage point
   m_EditorClassIdentifier: Assembly-CSharp::Abilities
-  name: Vantage point
+  Target: 4
+  abilityName: Vantage point
+  prefab: {fileID: 0}

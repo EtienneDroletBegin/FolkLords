@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: Brace
   m_EditorClassIdentifier: Assembly-CSharp::Abilities
-  name: Brace
+  Target: 4
+  abilityName: Brace
+  prefab: {fileID: 0}

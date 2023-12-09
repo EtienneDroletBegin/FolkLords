@@ -34,15 +34,29 @@ public class PartyMembers : ScriptableObject, ICombatUnit
 [CreateAssetMenu]
 public class Abilities : ScriptableObject
 {
-    //[Serializable, Flags]
-    //public enum ETarget
-    //{
-    //    ENEMY = 1 << 0,
-    //    ALLY = 1 <<1, 
-    //    SELF = 1<<2
-    //}
+    [Flags]
+    public enum ETarget
+    {
+        ENEMY = 1 << 0,
+        ALLY = 1 << 1,
+        SELF = 1 << 2,
+        EnemyAll = 1 << 3,
+        AllyAll = 1 << 4,
+    }
 
-   // public ETarget Target;
-    public string name;
+    public ETarget Target;
+    public string abilityName;
+    public GameObject prefab;
+
+
+    public void ChooseTarget()
+    {
+        EncounterManager.GetInstance().ChooseTarget(this);
+    }
+
+    public void Execute(GameObject target)
+    {
+        Instantiate(prefab, target.transform);
+    }
 
 }

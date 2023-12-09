@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: Mad Wailling
   m_EditorClassIdentifier: Assembly-CSharp::Abilities
-  name: Mad Wailling
+  Target: 24
+  abilityName: Mad Wailling
+  prefab: {fileID: 0}

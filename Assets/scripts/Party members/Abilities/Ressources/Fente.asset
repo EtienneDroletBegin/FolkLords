@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: Fente
   m_EditorClassIdentifier: Assembly-CSharp::Abilities
-  name: Fente
+  Target: 1
+  abilityName: Fente
+  prefab: {fileID: 0}

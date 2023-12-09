@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: Estoc
   m_EditorClassIdentifier: Assembly-CSharp::Abilities
-  name: Estocc
+  Target: 1
+  abilityName: Estoc
+  prefab: {fileID: 0}

@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: Trust Nobody
   m_EditorClassIdentifier: Assembly-CSharp::Abilities
-  name: Trust Nobody
+  Target: 4
+  abilityName: Trust Nobody
+  prefab: {fileID: 0}
