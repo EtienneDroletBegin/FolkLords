@@ -195,33 +195,74 @@ public class EncounterManager : MonoBehaviour
         //Received an ability
         else
         {
+            //The target is a single enemy
             if(ability.Target.HasFlag(Abilities.ETarget.ENEMY))
             {
+                List<Transform> targets = new List<Transform>();
                 foreach (Transform mnstrs in GameObject.Find("monsterSpots").transform)
                 {
                     if (mnstrs.transform.childCount != 0)
                     {
                         GameObject newBT = Instantiate(BtPrefab, GameObject.Find("AbilityButtons").transform);
                         newBT.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = mnstrs.GetChild(0).GetComponent<MnstrStats>()._name();
-                        newBT.GetComponent<Button>().onClick.AddListener(delegate { ability.Execute(mnstrs.GetChild(0).gameObject); });
+                        newBT.GetComponent<Button>().onClick.AddListener(delegate {
+                            targets.Add(mnstrs.GetChild(0));
+                            ability.Execute(targets); 
+                        });
                     }
                 }
             }
+            //the target is a single ally
             if (ability.Target.HasFlag(Abilities.ETarget.ALLY))
             {
-
+                List<Transform> targets = new List<Transform>();
+                int index = 0;
+                foreach (Transform plyrs in GameObject.Find("spawnSpots").transform)
+                {
+                    if (plyrs.transform.childCount != 0)
+                    {
+                        GameObject newBT = Instantiate(BtPrefab, GameObject.Find("AbilityButtons").transform);
+                        newBT.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = PartyManager.GetInstance().getParty()[index].memberName;
+                        newBT.GetComponent<Button>().onClick.AddListener(delegate {
+                            targets.Add(plyrs.GetChild(0));
+                            ability.Execute(targets); 
+                        });
+                    }
+                    index++;
+                }
             }
+            //the target is the caster
             if (ability.Target.HasFlag(Abilities.ETarget.SELF))
             {
-
+                //List<Transform> targets = new List<Transform>();
+                //targets.Add()
             }
+            //the target is all allies
             if (ability.Target.HasFlag(Abilities.ETarget.AllyAll))
             {
+                List<Transform> targets = new List<Transform>();
+                foreach(Transform plyrs in GameObject.Find("spawnSpots").transform)
+                {
+                    if (plyrs.transform.childCount != 0)
+                    {
+                        targets.Add(plyrs.GetChild(0));
+                    }
+                }
+                ability.Execute(targets);
 
             }
+            //the target is all enemies
             if (ability.Target.HasFlag(Abilities.ETarget.EnemyAll))
             {
-
+                List<Transform> targets = new List<Transform>();
+                foreach (Transform mnstrs in GameObject.Find("monsterSpots").transform)
+                {
+                    if (mnstrs.transform.childCount != 0)
+                    {
+                        targets.Add(mnstrs.GetChild(0));
+                    }
+                }
+                ability.Execute(targets);
             }
 
         }

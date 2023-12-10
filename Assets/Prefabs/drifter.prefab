@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3222734095307986293}
   - component: {fileID: -5410421702681403019}
   - component: {fileID: 3007029888658053660}
+  - component: {fileID: -3581913650458669278}
   m_Layer: 0
   m_Name: drifter
   m_TagString: Untagged
@@ -170,3 +171,15 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &-3581913650458669278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4505531941829669955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7c76f747733fe14f9a690a4858dde57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

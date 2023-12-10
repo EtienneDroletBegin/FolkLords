@@ -54,9 +54,13 @@ public class Abilities : ScriptableObject
         EncounterManager.GetInstance().ChooseTarget(this);
     }
 
-    public void Execute(GameObject target)
+    public void Execute(List<Transform> target)
     {
-        Instantiate(prefab, target.transform);
+        foreach (Transform t in target) 
+        {
+            Instantiate(prefab, t);
+        }
+        EncounterManager.GetInstance().endTurn();
     }
 
 }

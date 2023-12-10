@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5909887617448223183}
   - component: {fileID: 3824759619067876523}
   - component: {fileID: 9146724455823458501}
+  - component: {fileID: 1951650744990433975}
   m_Layer: 0
   m_Name: Conspirationist
   m_TagString: Untagged
@@ -170,3 +171,15 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &1951650744990433975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5367963388107462030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7c76f747733fe14f9a690a4858dde57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

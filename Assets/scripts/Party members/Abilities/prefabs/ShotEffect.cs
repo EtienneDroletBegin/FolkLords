@@ -2,17 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CombatManager : MonoBehaviour
+public class ShotEffect : AbilityParent
 {
     // Start is called before the first frame update
     void Start()
     {
-        
+        int damage = Random.Range(5, 9);
+        transform.parent.GetComponent<MnstrStats>().TakeDamage(damage);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

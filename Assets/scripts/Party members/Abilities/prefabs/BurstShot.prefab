@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7916025221054101820}
+  - component: {fileID: 1935459280688247667}
   m_Layer: 0
   m_Name: BurstShot
   m_TagString: Untagged
@@ -31,3 +32,16 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1935459280688247667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2398350650391946598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b535f57c6a03bc468e9a620965d4d8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  castableBy: {fileID: 11400000, guid: 24a71b9c4dfe2024fb52fc352d97ff32, type: 2}
