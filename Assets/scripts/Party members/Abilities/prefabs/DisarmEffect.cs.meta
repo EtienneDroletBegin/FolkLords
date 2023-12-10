@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9d3f143cf3a29834caa06581ef37c308
+guid: 863aa68b508b2e24e934ff2a6fdd13a5
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - castableBy: {fileID: 11400000, guid: 4f2602be5464cb140890fe4c83aa46c0, type: 2}
+  - castableBy: {fileID: 11400000, guid: 6ecfff5ea3489904a9fdc3b6da5a37a6, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

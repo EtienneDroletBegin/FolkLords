@@ -175,8 +175,8 @@ public class PartyManager : MonoBehaviour
     {
         for (int i = 0; i < ActiveParty.Length; i++)
         {
-            GameObject member = Instantiate(ActiveParty[i].prefab);
-            member.transform.position = GameObject.Find("spawnSpots").transform.GetChild(i).transform.position;
+            GameObject member = Instantiate(ActiveParty[i].prefab, GameObject.Find("spawnSpots").transform.GetChild(i));
+            //member.transform.position = GameObject.Find("spawnSpots").transform.GetChild(i).transform.position;
             member.GetComponent<Animator>().SetBool("incombat", true);
         }
     }
