@@ -63,6 +63,7 @@ public class EncounterManager : MonoBehaviour
     }
     public void ToggleCombat(Dictionary<string, object> eventParams)
     {
+       
         StartCoroutine(BeginFade());
 
     }

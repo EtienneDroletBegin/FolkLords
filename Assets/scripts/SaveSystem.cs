@@ -7,10 +7,10 @@ using UnityEngine;
 
 public class SaveData
 {
-    public bool hasSaved;
+
     public Vector2 Position;
     public PartyMembers[] ActiveParty;
-    public SaveData(bool hasSaved,Vector2 position, PartyMembers[] Party)
+    public SaveData(Vector2 position, PartyMembers[] Party)
     {
 
         Position = position;

@@ -4,11 +4,16 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.UI;
 
 public class MapLoader : MonoBehaviour
 {
     [SerializeField] private SuperMap testMap;
     [SerializeField] private GameObject playerPrefab;
+    [SerializeField] private Image[] BattleBackgrounds;
+    [SerializeField] private GameObject InteractionZone;
+
+    
     private GameObject currentMap;
     private SaveData saveData;
     private void Start()
@@ -37,9 +42,9 @@ public class MapLoader : MonoBehaviour
         foreach (SuperObject superObj in objects)
         {
             //Regarder le m_Type pour savoir quoi faire
-            if (superObj.m_Type.Contains("Doors"))
+            if (superObj.m_Type.Contains("Encounter"))
             {
-                superObj.AddComponent<Portal>();
+                Instantiate(InteractionZone, superObj.transform.position, Quaternion.identity);
                 
             }
             if (superObj.m_Type.Contains("Spawn"))
