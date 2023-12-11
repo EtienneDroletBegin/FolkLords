@@ -1047,6 +1047,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   testMap: {fileID: 5800655155744312708, guid: 4817e546dbd0f8740b6dacdeb2a8b76b, type: 3}
   playerPrefab: {fileID: 0}
+  BattleBackgrounds: []
+  InteractionZone: {fileID: 4985116213695887174, guid: 27652ba96a874ec4aaf75c4b62bab41c,
+    type: 3}
 --- !u!1001 &4530211030958429946
 PrefabInstance:
   m_ObjectHideFlags: 0

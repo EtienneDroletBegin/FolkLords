@@ -53,7 +53,7 @@ public class PlayerMovement : MonoBehaviour,IDamageable
 
         if (Input.GetKeyDown(KeyCode.B))
         {
-            SaveData dataToSave = new SaveData(true,transform.position, PartyManager.GetInstance().getParty());
+            SaveData dataToSave = new SaveData(transform.position, PartyManager.GetInstance().getParty());
             SaveSystem.save(dataToSave);
             Debug.Log(dataToSave.Position.ToString());
         }

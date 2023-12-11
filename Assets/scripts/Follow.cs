@@ -31,7 +31,7 @@ public class Follow : MonoBehaviour
 
     private void Update()
     {
-        if (Vector3.Distance(transform.position, target.position) > 0.75f)
+        if (Vector3.Distance(transform.position, target.position) > 1f)
         {
             transform.position = Vector2.MoveTowards(transform.position, target.transform.position, m_Speed * Time.deltaTime);
             Moving = true;
