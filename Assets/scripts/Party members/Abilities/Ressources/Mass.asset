@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Abilities
   Target: 16
   abilityName: Mass
-  prefab: {fileID: 0}
+  prefab: {fileID: 2398350650391946598, guid: 36a9e5a266040e6428042f1889e95ac6, type: 3}
+  APCost: 2

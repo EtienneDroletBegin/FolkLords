@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Abilities
   Target: 24
   abilityName: Mad Wailling
-  prefab: {fileID: 0}
+  prefab: {fileID: 2398350650391946598, guid: f36a64fc1b007e441a9aa35e0471bee8, type: 3}
+  APCost: 2

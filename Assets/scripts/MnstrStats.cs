@@ -34,6 +34,9 @@ public class MnstrStats : MonoBehaviour
     }
     public void TakeDamage(int Damage)
     {
+        camShake.instance.shake(2f, 0.3f);
+        GetComponent<Animator>().SetTrigger("takedamage");
+        transform.GetChild(0).GetComponent<ParticleSystem>().Play();
         HP -= Damage;
         HPSlider.value = HP;
     }

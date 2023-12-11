@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Abilities
   Target: 8
   abilityName: Holy Light
-  prefab: {fileID: 0}
+  prefab: {fileID: 2398350650391946598, guid: d6a3328d6185d1f499d8025ef804fc1f, type: 3}
+  APCost: 3

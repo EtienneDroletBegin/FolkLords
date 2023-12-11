@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Abilities
   Target: 1
   abilityName: Disarm
-  prefab: {fileID: 0}
+  prefab: {fileID: 2398350650391946598, guid: 40ec256fcc7a53445bfc28d8297b18ea, type: 3}
+  APCost: 1

@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Abilities
   Target: 8
   abilityName: Burst Shot
-  prefab: {fileID: 0}
+  prefab: {fileID: 2398350650391946598, guid: 44a3879a5b3d82943821caaca75bb48a, type: 3}
+  APCost: 2

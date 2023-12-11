@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Abilities
   Target: 2
   abilityName: Cover
-  prefab: {fileID: 0}
+  prefab: {fileID: 2398350650391946598, guid: 228487f21079f8b43b60ff4137ae5e7f, type: 3}
+  APCost: 1

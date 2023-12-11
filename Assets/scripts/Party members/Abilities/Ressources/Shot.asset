@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Abilities
   Target: 1
   abilityName: Shot
-  prefab: {fileID: 0}
+  prefab: {fileID: 2398350650391946598, guid: ecf53e389b5632b41b1a3a8077af4192, type: 3}
+  APCost: 1
