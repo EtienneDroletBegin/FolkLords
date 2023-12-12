@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Abilities
   Target: 2
   abilityName: Enlighten
-  prefab: {fileID: 0}
+  prefab: {fileID: 2398350650391946598, guid: 088819b75183c714196786ce994cda82, type: 3}
+  APCost: 2

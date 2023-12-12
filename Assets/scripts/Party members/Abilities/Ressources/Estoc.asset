@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Abilities
   Target: 1
   abilityName: Estoc
-  prefab: {fileID: 0}
+  prefab: {fileID: 2398350650391946598, guid: 761e6c61201cc7f4bb514a14969c7caa, type: 3}
+  APCost: 1

@@ -56,6 +56,11 @@ public class EncounterManager : MonoBehaviour
     private Monsters wendigo;
     private GameObject initIMG;
     private int CurrentTurn = 0;
+    private float AP;
+    private float BurnedAP;
+    private float MaxAp = 5;
+    private GameObject APGauge;
+    private TextMeshProUGUI burnText;
 
     private void Start()
     {
@@ -68,15 +73,22 @@ public class EncounterManager : MonoBehaviour
 
     }
 
+    public float GetAP() { return AP; }
+    public float GetMaxAP() { return MaxAp; }
+
     public void startCombat()
     {
         m_encounter = new List<initiative>();
+
         EventManager.GetInstance().TriggerEvent(EEvents.TOGGLECOMBAT, null);
 
     }
 
     public void RollInitiative()
     {
+        APGauge = GameObject.Find("APGauge");
+        burnText = GameObject.Find("BurnText").GetComponent<TextMeshProUGUI>();
+        burnText.gameObject.SetActive(false);
         //REMOVE LATER-----------------------------
         m_encounter = new List<initiative>();
         m_monsters = new List<Monsters>();
@@ -190,6 +202,7 @@ public class EncounterManager : MonoBehaviour
                     GameObject newBT = Instantiate(BtPrefab, GameObject.Find("AbilityButtons").transform);
                     newBT.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = mnstrs.GetChild(0).GetComponent<MnstrStats>()._name();
                     newBT.GetComponent<Button>().onClick.AddListener(delegate { attack(mnstrs); });
+
                 }
             }
         }
@@ -207,8 +220,11 @@ public class EncounterManager : MonoBehaviour
                         GameObject newBT = Instantiate(BtPrefab, GameObject.Find("AbilityButtons").transform);
                         newBT.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = mnstrs.GetChild(0).GetComponent<MnstrStats>()._name();
                         newBT.GetComponent<Button>().onClick.AddListener(delegate {
-                            targets.Add(mnstrs.GetChild(0));
-                            ability.Execute(targets); 
+                            if (BurnedAP + ability.APCost <= AP)
+                            {
+                                targets.Add(mnstrs.GetChild(0));
+                                ability.Execute(targets);
+                            }
                         });
                     }
                 }
@@ -222,12 +238,17 @@ public class EncounterManager : MonoBehaviour
                 {
                     if (plyrs.transform.childCount != 0)
                     {
+
                         GameObject newBT = Instantiate(BtPrefab, GameObject.Find("AbilityButtons").transform);
                         newBT.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = PartyManager.GetInstance().getParty()[index].memberName;
                         newBT.GetComponent<Button>().onClick.AddListener(delegate {
-                            targets.Add(plyrs.GetChild(0));
-                            ability.Execute(targets); 
-                        });
+                            if (BurnedAP + ability.APCost <= AP)
+                            {
+                                targets.Add(plyrs.GetChild(0));
+                                ability.Execute(targets);
+                            }
+                        }
+                        );
                     }
                     index++;
                 }
@@ -249,8 +270,10 @@ public class EncounterManager : MonoBehaviour
                         targets.Add(plyrs.GetChild(0));
                     }
                 }
-                ability.Execute(targets);
-
+                if (BurnedAP + ability.APCost <= AP)
+                {
+                    ability.Execute(targets);
+                }
             }
             //the target is all enemies
             if (ability.Target.HasFlag(Abilities.ETarget.EnemyAll))
@@ -263,18 +286,79 @@ public class EncounterManager : MonoBehaviour
                         targets.Add(mnstrs.GetChild(0));
                     }
                 }
-                ability.Execute(targets);
+                if (BurnedAP + ability.APCost <= AP)
+                {
+                    ability.Execute(targets);
+                }
             }
-
         }
 
     }
 
+    private void RemoveAP(float apToRemove)
+    {
+        AP -= apToRemove;
+        APGauge.GetComponent<ImgsFillDynamic>().SetValue(AP / MaxAp, false, 1);
+    }
+
     private void attack(Transform mnstrs)
     {
-        print(m_encounter[CurrentTurn].unit.ConvertTo<PartyMembers>().physDMG);
         mnstrs.GetChild(0).GetComponent<MnstrStats>().TakeDamage(m_encounter[CurrentTurn].unit.ConvertTo<PartyMembers>().physDMG);
+        if (BurnedAP == 0 && AP < MaxAp)
+        {
+            AP += 1;
+            APGauge.GetComponent<ImgsFillDynamic>().SetValue(AP / MaxAp, false, 1);
+        }
+        if (BurnedAP > 0)
+        {
+            for (int i = 0; i < BurnedAP; i++)
+            {
+                mnstrs.GetChild(0).GetComponent<MnstrStats>().TakeDamage(m_encounter[CurrentTurn].unit.ConvertTo<PartyMembers>().physDMG);
+                AP -= 1;
+                APGauge.GetComponent<ImgsFillDynamic>().SetValue(AP / MaxAp, false, 1);
+            }
+        }
+
+        BurnedAP = 0;
+        burnText.gameObject.SetActive(false);
         endTurn();
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            BurnAp();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            UnBurnAp();
+        }
+    }
+
+    private void BurnAp()
+    {
+        BurnedAP += 1;
+        burnText.gameObject.SetActive(true);
+        if (BurnedAP > AP)
+        {
+            BurnedAP = AP;
+        }
+        burnText.text = "-" + BurnedAP;
+
+    }
+
+    private void UnBurnAp()
+    {
+        BurnedAP -= 1;
+        if (BurnedAP <= 0)
+        {
+            burnText.gameObject.SetActive(false);
+            BurnedAP = 0;
+        }
+        burnText.text = "-" + BurnedAP;
+
     }
 
     IEnumerator BeginFade()

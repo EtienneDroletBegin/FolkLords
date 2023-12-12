@@ -47,6 +47,7 @@ public class Abilities : ScriptableObject
     public ETarget Target;
     public string abilityName;
     public GameObject prefab;
+    public int APCost;
 
 
     public void ChooseTarget()

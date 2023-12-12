@@ -58,6 +58,7 @@ public class PartyManager : MonoBehaviour
     private bool initialSpawn = true;
     private Vector2 lastPos;
 
+
     public void ChangeActiveParty()
     {
         Data = SaveSystem.load();
@@ -95,9 +96,6 @@ public class PartyManager : MonoBehaviour
             }
             
         }
-
-        
-
     }
 
     public PartyMembers[] getParty()

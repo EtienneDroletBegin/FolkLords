@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Abilities
   Target: 4
   abilityName: Vantage point
-  prefab: {fileID: 0}
+  prefab: {fileID: 2398350650391946598, guid: 63b856bafd0a22c458f2051247e74bba, type: 3}
+  APCost: 1

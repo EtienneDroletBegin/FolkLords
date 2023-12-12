@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Abilities
   Target: 1
   abilityName: Fente
-  prefab: {fileID: 0}
+  prefab: {fileID: 2398350650391946598, guid: cd3565cd656f3434cb95e9d6876be41b, type: 3}
+  APCost: 1

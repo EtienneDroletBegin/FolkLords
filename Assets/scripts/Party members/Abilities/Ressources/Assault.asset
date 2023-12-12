@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Abilities
   Target: 1
   abilityName: Assault
-  prefab: {fileID: 0}
+  prefab: {fileID: 2398350650391946598, guid: 3492d92c8cecd764eb951b20a4808281, type: 3}
+  APCost: 2
