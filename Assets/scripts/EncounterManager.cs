@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using TMPro;
@@ -50,11 +51,10 @@ public class EncounterManager : MonoBehaviour
 
 
     private List<initiative> m_encounter;
-    private List<Monsters> m_monsters;
+    private Monsters[] m_monsters;
     [SerializeField]
     private GameObject BtPrefab;
-    [SerializeField]
-    private Monsters wendigo;
+
     private GameObject initIMG;
     private int CurrentTurn = 0;
     private float AP = 0;
@@ -68,10 +68,26 @@ public class EncounterManager : MonoBehaviour
     private void Start()
     {
         EventManager.GetInstance().StartListening(EEvents.TOGGLECOMBAT, ToggleCombat);
+
     }
     public void ToggleCombat(Dictionary<string, object> eventParams)
     {
-       
+
+        if (eventParams != null)
+        {
+            object param;
+            if (eventParams.TryGetValue("Monsters", out param))
+            {
+                m_monsters = param.ConvertTo<Monsters[]>();
+            }
+            if (eventParams.TryGetValue("bg", out param))
+            {
+
+            }
+
+        }
+
+
         StartCoroutine(BeginFade());
 
     }
@@ -95,7 +111,6 @@ public class EncounterManager : MonoBehaviour
         burnText.gameObject.SetActive(false);
         //REMOVE LATER-----------------------------
         m_encounter = new List<initiative>();
-        m_monsters = new List<Monsters>();
         //------------------------------------------
         foreach (PartyMembers unit in PartyManager.GetInstance().getParty())
         {
@@ -106,13 +121,8 @@ public class EncounterManager : MonoBehaviour
             m_encounter.Add(ini);
         }
 
-        int monsterNB = UnityEngine.Random.Range(1,3);
-        //for (int i = 0; i<= monsterNB; i++)
-        //{
-        m_monsters.Add(wendigo);
-        m_monsters.Add(wendigo);
-        //}
-        foreach(Monsters mnstr in m_monsters)
+
+        foreach (Monsters mnstr in m_monsters)
         {
             initiative ini = new initiative();
             ini.unit = mnstr;
@@ -172,7 +182,7 @@ public class EncounterManager : MonoBehaviour
             Destroy(t.gameObject);
         }
         CurrentTurn++;
-        if(CurrentTurn >= m_encounter.Count)
+        if (CurrentTurn >= m_encounter.Count)
         {
             CurrentTurn = 0;
         }
@@ -207,7 +217,7 @@ public class EncounterManager : MonoBehaviour
             Destroy(t.gameObject);
         }
         //No ability received so basic attack
-        if(ability == null)
+        if (ability == null)
         {
             foreach (Transform mnstrs in GameObject.Find("monsterSpots").transform)
             {
@@ -227,7 +237,7 @@ public class EncounterManager : MonoBehaviour
         else
         {
             //The target is a single enemy
-            if(ability.Target.HasFlag(Abilities.ETarget.ENEMY))
+            if (ability.Target.HasFlag(Abilities.ETarget.ENEMY))
             {
                 List<Transform> targets = new List<Transform>();
                 foreach (Transform mnstrs in GameObject.Find("monsterSpots").transform)
@@ -236,7 +246,8 @@ public class EncounterManager : MonoBehaviour
                     {
                         GameObject newBT = Instantiate(BtPrefab, GameObject.Find("AbilityButtons").transform);
                         newBT.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = mnstrs.GetChild(0).GetComponent<MnstrStats>()._name();
-                        newBT.GetComponent<Button>().onClick.AddListener(delegate {
+                        newBT.GetComponent<Button>().onClick.AddListener(delegate
+                        {
                             if (BurnedAP + ability.APCost <= AP)
                             {
                                 RemoveAP(ability.APCost);
@@ -259,7 +270,8 @@ public class EncounterManager : MonoBehaviour
 
                         GameObject newBT = Instantiate(BtPrefab, GameObject.Find("AbilityButtons").transform);
                         newBT.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = PartyManager.GetInstance().getParty()[index].memberName;
-                        newBT.GetComponent<Button>().onClick.AddListener(delegate {
+                        newBT.GetComponent<Button>().onClick.AddListener(delegate
+                        {
                             if (BurnedAP + ability.APCost <= AP)
                             {
                                 RemoveAP(ability.APCost);
@@ -279,10 +291,10 @@ public class EncounterManager : MonoBehaviour
                 targets.Add(m_encounter[CurrentTurn].prefab.transform);
                 ability.Execute(targets);
                 RemoveAP(ability.APCost);
-                
+
             }
             //the target is all allies
-            if(ability.Target.HasFlag(Abilities.ETarget.AllyAll) || ability.Target.HasFlag(Abilities.ETarget.EnemyAll))
+            if (ability.Target.HasFlag(Abilities.ETarget.AllyAll) || ability.Target.HasFlag(Abilities.ETarget.EnemyAll))
             {
                 List<Transform> targets = new List<Transform>();
                 if (ability.Target.HasFlag(Abilities.ETarget.AllyAll))
@@ -383,10 +395,10 @@ public class EncounterManager : MonoBehaviour
         while (ElapsedTime < TotalTime)
         {
             ElapsedTime += Time.deltaTime;
-            Camera.main.transform.GetChild(0).GetComponent<SpriteRenderer>().color = Color.Lerp(startColor, endColor, (ElapsedTime/TotalTime));
+            Camera.main.transform.GetChild(0).GetComponent<SpriteRenderer>().color = Color.Lerp(startColor, endColor, (ElapsedTime / TotalTime));
             yield return null;
         }
-        if(SceneManager.GetActiveScene().name != "FightScene")
+        if (SceneManager.GetActiveScene().name != "FightScene")
         {
             SceneManager.LoadScene("FightScene");
         }
@@ -394,8 +406,8 @@ public class EncounterManager : MonoBehaviour
         {
             SceneManager.LoadScene("OverWorld");
         }
-        
+
     }
 
-    
+
 }
