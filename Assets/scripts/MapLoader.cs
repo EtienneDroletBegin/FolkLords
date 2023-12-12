@@ -51,8 +51,10 @@ public class MapLoader : MonoBehaviour
                 Encounters encounter = Encounters.ElementAt(int.Parse(superObj.m_TiledName)).ConvertTo<Encounters>();
                 Monsters[] mnstr = encounter.monsters;
                 Sprite bg = encounter.background;
+
                 door.SetEncounterMonsters(mnstr);
                 door.SetBackground(bg);
+                door.SetIndex(encounter.index);
             }
             if (superObj.m_Type.Contains("Spawn"))
             {

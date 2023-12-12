@@ -55,6 +55,8 @@ public class EncounterManager : MonoBehaviour
     [SerializeField]
     private GameObject BtPrefab;
 
+    private bool[] encountersWon;
+    private int CurrentEncounter = 0;
     private GameObject initIMG;
     private int CurrentTurn = 0;
     private float AP = 0;
@@ -65,6 +67,7 @@ public class EncounterManager : MonoBehaviour
     private List<Image> iniImages;
     private Image currentTurnImage;
 
+
     private void Start()
     {
         EventManager.GetInstance().StartListening(EEvents.TOGGLECOMBAT, ToggleCombat);
@@ -73,6 +76,9 @@ public class EncounterManager : MonoBehaviour
     public void ToggleCombat(Dictionary<string, object> eventParams)
     {
 
+
+
+
         if (eventParams != null)
         {
             object param;
@@ -80,9 +86,9 @@ public class EncounterManager : MonoBehaviour
             {
                 m_monsters = param.ConvertTo<Monsters[]>();
             }
-            if (eventParams.TryGetValue("bg", out param))
+            if (eventParams.TryGetValue("index", out param))
             {
-
+                CurrentEncounter = (int)param;
             }
 
         }
@@ -158,7 +164,7 @@ public class EncounterManager : MonoBehaviour
             iniImages.Add(go);
         }
         currentTurnImage = Instantiate(Resources.Load("currentTurn"), GameObject.Find("Canvas").transform).GetComponent<Image>();
-        
+
 
         if (m_encounter[CurrentTurn].unit is Monsters)
         {
@@ -177,6 +183,7 @@ public class EncounterManager : MonoBehaviour
 
     public void endTurn()
     {
+        CheckDeath();
         foreach (Transform t in GameObject.Find("AbilityButtons").transform)
         {
             Destroy(t.gameObject);
@@ -193,7 +200,44 @@ public class EncounterManager : MonoBehaviour
             m_encounter[CurrentTurn].prefab.GetComponent<MnstrStats>().Attack(aggro);
         }
     }
+    private void CheckDeath()
+    {
+        int alive = 0;
 
+        foreach (Transform mnstrs in GameObject.Find("monsterSpots").transform)
+        {
+            if (mnstrs.childCount != 0)
+            {
+                alive++;
+            }
+           
+        }
+        if (alive == 0)
+        {
+            ToggleCombat(null);
+            foreach (PartyMembers pm in PartyManager.GetInstance().getParty())
+            {
+                pm.maxHP += 5;
+                pm.physDMG += 2;
+                pm.magDMG += 2;
+            }
+        }
+        alive = 0;
+        foreach (initiative p in m_encounter.Where(x => x.unit is PartyMembers).ToList())
+        {
+            if (!p.prefab.GetComponent<unitCombatStats>().IsDead())
+            {
+                alive++;
+            }
+        }
+
+        if (alive == 0)
+        {
+            ToggleCombat(null);
+        }
+
+
+    }
     public void ChooseAbility()
     {
         foreach (Transform t in GameObject.Find("AbilityButtons").transform)
@@ -225,7 +269,8 @@ public class EncounterManager : MonoBehaviour
                 {
                     GameObject newBT = Instantiate(BtPrefab, GameObject.Find("AbilityButtons").transform);
                     newBT.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = mnstrs.GetChild(0).GetComponent<MnstrStats>()._name();
-                    newBT.GetComponent<Button>().onClick.AddListener(delegate {
+                    newBT.GetComponent<Button>().onClick.AddListener(delegate
+                    {
                         m_encounter[CurrentTurn].prefab.GetComponent<unitCombatStats>().Attack(mnstrs, BurnedAP);
                         attack();
                     });
@@ -336,7 +381,7 @@ public class EncounterManager : MonoBehaviour
 
     private void attack()
     {
-        
+
         if (BurnedAP == 0 && AP < MaxAp)
         {
             AP += 1;

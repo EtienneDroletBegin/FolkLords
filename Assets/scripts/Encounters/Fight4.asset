@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91766e2d3a739194ab9d1bfdc6fdc66c, type: 3}
   m_Name: Fight4
   m_EditorClassIdentifier: 
-  index: 0
+  index: 4
   background: {fileID: 21300000, guid: 0f0acf623198c124bbbd2f8d0278f14d, type: 3}
   monsters:
   - {fileID: 11400000, guid: 5e72e2dcb429eb5418c9ef735d4b066e, type: 2}

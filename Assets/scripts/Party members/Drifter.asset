@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: 2
   memberName: Drifter
-  maxHP: 30
-  maxAP: 4
-  physDMG: 3
-  magDMG: 2
+  maxHP: 40
+  maxAP: 5
+  physDMG: 4
+  magDMG: 4
   spd: 5
   Portrait: {fileID: 21300000, guid: f279c748278cbbf4f920fe67085e91a1, type: 3}
   controller: {fileID: 22100000, guid: c4c62588e3fa6c74ead8f8a643985bab, type: 2}

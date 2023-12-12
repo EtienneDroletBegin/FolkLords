@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: 1
   memberName: Musketeer
-  maxHP: 20
+  maxHP: 25
   maxAP: 5
   physDMG: 5
   magDMG: 2

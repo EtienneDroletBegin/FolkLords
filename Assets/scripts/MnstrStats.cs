@@ -18,7 +18,7 @@ public class MnstrStats : MonoBehaviour
     private string monsterName;
     private int Damage;
     private int resistance = 0;
-  
+
 
     private void Start()
     {
@@ -41,13 +41,27 @@ public class MnstrStats : MonoBehaviour
         transform.GetChild(0).GetComponent<ParticleSystem>().Play();
         HP -= (Damage - resistance);
         HPSlider.value = HP;
+        if(IsDead())
+        {
+            HP = 0;
+            Destroy(gameObject);
+        }
     }
     public void Attack(List<initiative> aggro)
     {
-        List<initiative> updatedAggro = aggro.OrderByDescending(X => X.prefab.GetComponent<unitCombatStats>().GetAggro()).ToList();
-        print(updatedAggro[0].prefab.name);
-        initiative target = updatedAggro[0];
-        StartCoroutine("monsterAttack", target);
+        if (!IsDead())
+        {
+            List<initiative> updatedAggro = aggro.OrderByDescending(X => X.prefab.GetComponent<unitCombatStats>().GetAggro()).ToList();
+            print(updatedAggro[0].prefab.name);
+            initiative target = updatedAggro[0];
+            StartCoroutine("monsterAttack", target);
+
+        }
+        else
+        {
+            EncounterManager.GetInstance().endTurn();
+
+        }
     }
 
     IEnumerator monsterAttack(initiative Target)
@@ -65,6 +79,10 @@ public class MnstrStats : MonoBehaviour
         }
         EncounterManager.GetInstance().endTurn();
 
+    }
+    public bool IsDead()
+    {
+        return HP <= 0;
     }
 
 

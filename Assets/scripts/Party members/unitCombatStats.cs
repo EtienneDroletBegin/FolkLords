@@ -8,7 +8,7 @@ public class unitCombatStats : MonoBehaviour
     [SerializeField] private PartyMembers linkedMember;
     [SerializeField] private Slider HPBar;
 
-    int HP;
+    int HP = 1;
     int resistance = 0;
     int Damage;
     int magDamage;
@@ -16,7 +16,7 @@ public class unitCombatStats : MonoBehaviour
     bool covered = false;
     ParticleSystem ps;
 
-    void Start()
+    void Awake()
     {
         Damage = linkedMember.physDMG;
         magDamage = linkedMember.magDMG;
@@ -80,6 +80,11 @@ public class unitCombatStats : MonoBehaviour
             covered = false;
         }
 
+        if(IsDead())
+        {
+            gameObject.SetActive(false);
+            aggro = 0;
+        }
     }
 
     public void Attack(Transform trgt, float BurnedAP)
@@ -104,5 +109,9 @@ public class unitCombatStats : MonoBehaviour
     public void Heal(int heal)
     {
         HP += heal;
+    }
+    public bool IsDead()
+    {
+        return HP <= 0;
     }
 }

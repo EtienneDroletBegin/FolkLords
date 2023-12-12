@@ -16,7 +16,7 @@ MonoBehaviour:
   memberName: Pope
   maxHP: 20
   maxAP: 4
-  physDMG: 2
+  physDMG: 3
   magDMG: 5
   spd: 4
   Portrait: {fileID: 21300000, guid: 9e8131b562fb98344808bab5ade07ff7, type: 3}

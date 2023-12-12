@@ -10,10 +10,12 @@ public class Doors : MonoBehaviour
 
     private bool isTriggered = false;
     private Sprite EncounterBackground;
+    private bool hasWon = false;
+    private int Index;
     
     private void Update()
     {
-        if(isTriggered)
+        if(isTriggered && !hasWon)
         {
             if(Input.GetKeyDown(KeyCode.F))
             {
@@ -52,4 +54,9 @@ public class Doors : MonoBehaviour
     {
         EncounterBackground = bg;
     }
+    public void SetIndex(int i)
+    {
+        Index = i;
+    }
+    
 }
