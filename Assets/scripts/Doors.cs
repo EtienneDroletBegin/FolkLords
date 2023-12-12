@@ -15,7 +15,7 @@ public class Doors : MonoBehaviour
     {
         if(isTriggered)
         {
-            if(Input.GetKeyDown(KeyCode.E))
+            if(Input.GetKeyDown(KeyCode.F))
             {
                 SaveData dataToSave = new SaveData(transform.position, PartyManager.GetInstance().getParty());
                 SaveSystem.save(dataToSave);
@@ -29,7 +29,7 @@ public class Doors : MonoBehaviour
         if(collision.CompareTag("mainPlayer"))
         {
             isTriggered = true;
-            GetComponent<TextMeshPro>().SetText("Press E");
+            GetComponent<TextMeshPro>().SetText("Press F");
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
