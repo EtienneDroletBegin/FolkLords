@@ -1,6 +1,7 @@
 using SuperTiled2Unity;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Tilemaps;
@@ -12,6 +13,7 @@ public class MapLoader : MonoBehaviour
     [SerializeField] private GameObject playerPrefab;
     [SerializeField] private Image[] BattleBackgrounds;
     [SerializeField] private GameObject InteractionZone;
+    [SerializeField] private List<ScriptableObject> Encounters;
 
     
     private GameObject currentMap;
@@ -44,8 +46,13 @@ public class MapLoader : MonoBehaviour
             //Regarder le m_Type pour savoir quoi faire
             if (superObj.m_Type.Contains("Encounter"))
             {
-                Instantiate(InteractionZone, superObj.transform.position, Quaternion.identity);
-                
+                Doors door = Instantiate(InteractionZone, superObj.transform.position, Quaternion.identity).GetComponent<Doors>();
+                Debug.Log(int.Parse(superObj.m_TiledName));
+                Encounters encounter = Encounters.ElementAt(int.Parse(superObj.m_TiledName)).ConvertTo<Encounters>();
+                Monsters[] mnstr = encounter.monsters;
+                Sprite bg = encounter.background;
+                door.SetEncounterMonsters(mnstr);
+                door.SetBackground(bg);
             }
             if (superObj.m_Type.Contains("Spawn"))
             {

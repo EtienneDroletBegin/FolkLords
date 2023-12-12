@@ -4998,7 +4998,7 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: -1869315837
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!114 &5963217751727255893
@@ -5054,7 +5054,7 @@ GameObject:
   - component: {fileID: -4667152901500805808}
   - component: {fileID: 6863188313628347523}
   m_Layer: 0
-  m_Name: Wendigo
+  m_Name: wendigo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5115,8 +5115,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1869315837
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 899762440, guid: d369b98b9fda7e4479c1d00e9a72bacc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

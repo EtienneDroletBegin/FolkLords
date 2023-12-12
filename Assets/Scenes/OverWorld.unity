@@ -301,7 +301,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6124cc12d3768b4ab1cebe2a763123a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  members: []
 --- !u!1 &410813111
 GameObject:
   m_ObjectHideFlags: 0
@@ -348,7 +347,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BtPrefab: {fileID: 5981007583855149481, guid: 89e6a7c05223fcd4686e2bdf8598fb0f,
     type: 3}
-  wendigo: {fileID: 11400000, guid: 5e032587616b3fb499c5ddadd557e0a6, type: 2}
 --- !u!1 &583255030
 GameObject:
   m_ObjectHideFlags: 0
@@ -1050,6 +1048,15 @@ MonoBehaviour:
   BattleBackgrounds: []
   InteractionZone: {fileID: 4985116213695887174, guid: 27652ba96a874ec4aaf75c4b62bab41c,
     type: 3}
+  Encounters:
+  - {fileID: 11400000, guid: 036dbd374187bd048b04a932f398b3c0, type: 2}
+  - {fileID: 11400000, guid: cb691a68a776a6545ac5b83b6ec3ebdf, type: 2}
+  - {fileID: 11400000, guid: a1fced979095d574da9a4732d5c6482b, type: 2}
+  - {fileID: 11400000, guid: f8d58e4f174a73e43b5de0aef3005fba, type: 2}
+  - {fileID: 11400000, guid: 84b36f8bc93434d4390df0256b87ba20, type: 2}
+  - {fileID: 11400000, guid: 84b36f8bc93434d4390df0256b87ba20, type: 2}
+  - {fileID: 11400000, guid: f8d58e4f174a73e43b5de0aef3005fba, type: 2}
+  - {fileID: 11400000, guid: 77ba206bde261924d99ba14438fd9edf, type: 2}
 --- !u!1001 &4530211030958429946
 PrefabInstance:
   m_ObjectHideFlags: 0
