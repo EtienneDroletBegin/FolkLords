@@ -1278,6 +1278,11 @@
 </chunk>
   </data>
  </layer>
+ <objectgroup id="4" name="Spawn" class="Spawn">
+  <object id="1" type="Spawn" x="161" y="1182.33">
+   <point/>
+  </object>
+ </objectgroup>
  <objectgroup id="8" name="Encounters" class="Encounter">
   <object id="2" name="0" type="Encounter" x="-64.6667" y="552.667">
    <point/>
@@ -1301,11 +1306,6 @@
    <point/>
   </object>
   <object id="9" name="7" type="Encounter" x="127.333" y="-215.333">
-   <point/>
-  </object>
- </objectgroup>
- <objectgroup id="4" name="Spawn" class="Spawn">
-  <object id="1" type="Spawn" x="161" y="1182.33">
    <point/>
   </object>
  </objectgroup>

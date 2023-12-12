@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "walls.tsx",
+    "activeFile": "TX Struct.tsx",
     "expandedProjectPaths": [
         "Map",
         "."
@@ -17,11 +17,11 @@
             "scaleInEditor": 2
         },
         "Map/Villagio.tmx": {
-            "scale": 1,
-            "selectedLayer": 1,
+            "scale": 0.33,
+            "selectedLayer": 6,
             "viewCenter": {
-                "x": 233,
-                "y": 258
+                "x": -69.69696969696952,
+                "y": 548.4848484848484
             }
         },
         "Map/Villagio.tmx#walls": {
@@ -58,8 +58,8 @@
     "recentFiles": [
         "Map/Villagio.tmx",
         "BUILDINGS.tsx",
-        "TX Struct.tsx",
         "walls.tsx",
+        "TX Struct.tsx",
         "TX Tileset Grass.tsx"
     ],
     "tileset.lastUsedFilter": "Fichiers de jeu de tuiles Tiled (*.tsx *.xml)",
