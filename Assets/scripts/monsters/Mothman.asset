@@ -17,6 +17,6 @@ MonoBehaviour:
   BaseAtk: 10
   img: {fileID: 21300000, guid: ed2cca2b806ff9b4c8922c5057397553, type: 3}
   moves:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: de59c6f047ec38244b756fa18f804378, type: 2}
+  - {fileID: 11400000, guid: 94bb7acc6e8f23e44996933c124e39dd, type: 2}
+  - {fileID: 11400000, guid: 35b6d679529264f4bb4e13263648c9e0, type: 2}

@@ -9,15 +9,15 @@ using UnityEngine.UIElements;
 public class MnstrStats : MonoBehaviour
 {
     [SerializeField]
-    private Monsters type;
+    protected Monsters type;
     [SerializeField]
     private GameObject HPBar;
 
-    private int HP;
-    private UnityEngine.UI.Slider HPSlider;
-    private string monsterName;
-    private int Damage;
-    private int resistance = 0;
+    protected int HP;
+    protected UnityEngine.UI.Slider HPSlider;
+    protected string monsterName;
+    protected int Damage;
+    protected int resistance = 0;
   
 
     private void Start()
@@ -42,7 +42,7 @@ public class MnstrStats : MonoBehaviour
         HP -= (Damage - resistance);
         HPSlider.value = HP;
     }
-    public void Attack(List<initiative> aggro)
+    virtual public void Attack(List<initiative> aggro)
     {
         List<initiative> updatedAggro = aggro.OrderByDescending(X => X.prefab.GetComponent<unitCombatStats>().GetAggro()).ToList();
         print(updatedAggro[0].prefab.name);

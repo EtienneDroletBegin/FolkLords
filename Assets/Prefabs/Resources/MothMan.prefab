@@ -4967,7 +4967,7 @@ RectTransform:
   m_GameObject: {fileID: 2906316106872804586}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.004187011, y: 0.004187011, z: 0.004187011}
+  m_LocalScale: {x: 0.007294611, y: 0.009110518, z: 0.004187011}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6428562305978853599}
@@ -4975,7 +4975,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.02, y: 0.38}
+  m_AnchoredPosition: {x: 0.066, y: 2.201}
   m_SizeDelta: {x: 1211, y: 669}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &6886593815930640010
@@ -5051,8 +5051,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7395881790383051119}
   - component: {fileID: 7679615972729239956}
-  - component: {fileID: -4667152901500805808}
   - component: {fileID: 6863188313628347523}
+  - component: {fileID: 2978994071714612263}
   m_Layer: 0
   m_Name: MothMan
   m_TagString: Untagged
@@ -5129,20 +5129,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-4667152901500805808
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5377163985449106752}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 192c48db6d7ca4e4ea6a0ad7b8e466bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: {fileID: 11400000, guid: 5e032587616b3fb499c5ddadd557e0a6, type: 2}
-  HPBar: {fileID: 6430246206938041264}
 --- !u!95 &6863188313628347523
 Animator:
   serializedVersion: 5
@@ -5164,6 +5150,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2978994071714612263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5377163985449106752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55439ff9f4773af4c82b2838c338d1d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: {fileID: 11400000, guid: 1228bdd5c16f0e34ba13d83478132c8b, type: 2}
+  HPBar: {fileID: 6430246206938041264}
 --- !u!1 &6430246206938041264
 GameObject:
   m_ObjectHideFlags: 0

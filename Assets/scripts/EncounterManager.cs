@@ -252,7 +252,7 @@ public class EncounterManager : MonoBehaviour
                             {
                                 RemoveAP(ability.APCost);
                                 targets.Add(mnstrs.GetChild(0));
-                                ability.Execute(targets);
+                                ability.Execute(targets, m_encounter[CurrentTurn].prefab.name);
                             }
                         });
                     }
@@ -276,7 +276,7 @@ public class EncounterManager : MonoBehaviour
                             {
                                 RemoveAP(ability.APCost);
                                 targets.Add(plyrs.GetChild(0));
-                                ability.Execute(targets);
+                                ability.Execute(targets, m_encounter[CurrentTurn].prefab.name);
                             }
                         }
                         );
@@ -289,7 +289,7 @@ public class EncounterManager : MonoBehaviour
             {
                 List<Transform> targets = new List<Transform>();
                 targets.Add(m_encounter[CurrentTurn].prefab.transform);
-                ability.Execute(targets);
+                ability.Execute(targets, m_encounter[CurrentTurn].prefab.name);
                 RemoveAP(ability.APCost);
 
             }
@@ -322,7 +322,7 @@ public class EncounterManager : MonoBehaviour
                 if (ability.APCost <= AP)
                 {
                     RemoveAP(ability.APCost);
-                    ability.Execute(targets);
+                    ability.Execute(targets, m_encounter[CurrentTurn].prefab.name);
                 }
             }
         }
