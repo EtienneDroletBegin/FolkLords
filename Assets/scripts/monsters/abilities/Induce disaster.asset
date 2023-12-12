@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: Induce disaster
+  m_Name: Induce Disaster
   m_EditorClassIdentifier: Assembly-CSharp::Abilities
   Target: 2
-  abilityName: InduceDisaster
-  prefab: {fileID: 0}
+  abilityName: Induce Disaster
+  prefab: {fileID: 2398350650391946598, guid: e51a8d5d333073e48927bc5260080a2f, type: 3}
   APCost: 0

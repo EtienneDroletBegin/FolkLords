@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEditor.Animations;
 using UnityEngine;
 
@@ -55,13 +56,16 @@ public class Abilities : ScriptableObject
         EncounterManager.GetInstance().ChooseTarget(this);
     }
 
-    public void Execute(List<Transform> target)
+    public void Execute(List<Transform> target, string caster)
     {
         foreach (Transform t in target) 
         {
             Instantiate(prefab, t);
         }
-        EncounterManager.GetInstance().endTurn();
+        GameObject abilityUI = GameObject.Find("AbilityUI");
+        abilityUI.gameObject.GetComponent<Animation>().Play();
+        abilityUI.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = caster + " has used " + abilityName;
+        //EncounterManager.GetInstance().endTurn();
     }
 
 }

@@ -19,6 +19,7 @@ public class AssaultEffects : AbilityParent
             transform.parent.GetComponent<MnstrStats>().TakeDamage(castableBy.physDMG);
             yield return new WaitForSeconds(0.3f);
         }
+        EncounterManager.GetInstance().endTurn();
         Destroy(gameObject);
         
     }

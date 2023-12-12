@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Abilities
   Target: 16
   abilityName: Doom Omen
-  prefab: {fileID: 0}
+  prefab: {fileID: 2398350650391946598, guid: ce21560108cc9d84392ad41abbcec11b, type: 3}
   APCost: 0

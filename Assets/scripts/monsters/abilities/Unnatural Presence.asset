@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Abilities
   Target: 4
   abilityName: Unnatural Presence
-  prefab: {fileID: 0}
+  prefab: {fileID: 2398350650391946598, guid: c803584a6ed908f4cb34ab4f64cf365e, type: 3}
   APCost: 0
