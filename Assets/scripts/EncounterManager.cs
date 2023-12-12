@@ -62,6 +62,8 @@ public class EncounterManager : MonoBehaviour
     private float MaxAp = 5;
     private GameObject APGauge;
     private TextMeshProUGUI burnText;
+    private List<Image> iniImages;
+    private Image currentTurnImage;
 
     private void Start()
     {
@@ -126,10 +128,10 @@ public class EncounterManager : MonoBehaviour
             m_encounter.Add(ini);
 
         }
-
-
         m_encounter = m_encounter.OrderByDescending(x => x.init).ToList();
         initIMG = Resources.Load<GameObject>("initIMG");
+        int index = 0;
+        iniImages = new List<Image>();
         foreach (initiative image in m_encounter)
         {
             Image go = Instantiate(initIMG, GameObject.Find("initiative").transform).GetComponent<Image>();
@@ -142,24 +144,30 @@ public class EncounterManager : MonoBehaviour
                 go.sprite = image.unit.ConvertTo<Monsters>().img;
 
             }
+            go.name = "initImg" + index++;
+            iniImages.Add(go);
         }
+        currentTurnImage = Instantiate(Resources.Load("currentTurn"), GameObject.Find("Canvas").transform).GetComponent<Image>();
+        
 
         if (m_encounter[CurrentTurn].unit is Monsters)
         {
-            endTurn();
+            List<initiative> aggro = m_encounter.Where(x => x.unit is PartyMembers).ToList();
+            //aggro = ;
+            m_encounter[CurrentTurn].prefab.GetComponent<MnstrStats>().Attack(aggro);
         }
 
         foreach (Transform t in GameObject.Find("AbilityButtons").transform)
         {
             Destroy(t.gameObject);
         }
-
+        currentTurnImage.transform.position = iniImages[0].transform.position;
 
     }
 
     public void endTurn()
     {
-        foreach(Transform t in GameObject.Find("AbilityButtons").transform)
+        foreach (Transform t in GameObject.Find("AbilityButtons").transform)
         {
             Destroy(t.gameObject);
         }
@@ -168,10 +176,10 @@ public class EncounterManager : MonoBehaviour
         {
             CurrentTurn = 0;
         }
+        currentTurnImage.transform.position = iniImages[CurrentTurn].transform.position;
         if (m_encounter[CurrentTurn].unit is Monsters)
         {
             List<initiative> aggro = m_encounter.Where(x => x.unit is PartyMembers).ToList();
-            //aggro = ;
             m_encounter[CurrentTurn].prefab.GetComponent<MnstrStats>().Attack(aggro);
         }
     }
@@ -207,7 +215,10 @@ public class EncounterManager : MonoBehaviour
                 {
                     GameObject newBT = Instantiate(BtPrefab, GameObject.Find("AbilityButtons").transform);
                     newBT.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = mnstrs.GetChild(0).GetComponent<MnstrStats>()._name();
-                    newBT.GetComponent<Button>().onClick.AddListener(delegate { attack(mnstrs); });
+                    newBT.GetComponent<Button>().onClick.AddListener(delegate {
+                        m_encounter[CurrentTurn].prefab.GetComponent<unitCombatStats>().Attack(mnstrs, BurnedAP);
+                        attack();
+                    });
 
                 }
             }
@@ -266,6 +277,7 @@ public class EncounterManager : MonoBehaviour
             {
                 List<Transform> targets = new List<Transform>();
                 targets.Add(m_encounter[CurrentTurn].prefab.transform);
+                ability.Execute(targets);
                 RemoveAP(ability.APCost);
                 
             }
@@ -310,24 +322,14 @@ public class EncounterManager : MonoBehaviour
         APGauge.GetComponent<ImgsFillDynamic>().SetValue(AP / MaxAp, false, 1);
     }
 
-    private void attack(Transform mnstrs)
+    private void attack()
     {
-        mnstrs.GetChild(0).GetComponent<MnstrStats>().TakeDamage(m_encounter[CurrentTurn].unit.ConvertTo<PartyMembers>().physDMG);
+        
         if (BurnedAP == 0 && AP < MaxAp)
         {
             AP += 1;
             APGauge.GetComponent<ImgsFillDynamic>().SetValue(AP / MaxAp, false, 1);
         }
-        if (BurnedAP > 0)
-        {
-            for (int i = 0; i < BurnedAP; i++)
-            {
-                mnstrs.GetChild(0).GetComponent<MnstrStats>().TakeDamage(m_encounter[CurrentTurn].unit.ConvertTo<PartyMembers>().physDMG);
-                AP -= 1;
-                APGauge.GetComponent<ImgsFillDynamic>().SetValue(AP / MaxAp, false, 1);
-            }
-        }
-
         BurnedAP = 0;
         burnText.gameObject.SetActive(false);
         endTurn();

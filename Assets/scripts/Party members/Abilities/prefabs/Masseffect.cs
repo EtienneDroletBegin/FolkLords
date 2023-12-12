@@ -6,7 +6,7 @@ public class Masseffect : AbilityParent
 {
     void Start()
     {
-        int healing = Random.Range(2, 6);
+        int healing = Random.Range(castableBy.magDMG-5, castableBy.magDMG-2);
         transform.parent.GetComponent<unitCombatStats>().Heal(healing);
     }
 

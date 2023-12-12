@@ -10,4 +10,10 @@ public class EstocEffect : AbilityParent
         transform.parent.GetComponent<MnstrStats>().TakeDamage(castableBy.physDMG);
         transform.parent.GetComponent<MnstrStats>().ReduceDamage(1);
     }
+
+    private void OnDestroy()
+    {
+        transform.parent.GetComponent<MnstrStats>().ReduceDamage(-1);
+        
+    }
 }

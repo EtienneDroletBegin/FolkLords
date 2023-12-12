@@ -6,7 +6,7 @@ public class HolyLightEffect : AbilityParent
 {
     void Start()
     {
-        int damage = Random.Range(3, 7);
+        int damage = Random.Range(castableBy.magDMG - 3, castableBy.magDMG);
         transform.parent.GetComponent<MnstrStats>().TakeDamage(damage);
     }
 

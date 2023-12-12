@@ -6,6 +6,12 @@ public class FenteEffect : AbilityParent
 {
     void Start()
     {
+        transform.parent.GetComponent<unitCombatStats>().AttkGain(castableBy.physDMG);
+    }
+
+    private void OnDestroy()
+    {
+        transform.parent.GetComponent<unitCombatStats>().AttkGain(castableBy.physDMG * -1);
     }
 
 }

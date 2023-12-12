@@ -6,7 +6,7 @@ public class BurstShotEffect : AbilityParent
 {
     void Start()
     {
-        int damage = Random.Range(3, 7);
+        int damage = Random.Range(castableBy.physDMG-3, castableBy.physDMG);
         transform.parent.GetComponent<MnstrStats>().TakeDamage(damage);
     }
 

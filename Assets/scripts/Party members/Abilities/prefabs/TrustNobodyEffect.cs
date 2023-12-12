@@ -6,7 +6,15 @@ public class TrustNobodyEffect : AbilityParent
 {
     void Start()
     {
-        transform.parent.GetComponent<unitCombatStats>().AugmentAggro(1);
+        unitCombatStats parent = transform.parent.GetComponent<unitCombatStats>();
+        parent.AugmentAggro(2);
+        parent.AttkGain(parent.getDMG());
+    }
+
+    private void OnDestroy()
+    {
+        unitCombatStats parent = transform.parent.GetComponent<unitCombatStats>();
+        parent.AttkGain(parent.getDMG() * -1);
     }
 
 }
