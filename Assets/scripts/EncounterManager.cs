@@ -168,6 +168,11 @@ public class EncounterManager : MonoBehaviour
 
         if (m_encounter[CurrentTurn].unit is Monsters)
         {
+            if (m_encounter[CurrentTurn].prefab == null)
+            {
+                m_encounter.Remove(m_encounter[CurrentTurn]);
+                endTurn();
+            }
             List<initiative> aggro = m_encounter.Where(x => x.unit is PartyMembers).ToList();
             //aggro = ;
             m_encounter[CurrentTurn].prefab.GetComponent<MnstrStats>().Attack(aggro);
@@ -196,8 +201,15 @@ public class EncounterManager : MonoBehaviour
         currentTurnImage.transform.position = iniImages[CurrentTurn].transform.position;
         if (m_encounter[CurrentTurn].unit is Monsters)
         {
-            List<initiative> aggro = m_encounter.Where(x => x.unit is PartyMembers).ToList();
-            m_encounter[CurrentTurn].prefab.GetComponent<MnstrStats>().Attack(aggro);
+            if (!m_encounter[CurrentTurn].prefab.GetComponent<MnstrStats>().isDead)
+            {
+                List<initiative> aggro = m_encounter.Where(x => x.unit is PartyMembers).ToList();
+                m_encounter[CurrentTurn].prefab.GetComponent<MnstrStats>().Attack(aggro);
+            }
+            else
+            {
+                endTurn();
+            }
         }
     }
     private void CheckDeath()
@@ -208,9 +220,12 @@ public class EncounterManager : MonoBehaviour
         {
             if (mnstrs.childCount != 0)
             {
-                alive++;
+                if (!mnstrs.GetChild(0).GetComponent<MnstrStats>().isDead)
+                {
+                    alive++;
+                }
             }
-           
+       
         }
         if (alive == 0)
         {
@@ -267,13 +282,16 @@ public class EncounterManager : MonoBehaviour
             {
                 if (mnstrs.transform.childCount != 0)
                 {
-                    GameObject newBT = Instantiate(BtPrefab, GameObject.Find("AbilityButtons").transform);
-                    newBT.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = mnstrs.GetChild(0).GetComponent<MnstrStats>()._name();
-                    newBT.GetComponent<Button>().onClick.AddListener(delegate
+                    if (!mnstrs.transform.GetChild(0).GetComponent<MnstrStats>().isDead)
                     {
-                        m_encounter[CurrentTurn].prefab.GetComponent<unitCombatStats>().Attack(mnstrs, BurnedAP);
-                        attack();
-                    });
+                        GameObject newBT = Instantiate(BtPrefab, GameObject.Find("AbilityButtons").transform);
+                        newBT.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = mnstrs.GetChild(0).GetComponent<MnstrStats>()._name();
+                        newBT.GetComponent<Button>().onClick.AddListener(delegate
+                        {
+                            m_encounter[CurrentTurn].prefab.GetComponent<unitCombatStats>().Attack(mnstrs, BurnedAP);
+                            attack();
+                        });
+                    }
 
                 }
             }
@@ -289,17 +307,21 @@ public class EncounterManager : MonoBehaviour
                 {
                     if (mnstrs.transform.childCount != 0)
                     {
-                        GameObject newBT = Instantiate(BtPrefab, GameObject.Find("AbilityButtons").transform);
-                        newBT.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = mnstrs.GetChild(0).GetComponent<MnstrStats>()._name();
-                        newBT.GetComponent<Button>().onClick.AddListener(delegate
+                        if (!mnstrs.transform.GetChild(0).GetComponent<MnstrStats>().isDead)
                         {
-                            if (BurnedAP + ability.APCost <= AP)
+                            GameObject newBT = Instantiate(BtPrefab, GameObject.Find("AbilityButtons").transform);
+                            newBT.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = mnstrs.GetChild(0).GetComponent<MnstrStats>()._name();
+                            newBT.GetComponent<Button>().onClick.AddListener(delegate
                             {
-                                RemoveAP(ability.APCost);
-                                targets.Add(mnstrs.GetChild(0));
-                                ability.Execute(targets, m_encounter[CurrentTurn].prefab.name);
-                            }
-                        });
+                                if (BurnedAP + ability.APCost <= AP)
+                                {
+                                    RemoveAP(ability.APCost);
+                                    targets.Add(mnstrs.GetChild(0));
+                                    ability.Execute(targets, m_encounter[CurrentTurn].prefab.name);
+                                }
+                            });
+                        }
+
                     }
                 }
             }

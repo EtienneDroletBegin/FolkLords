@@ -13,22 +13,13 @@ public class MnstrStats : MonoBehaviour
     [SerializeField]
     private GameObject HPBar;
 
-<<<<<<< HEAD
-    private int HP;
-    private UnityEngine.UI.Slider HPSlider;
-    private string monsterName;
-    private int Damage;
-    private int resistance = 0;
-
-=======
     protected int HP;
     protected UnityEngine.UI.Slider HPSlider;
     protected string monsterName;
     protected int Damage;
     protected int resistance = 0;
+    public bool isDead;
   
->>>>>>> 3b0109da844ce57e14d5044ee7e51759cfeb92a6
-
     private void Start()
     {
         Damage = type.BaseAtk;
@@ -53,7 +44,8 @@ public class MnstrStats : MonoBehaviour
         if(IsDead())
         {
             HP = 0;
-            Destroy(gameObject);
+            isDead = true;
+            //Destroy(gameObject);
         }
     }
     virtual public void Attack(List<initiative> aggro)

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: 0
   memberName: Pope
-  maxHP: 20
+  maxHP: 25
   maxAP: 4
   physDMG: 3
   magDMG: 5
