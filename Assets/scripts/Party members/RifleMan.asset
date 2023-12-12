@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 91a0bc4c1ad29934dac433ab110972ff, type: 3}
-  m_Name: Rifleman
+  m_Name: RifleMan
   m_EditorClassIdentifier: 
   index: 4
   memberName: Rifleman

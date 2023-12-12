@@ -13,6 +13,7 @@ using static UnityEngine.UI.CanvasScaler;
 public struct initiative
 {
     public ICombatUnit unit;
+    public GameObject prefab;
     public int init;
 }
 
@@ -56,8 +57,8 @@ public class EncounterManager : MonoBehaviour
     private Monsters wendigo;
     private GameObject initIMG;
     private int CurrentTurn = 0;
-    private float AP;
-    private float BurnedAP;
+    private float AP = 0;
+    private float BurnedAP = 0;
     private float MaxAp = 5;
     private GameObject APGauge;
     private TextMeshProUGUI burnText;
@@ -86,6 +87,7 @@ public class EncounterManager : MonoBehaviour
 
     public void RollInitiative()
     {
+        AP = 0;
         APGauge = GameObject.Find("APGauge");
         burnText = GameObject.Find("BurnText").GetComponent<TextMeshProUGUI>();
         burnText.gameObject.SetActive(false);
@@ -98,6 +100,7 @@ public class EncounterManager : MonoBehaviour
             initiative ini = new initiative();
             ini.unit = unit;
             ini.init = UnityEngine.Random.Range(1, unit.spd);
+            ini.prefab = GameObject.Find(unit.memberName);
             m_encounter.Add(ini);
         }
 
@@ -109,18 +112,19 @@ public class EncounterManager : MonoBehaviour
         //}
         foreach(Monsters mnstr in m_monsters)
         {
-            foreach(Transform spots in GameObject.Find("monsterSpots").transform)
-            {
-                if (spots.childCount == 0)
-                {
-                    Instantiate(Resources.Load<GameObject>("wendigo"), spots);
-                    break;
-                }
-            }
             initiative ini = new initiative();
             ini.unit = mnstr;
             ini.init = UnityEngine.Random.Range(1, 6);
+            foreach (Transform spots in GameObject.Find("monsterSpots").transform)
+            {
+                if (spots.childCount == 0)
+                {
+                    ini.prefab = Instantiate((GameObject)Resources.Load(mnstr.monsterName), spots);
+                    break;
+                }
+            }
             m_encounter.Add(ini);
+
         }
 
 
@@ -166,7 +170,9 @@ public class EncounterManager : MonoBehaviour
         }
         if (m_encounter[CurrentTurn].unit is Monsters)
         {
-            endTurn();
+            List<initiative> aggro = m_encounter.Where(x => x.unit is PartyMembers).ToList();
+            //aggro = ;
+            m_encounter[CurrentTurn].prefab.GetComponent<MnstrStats>().Attack(aggro);
         }
     }
 
@@ -222,6 +228,7 @@ public class EncounterManager : MonoBehaviour
                         newBT.GetComponent<Button>().onClick.AddListener(delegate {
                             if (BurnedAP + ability.APCost <= AP)
                             {
+                                RemoveAP(ability.APCost);
                                 targets.Add(mnstrs.GetChild(0));
                                 ability.Execute(targets);
                             }
@@ -244,6 +251,7 @@ public class EncounterManager : MonoBehaviour
                         newBT.GetComponent<Button>().onClick.AddListener(delegate {
                             if (BurnedAP + ability.APCost <= AP)
                             {
+                                RemoveAP(ability.APCost);
                                 targets.Add(plyrs.GetChild(0));
                                 ability.Execute(targets);
                             }
@@ -256,46 +264,47 @@ public class EncounterManager : MonoBehaviour
             //the target is the caster
             if (ability.Target.HasFlag(Abilities.ETarget.SELF))
             {
-                //List<Transform> targets = new List<Transform>();
-                //targets.Add()
+                List<Transform> targets = new List<Transform>();
+                targets.Add(m_encounter[CurrentTurn].prefab.transform);
+                RemoveAP(ability.APCost);
+                
             }
             //the target is all allies
-            if (ability.Target.HasFlag(Abilities.ETarget.AllyAll))
+            if(ability.Target.HasFlag(Abilities.ETarget.AllyAll) || ability.Target.HasFlag(Abilities.ETarget.EnemyAll))
             {
                 List<Transform> targets = new List<Transform>();
-                foreach(Transform plyrs in GameObject.Find("spawnSpots").transform)
+                if (ability.Target.HasFlag(Abilities.ETarget.AllyAll))
                 {
-                    if (plyrs.transform.childCount != 0)
+                    foreach (Transform plyrs in GameObject.Find("spawnSpots").transform)
                     {
-                        targets.Add(plyrs.GetChild(0));
+                        if (plyrs.transform.childCount != 0)
+                        {
+                            targets.Add(plyrs.GetChild(0));
+                        }
+                    }
+
+                }
+                //the target is all enemies
+                if (ability.Target.HasFlag(Abilities.ETarget.EnemyAll))
+                {
+                    foreach (Transform mnstrs in GameObject.Find("monsterSpots").transform)
+                    {
+                        if (mnstrs.transform.childCount != 0)
+                        {
+                            targets.Add(mnstrs.GetChild(0));
+                        }
                     }
                 }
-                if (BurnedAP + ability.APCost <= AP)
+                if (ability.APCost <= AP)
                 {
-                    ability.Execute(targets);
-                }
-            }
-            //the target is all enemies
-            if (ability.Target.HasFlag(Abilities.ETarget.EnemyAll))
-            {
-                List<Transform> targets = new List<Transform>();
-                foreach (Transform mnstrs in GameObject.Find("monsterSpots").transform)
-                {
-                    if (mnstrs.transform.childCount != 0)
-                    {
-                        targets.Add(mnstrs.GetChild(0));
-                    }
-                }
-                if (BurnedAP + ability.APCost <= AP)
-                {
+                    RemoveAP(ability.APCost);
                     ability.Execute(targets);
                 }
             }
         }
-
     }
 
-    private void RemoveAP(float apToRemove)
+    public void RemoveAP(float apToRemove)
     {
         AP -= apToRemove;
         APGauge.GetComponent<ImgsFillDynamic>().SetValue(AP / MaxAp, false, 1);
